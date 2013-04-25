@@ -1,0 +1,24 @@
+Apr 25, 2013 6:29:23 PM org.apache.catalina.core.AprLifecycleListener init
+INFO: The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: D:\Projects\website\Tomcat\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\Dell\Dell Wireless WLAN Card;C:\Program Files (x86)\Autodesk\Backburner\;C:\Program Files (x86)\QuickTime\QTSystem\;C:\Program Files (x86)\ATI Technologies\ATI.ACE\Core-Static;C:\Users\Vlad\AppData\Local\GitHub\PortableGit_93e8418133eb85e81a81e5e19c272776524496c6\bin;C:\Users\Vlad\AppData\Local\GitHub\PortableGit_93e8418133eb85e81a81e5e19c272776524496c6\cmd;C:\Users\Vlad\AppData\Local\GitHub\PortableGit_93e8418133eb85e81a81e5e19c272776524496c6\libexec\git-core;;.
+Apr 25, 2013 6:29:24 PM org.apache.coyote.AbstractProtocol init
+INFO: Initializing ProtocolHandler ["http-bio-8080"]
+Apr 25, 2013 6:29:24 PM org.apache.coyote.AbstractProtocol init
+INFO: Initializing ProtocolHandler ["ajp-bio-8009"]
+Apr 25, 2013 6:29:24 PM org.apache.catalina.startup.Catalina load
+INFO: Initialization processed in 1696 ms
+Apr 25, 2013 6:29:24 PM org.apache.catalina.core.StandardService startInternal
+INFO: Starting service Catalina
+Apr 25, 2013 6:29:24 PM org.apache.catalina.core.StandardEngine startInternal
+INFO: Starting Servlet Engine: Apache Tomcat/7.0.39
+Apr 25, 2013 6:29:24 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory D:\Projects\website\Tomcat\webapps\docs
+Apr 25, 2013 6:29:24 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory D:\Projects\website\Tomcat\webapps\manager
+Apr 25, 2013 6:29:24 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory D:\Projects\website\Tomcat\webapps\ROOT
+Apr 25, 2013 6:29:24 PM org.apache.coyote.AbstractProtocol start
+INFO: Starting ProtocolHandler ["http-bio-8080"]
+Apr 25, 2013 6:29:24 PM org.apache.coyote.AbstractProtocol start
+INFO: Starting ProtocolHandler ["ajp-bio-8009"]
+Apr 25, 2013 6:29:24 PM org.apache.catalina.startup.Catalina start
+INFO: Server startup in 465 ms

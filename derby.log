@@ -1,0 +1,139 @@
+Thu Apr 25 21:15:14 BST 2013 Thread[main,5,main] Cleanup action starting
+java.sql.SQLException: Database 'Databases/mydb' not found.
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory40.getSQLException(Unknown Source)
+	at org.apache.derby.impl.jdbc.Util.newEmbedSQLException(Unknown Source)
+	at org.apache.derby.impl.jdbc.Util.newEmbedSQLException(Unknown Source)
+	at org.apache.derby.impl.jdbc.Util.generateCsSQLException(Unknown Source)
+	at org.apache.derby.impl.jdbc.EmbedConnection.newSQLException(Unknown Source)
+	at org.apache.derby.impl.jdbc.EmbedConnection.handleDBNotFound(Unknown Source)
+	at org.apache.derby.impl.jdbc.EmbedConnection.<init>(Unknown Source)
+	at org.apache.derby.impl.jdbc.EmbedConnection40.<init>(Unknown Source)
+	at org.apache.derby.jdbc.Driver40.getNewEmbedConnection(Unknown Source)
+	at org.apache.derby.jdbc.InternalDriver.connect(Unknown Source)
+	at org.apache.derby.jdbc.Driver20.connect(Unknown Source)
+	at org.apache.derby.jdbc.AutoloadedDriver.connect(Unknown Source)
+	at java.sql.DriverManager.getConnection(DriverManager.java:579)
+	at java.sql.DriverManager.getConnection(DriverManager.java:190)
+	at org.apache.derby.impl.tools.ij.ij.dynamicConnection(Unknown Source)
+	at org.apache.derby.impl.tools.ij.ij.ConnectStatement(Unknown Source)
+	at org.apache.derby.impl.tools.ij.ij.ijStatement(Unknown Source)
+	at org.apache.derby.impl.tools.ij.utilMain.runScriptGuts(Unknown Source)
+	at org.apache.derby.impl.tools.ij.utilMain.go(Unknown Source)
+	at org.apache.derby.impl.tools.ij.Main.go(Unknown Source)
+	at org.apache.derby.impl.tools.ij.Main.mainCore(Unknown Source)
+	at org.apache.derby.impl.tools.ij.Main.main(Unknown Source)
+	at org.apache.derby.tools.ij.main(Unknown Source)
+	at org.apache.derby.iapi.tools.run.main(Unknown Source)
+Caused by: java.sql.SQLException: Database 'Databases/mydb' not found.
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory.getSQLException(Unknown Source)
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory40.wrapArgsForTransportAcrossDRDA(Unknown Source)
+	... 24 more
+============= begin nested exception, level (1) ===========
+java.sql.SQLException: Database 'Databases/mydb' not found.
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory.getSQLException(Unknown Source)
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory40.wrapArgsForTransportAcrossDRDA(Unknown Source)
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory40.getSQLException(Unknown Source)
+	at org.apache.derby.impl.jdbc.Util.newEmbedSQLException(Unknown Source)
+	at org.apache.derby.impl.jdbc.Util.newEmbedSQLException(Unknown Source)
+	at org.apache.derby.impl.jdbc.Util.generateCsSQLException(Unknown Source)
+	at org.apache.derby.impl.jdbc.EmbedConnection.newSQLException(Unknown Source)
+	at org.apache.derby.impl.jdbc.EmbedConnection.handleDBNotFound(Unknown Source)
+	at org.apache.derby.impl.jdbc.EmbedConnection.<init>(Unknown Source)
+	at org.apache.derby.impl.jdbc.EmbedConnection40.<init>(Unknown Source)
+	at org.apache.derby.jdbc.Driver40.getNewEmbedConnection(Unknown Source)
+	at org.apache.derby.jdbc.InternalDriver.connect(Unknown Source)
+	at org.apache.derby.jdbc.Driver20.connect(Unknown Source)
+	at org.apache.derby.jdbc.AutoloadedDriver.connect(Unknown Source)
+	at java.sql.DriverManager.getConnection(DriverManager.java:579)
+	at java.sql.DriverManager.getConnection(DriverManager.java:190)
+	at org.apache.derby.impl.tools.ij.ij.dynamicConnection(Unknown Source)
+	at org.apache.derby.impl.tools.ij.ij.ConnectStatement(Unknown Source)
+	at org.apache.derby.impl.tools.ij.ij.ijStatement(Unknown Source)
+	at org.apache.derby.impl.tools.ij.utilMain.runScriptGuts(Unknown Source)
+	at org.apache.derby.impl.tools.ij.utilMain.go(Unknown Source)
+	at org.apache.derby.impl.tools.ij.Main.go(Unknown Source)
+	at org.apache.derby.impl.tools.ij.Main.mainCore(Unknown Source)
+	at org.apache.derby.impl.tools.ij.Main.main(Unknown Source)
+	at org.apache.derby.tools.ij.main(Unknown Source)
+	at org.apache.derby.iapi.tools.run.main(Unknown Source)
+============= end nested exception, level (1) ===========
+Cleanup action completed
+Thu Apr 25 21:15:32 BST 2013 Thread[main,5,main] Cleanup action starting
+java.sql.SQLException: Database 'databases/mydb' not found.
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory40.getSQLException(Unknown Source)
+	at org.apache.derby.impl.jdbc.Util.newEmbedSQLException(Unknown Source)
+	at org.apache.derby.impl.jdbc.Util.newEmbedSQLException(Unknown Source)
+	at org.apache.derby.impl.jdbc.Util.generateCsSQLException(Unknown Source)
+	at org.apache.derby.impl.jdbc.EmbedConnection.newSQLException(Unknown Source)
+	at org.apache.derby.impl.jdbc.EmbedConnection.handleDBNotFound(Unknown Source)
+	at org.apache.derby.impl.jdbc.EmbedConnection.<init>(Unknown Source)
+	at org.apache.derby.impl.jdbc.EmbedConnection40.<init>(Unknown Source)
+	at org.apache.derby.jdbc.Driver40.getNewEmbedConnection(Unknown Source)
+	at org.apache.derby.jdbc.InternalDriver.connect(Unknown Source)
+	at org.apache.derby.jdbc.Driver20.connect(Unknown Source)
+	at org.apache.derby.jdbc.AutoloadedDriver.connect(Unknown Source)
+	at java.sql.DriverManager.getConnection(DriverManager.java:579)
+	at java.sql.DriverManager.getConnection(DriverManager.java:190)
+	at org.apache.derby.impl.tools.ij.ij.dynamicConnection(Unknown Source)
+	at org.apache.derby.impl.tools.ij.ij.ConnectStatement(Unknown Source)
+	at org.apache.derby.impl.tools.ij.ij.ijStatement(Unknown Source)
+	at org.apache.derby.impl.tools.ij.utilMain.runScriptGuts(Unknown Source)
+	at org.apache.derby.impl.tools.ij.utilMain.go(Unknown Source)
+	at org.apache.derby.impl.tools.ij.Main.go(Unknown Source)
+	at org.apache.derby.impl.tools.ij.Main.mainCore(Unknown Source)
+	at org.apache.derby.impl.tools.ij.Main.main(Unknown Source)
+	at org.apache.derby.tools.ij.main(Unknown Source)
+	at org.apache.derby.iapi.tools.run.main(Unknown Source)
+Caused by: java.sql.SQLException: Database 'databases/mydb' not found.
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory.getSQLException(Unknown Source)
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory40.wrapArgsForTransportAcrossDRDA(Unknown Source)
+	... 24 more
+============= begin nested exception, level (1) ===========
+java.sql.SQLException: Database 'databases/mydb' not found.
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory.getSQLException(Unknown Source)
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory40.wrapArgsForTransportAcrossDRDA(Unknown Source)
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory40.getSQLException(Unknown Source)
+	at org.apache.derby.impl.jdbc.Util.newEmbedSQLException(Unknown Source)
+	at org.apache.derby.impl.jdbc.Util.newEmbedSQLException(Unknown Source)
+	at org.apache.derby.impl.jdbc.Util.generateCsSQLException(Unknown Source)
+	at org.apache.derby.impl.jdbc.EmbedConnection.newSQLException(Unknown Source)
+	at org.apache.derby.impl.jdbc.EmbedConnection.handleDBNotFound(Unknown Source)
+	at org.apache.derby.impl.jdbc.EmbedConnection.<init>(Unknown Source)
+	at org.apache.derby.impl.jdbc.EmbedConnection40.<init>(Unknown Source)
+	at org.apache.derby.jdbc.Driver40.getNewEmbedConnection(Unknown Source)
+	at org.apache.derby.jdbc.InternalDriver.connect(Unknown Source)
+	at org.apache.derby.jdbc.Driver20.connect(Unknown Source)
+	at org.apache.derby.jdbc.AutoloadedDriver.connect(Unknown Source)
+	at java.sql.DriverManager.getConnection(DriverManager.java:579)
+	at java.sql.DriverManager.getConnection(DriverManager.java:190)
+	at org.apache.derby.impl.tools.ij.ij.dynamicConnection(Unknown Source)
+	at org.apache.derby.impl.tools.ij.ij.ConnectStatement(Unknown Source)
+	at org.apache.derby.impl.tools.ij.ij.ijStatement(Unknown Source)
+	at org.apache.derby.impl.tools.ij.utilMain.runScriptGuts(Unknown Source)
+	at org.apache.derby.impl.tools.ij.utilMain.go(Unknown Source)
+	at org.apache.derby.impl.tools.ij.Main.go(Unknown Source)
+	at org.apache.derby.impl.tools.ij.Main.mainCore(Unknown Source)
+	at org.apache.derby.impl.tools.ij.Main.main(Unknown Source)
+	at org.apache.derby.tools.ij.main(Unknown Source)
+	at org.apache.derby.iapi.tools.run.main(Unknown Source)
+============= end nested exception, level (1) ===========
+Cleanup action completed
+----------------------------------------------------------------
+Thu Apr 25 21:16:07 BST 2013:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.10.1.1 - (1458268): instance a816c00e-013e-42d5-e44d-00000318f7a0 
+on database directory D:\Projects\website\Databases\mydb with class loader sun.misc.Launcher$AppClassLoader@2677622b 
+Loaded from file:/D:/Projects/website/Derby/lib/derby.jar
+java.vendor=Oracle Corporation
+java.runtime.version=1.7.0_11-b21
+user.dir=D:\Projects\website
+os.name=Windows 7
+os.arch=amd64
+os.version=6.1
+derby.system.home=null
+Database Class Loader started - derby.database.classpath=''
+----------------------------------------------------------------
+Thu Apr 25 21:17:32 BST 2013: Shutting down Derby engine
+----------------------------------------------------------------
+Thu Apr 25 21:17:33 BST 2013:
+Shutting down instance a816c00e-013e-42d5-e44d-00000318f7a0 on database directory D:\Projects\website\Databases\mydb with class loader sun.misc.Launcher$AppClassLoader@2677622b 
+----------------------------------------------------------------

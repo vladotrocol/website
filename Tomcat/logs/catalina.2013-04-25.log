@@ -22,3 +22,767 @@ Apr 25, 2013 6:29:24 PM org.apache.coyote.AbstractProtocol start
 INFO: Starting ProtocolHandler ["ajp-bio-8009"]
 Apr 25, 2013 6:29:24 PM org.apache.catalina.startup.Catalina start
 INFO: Server startup in 465 ms
+Apr 25, 2013 6:32:32 PM org.apache.coyote.AbstractProtocol pause
+INFO: Pausing ProtocolHandler ["http-bio-8080"]
+Apr 25, 2013 6:32:32 PM org.apache.coyote.AbstractProtocol pause
+INFO: Pausing ProtocolHandler ["ajp-bio-8009"]
+Apr 25, 2013 6:32:32 PM org.apache.catalina.core.StandardService stopInternal
+INFO: Stopping service Catalina
+Apr 25, 2013 6:32:32 PM org.apache.coyote.AbstractProtocol stop
+INFO: Stopping ProtocolHandler ["http-bio-8080"]
+Apr 25, 2013 6:32:32 PM org.apache.coyote.AbstractProtocol stop
+INFO: Stopping ProtocolHandler ["ajp-bio-8009"]
+Apr 25, 2013 6:32:38 PM org.apache.tomcat.util.digester.Digester endElement
+WARNING:   No rules found matching 'Context'.
+Apr 25, 2013 6:32:38 PM org.apache.tomcat.util.digester.Digester fatalError
+SEVERE: Parse Fatal Error at line 32 column 2: The markup in the document following the root element must be well-formed.
+org.xml.sax.SAXParseException; systemId: file:/D:/Projects/website/Tomcat/conf/server.xml; lineNumber: 32; columnNumber: 2; The markup in the document following the root element must be well-formed.
+	at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.createSAXParseException(Unknown Source)
+	at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.fatalError(Unknown Source)
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(Unknown Source)
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(Unknown Source)
+	at com.sun.org.apache.xerces.internal.impl.XMLScanner.reportFatalError(Unknown Source)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl$TrailingMiscDriver.next(Unknown Source)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl.next(Unknown Source)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanDocument(Unknown Source)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(Unknown Source)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(Unknown Source)
+	at com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(Unknown Source)
+	at com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.parse(Unknown Source)
+	at com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl$JAXPSAXParser.parse(Unknown Source)
+	at org.apache.tomcat.util.digester.Digester.parse(Digester.java:1537)
+	at org.apache.catalina.startup.Catalina.load(Catalina.java:610)
+	at org.apache.catalina.startup.Catalina.load(Catalina.java:658)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.apache.catalina.startup.Bootstrap.load(Bootstrap.java:281)
+	at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:455)
+
+Apr 25, 2013 6:32:38 PM org.apache.catalina.startup.Catalina load
+WARNING: Catalina.start using conf/server.xml: The markup in the document following the root element must be well-formed.
+Apr 25, 2013 6:32:38 PM org.apache.tomcat.util.digester.Digester endElement
+WARNING:   No rules found matching 'Context'.
+Apr 25, 2013 6:32:38 PM org.apache.tomcat.util.digester.Digester fatalError
+SEVERE: Parse Fatal Error at line 32 column 2: The markup in the document following the root element must be well-formed.
+org.xml.sax.SAXParseException; systemId: file:/D:/Projects/website/Tomcat/conf/server.xml; lineNumber: 32; columnNumber: 2; The markup in the document following the root element must be well-formed.
+	at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.createSAXParseException(Unknown Source)
+	at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.fatalError(Unknown Source)
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(Unknown Source)
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(Unknown Source)
+	at com.sun.org.apache.xerces.internal.impl.XMLScanner.reportFatalError(Unknown Source)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl$TrailingMiscDriver.next(Unknown Source)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl.next(Unknown Source)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanDocument(Unknown Source)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(Unknown Source)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(Unknown Source)
+	at com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(Unknown Source)
+	at com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.parse(Unknown Source)
+	at com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl$JAXPSAXParser.parse(Unknown Source)
+	at org.apache.tomcat.util.digester.Digester.parse(Digester.java:1537)
+	at org.apache.catalina.startup.Catalina.load(Catalina.java:610)
+	at org.apache.catalina.startup.Catalina.start(Catalina.java:672)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.apache.catalina.startup.Bootstrap.start(Bootstrap.java:322)
+	at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:456)
+
+Apr 25, 2013 6:32:38 PM org.apache.catalina.startup.Catalina load
+WARNING: Catalina.start using conf/server.xml: The markup in the document following the root element must be well-formed.
+Apr 25, 2013 6:32:38 PM org.apache.catalina.startup.Catalina start
+SEVERE: Cannot start server. Server instance is not configured.
+Apr 25, 2013 6:38:11 PM org.apache.tomcat.util.digester.Digester endElement
+WARNING:   No rules found matching 'Context'.
+Apr 25, 2013 6:38:11 PM org.apache.tomcat.util.digester.Digester fatalError
+SEVERE: Parse Fatal Error at line 32 column 2: The markup in the document following the root element must be well-formed.
+org.xml.sax.SAXParseException; systemId: file:/D:/Projects/website/Tomcat/conf/server.xml; lineNumber: 32; columnNumber: 2; The markup in the document following the root element must be well-formed.
+	at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.createSAXParseException(Unknown Source)
+	at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.fatalError(Unknown Source)
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(Unknown Source)
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(Unknown Source)
+	at com.sun.org.apache.xerces.internal.impl.XMLScanner.reportFatalError(Unknown Source)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl$TrailingMiscDriver.next(Unknown Source)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl.next(Unknown Source)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanDocument(Unknown Source)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(Unknown Source)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(Unknown Source)
+	at com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(Unknown Source)
+	at com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.parse(Unknown Source)
+	at com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl$JAXPSAXParser.parse(Unknown Source)
+	at org.apache.tomcat.util.digester.Digester.parse(Digester.java:1537)
+	at org.apache.catalina.startup.Catalina.load(Catalina.java:610)
+	at org.apache.catalina.startup.Catalina.load(Catalina.java:658)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.apache.catalina.startup.Bootstrap.load(Bootstrap.java:281)
+	at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:455)
+
+Apr 25, 2013 6:38:11 PM org.apache.catalina.startup.Catalina load
+WARNING: Catalina.start using conf/server.xml: The markup in the document following the root element must be well-formed.
+Apr 25, 2013 6:38:11 PM org.apache.tomcat.util.digester.Digester endElement
+WARNING:   No rules found matching 'Context'.
+Apr 25, 2013 6:38:11 PM org.apache.tomcat.util.digester.Digester fatalError
+SEVERE: Parse Fatal Error at line 32 column 2: The markup in the document following the root element must be well-formed.
+org.xml.sax.SAXParseException; systemId: file:/D:/Projects/website/Tomcat/conf/server.xml; lineNumber: 32; columnNumber: 2; The markup in the document following the root element must be well-formed.
+	at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.createSAXParseException(Unknown Source)
+	at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.fatalError(Unknown Source)
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(Unknown Source)
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(Unknown Source)
+	at com.sun.org.apache.xerces.internal.impl.XMLScanner.reportFatalError(Unknown Source)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl$TrailingMiscDriver.next(Unknown Source)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl.next(Unknown Source)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanDocument(Unknown Source)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(Unknown Source)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(Unknown Source)
+	at com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(Unknown Source)
+	at com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.parse(Unknown Source)
+	at com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl$JAXPSAXParser.parse(Unknown Source)
+	at org.apache.tomcat.util.digester.Digester.parse(Digester.java:1537)
+	at org.apache.catalina.startup.Catalina.load(Catalina.java:610)
+	at org.apache.catalina.startup.Catalina.start(Catalina.java:672)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.apache.catalina.startup.Bootstrap.start(Bootstrap.java:322)
+	at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:456)
+
+Apr 25, 2013 6:38:11 PM org.apache.catalina.startup.Catalina load
+WARNING: Catalina.start using conf/server.xml: The markup in the document following the root element must be well-formed.
+Apr 25, 2013 6:38:11 PM org.apache.catalina.startup.Catalina start
+SEVERE: Cannot start server. Server instance is not configured.
+Apr 25, 2013 6:38:48 PM org.apache.catalina.core.AprLifecycleListener init
+INFO: The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: D:\Projects\website\Tomcat\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\Dell\Dell Wireless WLAN Card;C:\Program Files (x86)\Autodesk\Backburner\;C:\Program Files (x86)\QuickTime\QTSystem\;C:\Program Files (x86)\ATI Technologies\ATI.ACE\Core-Static;C:\Users\Vlad\AppData\Local\GitHub\PortableGit_93e8418133eb85e81a81e5e19c272776524496c6\bin;C:\Users\Vlad\AppData\Local\GitHub\PortableGit_93e8418133eb85e81a81e5e19c272776524496c6\cmd;C:\Users\Vlad\AppData\Local\GitHub\PortableGit_93e8418133eb85e81a81e5e19c272776524496c6\libexec\git-core;;.
+Apr 25, 2013 6:38:48 PM org.apache.coyote.AbstractProtocol init
+INFO: Initializing ProtocolHandler ["http-bio-8080"]
+Apr 25, 2013 6:38:48 PM org.apache.coyote.AbstractProtocol init
+INFO: Initializing ProtocolHandler ["ajp-bio-8009"]
+Apr 25, 2013 6:38:48 PM org.apache.catalina.startup.Catalina load
+INFO: Initialization processed in 478 ms
+Apr 25, 2013 6:38:48 PM org.apache.catalina.core.StandardService startInternal
+INFO: Starting service Catalina
+Apr 25, 2013 6:38:48 PM org.apache.catalina.core.StandardEngine startInternal
+INFO: Starting Servlet Engine: Apache Tomcat/7.0.39
+Apr 25, 2013 6:38:48 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory D:\Projects\website\Tomcat\webapps\docs
+Apr 25, 2013 6:38:48 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory D:\Projects\website\Tomcat\webapps\manager
+Apr 25, 2013 6:38:48 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory D:\Projects\website\Tomcat\webapps\ROOT
+Apr 25, 2013 6:38:48 PM org.apache.coyote.AbstractProtocol start
+INFO: Starting ProtocolHandler ["http-bio-8080"]
+Apr 25, 2013 6:38:48 PM org.apache.coyote.AbstractProtocol start
+INFO: Starting ProtocolHandler ["ajp-bio-8009"]
+Apr 25, 2013 6:38:48 PM org.apache.catalina.startup.Catalina start
+INFO: Server startup in 428 ms
+Apr 25, 2013 6:39:31 PM org.apache.coyote.AbstractProtocol pause
+INFO: Pausing ProtocolHandler ["http-bio-8080"]
+Apr 25, 2013 6:39:31 PM org.apache.coyote.AbstractProtocol pause
+INFO: Pausing ProtocolHandler ["ajp-bio-8009"]
+Apr 25, 2013 6:39:31 PM org.apache.catalina.core.StandardService stopInternal
+INFO: Stopping service Catalina
+Apr 25, 2013 6:39:31 PM org.apache.coyote.AbstractProtocol stop
+INFO: Stopping ProtocolHandler ["http-bio-8080"]
+Apr 25, 2013 6:39:31 PM org.apache.coyote.AbstractProtocol stop
+INFO: Stopping ProtocolHandler ["ajp-bio-8009"]
+Apr 25, 2013 6:39:35 PM org.apache.catalina.core.AprLifecycleListener init
+INFO: The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: D:\Projects\website\Tomcat\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\Dell\Dell Wireless WLAN Card;C:\Program Files (x86)\Autodesk\Backburner\;C:\Program Files (x86)\QuickTime\QTSystem\;C:\Program Files (x86)\ATI Technologies\ATI.ACE\Core-Static;C:\Users\Vlad\AppData\Local\GitHub\PortableGit_93e8418133eb85e81a81e5e19c272776524496c6\bin;C:\Users\Vlad\AppData\Local\GitHub\PortableGit_93e8418133eb85e81a81e5e19c272776524496c6\cmd;C:\Users\Vlad\AppData\Local\GitHub\PortableGit_93e8418133eb85e81a81e5e19c272776524496c6\libexec\git-core;;.
+Apr 25, 2013 6:39:35 PM org.apache.tomcat.util.digester.Digester fatalError
+SEVERE: Parse Fatal Error at line 150 column 2: The markup in the document following the root element must be well-formed.
+org.xml.sax.SAXParseException; systemId: file:/D:/Projects/website/Tomcat/conf/server.xml; lineNumber: 150; columnNumber: 2; The markup in the document following the root element must be well-formed.
+	at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.createSAXParseException(Unknown Source)
+	at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.fatalError(Unknown Source)
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(Unknown Source)
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(Unknown Source)
+	at com.sun.org.apache.xerces.internal.impl.XMLScanner.reportFatalError(Unknown Source)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl$TrailingMiscDriver.next(Unknown Source)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl.next(Unknown Source)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanDocument(Unknown Source)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(Unknown Source)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(Unknown Source)
+	at com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(Unknown Source)
+	at com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.parse(Unknown Source)
+	at com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl$JAXPSAXParser.parse(Unknown Source)
+	at org.apache.tomcat.util.digester.Digester.parse(Digester.java:1537)
+	at org.apache.catalina.startup.Catalina.load(Catalina.java:610)
+	at org.apache.catalina.startup.Catalina.load(Catalina.java:658)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.apache.catalina.startup.Bootstrap.load(Bootstrap.java:281)
+	at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:455)
+
+Apr 25, 2013 6:39:35 PM org.apache.catalina.startup.Catalina load
+WARNING: Catalina.start using conf/server.xml: The markup in the document following the root element must be well-formed.
+Apr 25, 2013 6:39:35 PM org.apache.coyote.AbstractProtocol init
+INFO: Initializing ProtocolHandler ["http-bio-8080"]
+Apr 25, 2013 6:39:35 PM org.apache.coyote.AbstractProtocol init
+INFO: Initializing ProtocolHandler ["ajp-bio-8009"]
+Apr 25, 2013 6:39:35 PM org.apache.catalina.core.StandardService startInternal
+INFO: Starting service Catalina
+Apr 25, 2013 6:39:35 PM org.apache.catalina.core.StandardEngine startInternal
+INFO: Starting Servlet Engine: Apache Tomcat/7.0.39
+Apr 25, 2013 6:39:35 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory D:\Projects\website\Tomcat\webapps\docs
+Apr 25, 2013 6:39:36 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory D:\Projects\website\Tomcat\webapps\manager
+Apr 25, 2013 6:39:36 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory D:\Projects\website\Tomcat\webapps\ROOT
+Apr 25, 2013 6:39:36 PM org.apache.coyote.AbstractProtocol start
+INFO: Starting ProtocolHandler ["http-bio-8080"]
+Apr 25, 2013 6:39:36 PM org.apache.coyote.AbstractProtocol start
+INFO: Starting ProtocolHandler ["ajp-bio-8009"]
+Apr 25, 2013 6:39:36 PM org.apache.catalina.startup.Catalina start
+INFO: Server startup in 482 ms
+Apr 25, 2013 6:40:13 PM org.apache.coyote.AbstractProtocol pause
+INFO: Pausing ProtocolHandler ["http-bio-8080"]
+Apr 25, 2013 6:40:13 PM org.apache.coyote.AbstractProtocol pause
+INFO: Pausing ProtocolHandler ["ajp-bio-8009"]
+Apr 25, 2013 6:40:13 PM org.apache.catalina.core.StandardService stopInternal
+INFO: Stopping service Catalina
+Apr 25, 2013 6:40:14 PM org.apache.coyote.AbstractProtocol stop
+INFO: Stopping ProtocolHandler ["http-bio-8080"]
+Apr 25, 2013 6:40:14 PM org.apache.coyote.AbstractProtocol stop
+INFO: Stopping ProtocolHandler ["ajp-bio-8009"]
+Apr 25, 2013 6:40:18 PM org.apache.tomcat.util.digester.Digester endElement
+WARNING:   No rules found matching 'Server/Service/Context'.
+Apr 25, 2013 6:40:18 PM org.apache.catalina.core.AprLifecycleListener init
+INFO: The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: D:\Projects\website\Tomcat\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\Dell\Dell Wireless WLAN Card;C:\Program Files (x86)\Autodesk\Backburner\;C:\Program Files (x86)\QuickTime\QTSystem\;C:\Program Files (x86)\ATI Technologies\ATI.ACE\Core-Static;C:\Users\Vlad\AppData\Local\GitHub\PortableGit_93e8418133eb85e81a81e5e19c272776524496c6\bin;C:\Users\Vlad\AppData\Local\GitHub\PortableGit_93e8418133eb85e81a81e5e19c272776524496c6\cmd;C:\Users\Vlad\AppData\Local\GitHub\PortableGit_93e8418133eb85e81a81e5e19c272776524496c6\libexec\git-core;;.
+Apr 25, 2013 6:40:19 PM org.apache.coyote.AbstractProtocol init
+INFO: Initializing ProtocolHandler ["http-bio-8080"]
+Apr 25, 2013 6:40:19 PM org.apache.coyote.AbstractProtocol init
+INFO: Initializing ProtocolHandler ["ajp-bio-8009"]
+Apr 25, 2013 6:40:19 PM org.apache.catalina.startup.Catalina load
+INFO: Initialization processed in 387 ms
+Apr 25, 2013 6:40:19 PM org.apache.catalina.core.StandardService startInternal
+INFO: Starting service Catalina
+Apr 25, 2013 6:40:19 PM org.apache.catalina.core.StandardEngine startInternal
+INFO: Starting Servlet Engine: Apache Tomcat/7.0.39
+Apr 25, 2013 6:40:19 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory D:\Projects\website\Tomcat\webapps\docs
+Apr 25, 2013 6:40:19 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory D:\Projects\website\Tomcat\webapps\manager
+Apr 25, 2013 6:40:19 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory D:\Projects\website\Tomcat\webapps\ROOT
+Apr 25, 2013 6:40:19 PM org.apache.coyote.AbstractProtocol start
+INFO: Starting ProtocolHandler ["http-bio-8080"]
+Apr 25, 2013 6:40:19 PM org.apache.coyote.AbstractProtocol start
+INFO: Starting ProtocolHandler ["ajp-bio-8009"]
+Apr 25, 2013 6:40:19 PM org.apache.catalina.startup.Catalina start
+INFO: Server startup in 338 ms
+Apr 25, 2013 6:46:40 PM org.apache.coyote.AbstractProtocol pause
+INFO: Pausing ProtocolHandler ["http-bio-8080"]
+Apr 25, 2013 6:46:40 PM org.apache.coyote.AbstractProtocol pause
+INFO: Pausing ProtocolHandler ["ajp-bio-8009"]
+Apr 25, 2013 6:46:40 PM org.apache.catalina.core.StandardService stopInternal
+INFO: Stopping service Catalina
+Apr 25, 2013 6:46:40 PM org.apache.coyote.AbstractProtocol stop
+INFO: Stopping ProtocolHandler ["http-bio-8080"]
+Apr 25, 2013 6:46:40 PM org.apache.coyote.AbstractProtocol stop
+INFO: Stopping ProtocolHandler ["ajp-bio-8009"]
+Apr 25, 2013 6:46:44 PM org.apache.tomcat.util.digester.Digester endElement
+WARNING:   No rules found matching 'Context'.
+Apr 25, 2013 6:46:44 PM org.apache.tomcat.util.digester.Digester fatalError
+SEVERE: Parse Fatal Error at line 31 column 2: The markup in the document following the root element must be well-formed.
+org.xml.sax.SAXParseException; systemId: file:/D:/Projects/website/Tomcat/conf/server.xml; lineNumber: 31; columnNumber: 2; The markup in the document following the root element must be well-formed.
+	at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.createSAXParseException(Unknown Source)
+	at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.fatalError(Unknown Source)
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(Unknown Source)
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(Unknown Source)
+	at com.sun.org.apache.xerces.internal.impl.XMLScanner.reportFatalError(Unknown Source)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl$TrailingMiscDriver.next(Unknown Source)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl.next(Unknown Source)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanDocument(Unknown Source)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(Unknown Source)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(Unknown Source)
+	at com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(Unknown Source)
+	at com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.parse(Unknown Source)
+	at com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl$JAXPSAXParser.parse(Unknown Source)
+	at org.apache.tomcat.util.digester.Digester.parse(Digester.java:1537)
+	at org.apache.catalina.startup.Catalina.load(Catalina.java:610)
+	at org.apache.catalina.startup.Catalina.load(Catalina.java:658)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.apache.catalina.startup.Bootstrap.load(Bootstrap.java:281)
+	at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:455)
+
+Apr 25, 2013 6:46:44 PM org.apache.catalina.startup.Catalina load
+WARNING: Catalina.start using conf/server.xml: The markup in the document following the root element must be well-formed.
+Apr 25, 2013 6:46:44 PM org.apache.tomcat.util.digester.Digester endElement
+WARNING:   No rules found matching 'Context'.
+Apr 25, 2013 6:46:44 PM org.apache.tomcat.util.digester.Digester fatalError
+SEVERE: Parse Fatal Error at line 31 column 2: The markup in the document following the root element must be well-formed.
+org.xml.sax.SAXParseException; systemId: file:/D:/Projects/website/Tomcat/conf/server.xml; lineNumber: 31; columnNumber: 2; The markup in the document following the root element must be well-formed.
+	at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.createSAXParseException(Unknown Source)
+	at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.fatalError(Unknown Source)
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(Unknown Source)
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(Unknown Source)
+	at com.sun.org.apache.xerces.internal.impl.XMLScanner.reportFatalError(Unknown Source)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl$TrailingMiscDriver.next(Unknown Source)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl.next(Unknown Source)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanDocument(Unknown Source)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(Unknown Source)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(Unknown Source)
+	at com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(Unknown Source)
+	at com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.parse(Unknown Source)
+	at com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl$JAXPSAXParser.parse(Unknown Source)
+	at org.apache.tomcat.util.digester.Digester.parse(Digester.java:1537)
+	at org.apache.catalina.startup.Catalina.load(Catalina.java:610)
+	at org.apache.catalina.startup.Catalina.start(Catalina.java:672)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.apache.catalina.startup.Bootstrap.start(Bootstrap.java:322)
+	at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:456)
+
+Apr 25, 2013 6:46:44 PM org.apache.catalina.startup.Catalina load
+WARNING: Catalina.start using conf/server.xml: The markup in the document following the root element must be well-formed.
+Apr 25, 2013 6:46:44 PM org.apache.catalina.startup.Catalina start
+SEVERE: Cannot start server. Server instance is not configured.
+Apr 25, 2013 6:48:08 PM org.apache.tomcat.util.digester.Digester endElement
+WARNING:   No rules found matching 'Context'.
+Apr 25, 2013 6:48:08 PM org.apache.tomcat.util.digester.Digester fatalError
+SEVERE: Parse Fatal Error at line 31 column 2: The markup in the document following the root element must be well-formed.
+org.xml.sax.SAXParseException; systemId: file:/D:/Projects/website/Tomcat/conf/server.xml; lineNumber: 31; columnNumber: 2; The markup in the document following the root element must be well-formed.
+	at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.createSAXParseException(Unknown Source)
+	at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.fatalError(Unknown Source)
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(Unknown Source)
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(Unknown Source)
+	at com.sun.org.apache.xerces.internal.impl.XMLScanner.reportFatalError(Unknown Source)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl$TrailingMiscDriver.next(Unknown Source)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl.next(Unknown Source)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanDocument(Unknown Source)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(Unknown Source)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(Unknown Source)
+	at com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(Unknown Source)
+	at com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.parse(Unknown Source)
+	at com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl$JAXPSAXParser.parse(Unknown Source)
+	at org.apache.tomcat.util.digester.Digester.parse(Digester.java:1537)
+	at org.apache.catalina.startup.Catalina.load(Catalina.java:610)
+	at org.apache.catalina.startup.Catalina.load(Catalina.java:658)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.apache.catalina.startup.Bootstrap.load(Bootstrap.java:281)
+	at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:455)
+
+Apr 25, 2013 6:48:08 PM org.apache.catalina.startup.Catalina load
+WARNING: Catalina.start using conf/server.xml: The markup in the document following the root element must be well-formed.
+Apr 25, 2013 6:48:08 PM org.apache.tomcat.util.digester.Digester endElement
+WARNING:   No rules found matching 'Context'.
+Apr 25, 2013 6:48:08 PM org.apache.tomcat.util.digester.Digester fatalError
+SEVERE: Parse Fatal Error at line 31 column 2: The markup in the document following the root element must be well-formed.
+org.xml.sax.SAXParseException; systemId: file:/D:/Projects/website/Tomcat/conf/server.xml; lineNumber: 31; columnNumber: 2; The markup in the document following the root element must be well-formed.
+	at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.createSAXParseException(Unknown Source)
+	at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.fatalError(Unknown Source)
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(Unknown Source)
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(Unknown Source)
+	at com.sun.org.apache.xerces.internal.impl.XMLScanner.reportFatalError(Unknown Source)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl$TrailingMiscDriver.next(Unknown Source)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl.next(Unknown Source)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanDocument(Unknown Source)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(Unknown Source)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(Unknown Source)
+	at com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(Unknown Source)
+	at com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.parse(Unknown Source)
+	at com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl$JAXPSAXParser.parse(Unknown Source)
+	at org.apache.tomcat.util.digester.Digester.parse(Digester.java:1537)
+	at org.apache.catalina.startup.Catalina.load(Catalina.java:610)
+	at org.apache.catalina.startup.Catalina.start(Catalina.java:672)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.apache.catalina.startup.Bootstrap.start(Bootstrap.java:322)
+	at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:456)
+
+Apr 25, 2013 6:48:08 PM org.apache.catalina.startup.Catalina load
+WARNING: Catalina.start using conf/server.xml: The markup in the document following the root element must be well-formed.
+Apr 25, 2013 6:48:08 PM org.apache.catalina.startup.Catalina start
+SEVERE: Cannot start server. Server instance is not configured.
+Apr 25, 2013 6:49:22 PM org.apache.catalina.core.AprLifecycleListener init
+INFO: The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: D:\Projects\website\Tomcat\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\Dell\Dell Wireless WLAN Card;C:\Program Files (x86)\Autodesk\Backburner\;C:\Program Files (x86)\QuickTime\QTSystem\;C:\Program Files (x86)\ATI Technologies\ATI.ACE\Core-Static;C:\Users\Vlad\AppData\Local\GitHub\PortableGit_93e8418133eb85e81a81e5e19c272776524496c6\bin;C:\Users\Vlad\AppData\Local\GitHub\PortableGit_93e8418133eb85e81a81e5e19c272776524496c6\cmd;C:\Users\Vlad\AppData\Local\GitHub\PortableGit_93e8418133eb85e81a81e5e19c272776524496c6\libexec\git-core;;.
+Apr 25, 2013 6:49:22 PM org.apache.tomcat.util.digester.Digester endElement
+WARNING:   No rules found matching 'Server/Service/Engine/Context'.
+Apr 25, 2013 6:49:22 PM org.apache.coyote.AbstractProtocol init
+INFO: Initializing ProtocolHandler ["http-bio-8080"]
+Apr 25, 2013 6:49:22 PM org.apache.coyote.AbstractProtocol init
+INFO: Initializing ProtocolHandler ["ajp-bio-8009"]
+Apr 25, 2013 6:49:22 PM org.apache.catalina.startup.Catalina load
+INFO: Initialization processed in 399 ms
+Apr 25, 2013 6:49:23 PM org.apache.catalina.core.StandardService startInternal
+INFO: Starting service Catalina
+Apr 25, 2013 6:49:23 PM org.apache.catalina.core.StandardEngine startInternal
+INFO: Starting Servlet Engine: Apache Tomcat/7.0.39
+Apr 25, 2013 6:49:23 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory D:\Projects\website\Tomcat\webapps\docs
+Apr 25, 2013 6:49:23 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory D:\Projects\website\Tomcat\webapps\manager
+Apr 25, 2013 6:49:23 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory D:\Projects\website\Tomcat\webapps\ROOT
+Apr 25, 2013 6:49:23 PM org.apache.coyote.AbstractProtocol start
+INFO: Starting ProtocolHandler ["http-bio-8080"]
+Apr 25, 2013 6:49:23 PM org.apache.coyote.AbstractProtocol start
+INFO: Starting ProtocolHandler ["ajp-bio-8009"]
+Apr 25, 2013 6:49:23 PM org.apache.catalina.startup.Catalina start
+INFO: Server startup in 315 ms
+Apr 25, 2013 6:51:54 PM org.apache.coyote.AbstractProtocol pause
+INFO: Pausing ProtocolHandler ["http-bio-8080"]
+Apr 25, 2013 6:51:54 PM org.apache.coyote.AbstractProtocol pause
+INFO: Pausing ProtocolHandler ["ajp-bio-8009"]
+Apr 25, 2013 6:51:54 PM org.apache.catalina.core.StandardService stopInternal
+INFO: Stopping service Catalina
+Apr 25, 2013 6:51:54 PM org.apache.coyote.AbstractProtocol stop
+INFO: Stopping ProtocolHandler ["http-bio-8080"]
+Apr 25, 2013 6:51:54 PM org.apache.coyote.AbstractProtocol stop
+INFO: Stopping ProtocolHandler ["ajp-bio-8009"]
+Apr 25, 2013 6:51:58 PM org.apache.tomcat.util.digester.Digester endElement
+WARNING:   No rules found matching 'Server/Service/Context'.
+Apr 25, 2013 6:51:58 PM org.apache.catalina.core.AprLifecycleListener init
+INFO: The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: D:\Projects\website\Tomcat\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\Dell\Dell Wireless WLAN Card;C:\Program Files (x86)\Autodesk\Backburner\;C:\Program Files (x86)\QuickTime\QTSystem\;C:\Program Files (x86)\ATI Technologies\ATI.ACE\Core-Static;C:\Users\Vlad\AppData\Local\GitHub\PortableGit_93e8418133eb85e81a81e5e19c272776524496c6\bin;C:\Users\Vlad\AppData\Local\GitHub\PortableGit_93e8418133eb85e81a81e5e19c272776524496c6\cmd;C:\Users\Vlad\AppData\Local\GitHub\PortableGit_93e8418133eb85e81a81e5e19c272776524496c6\libexec\git-core;;.
+Apr 25, 2013 6:51:59 PM org.apache.coyote.AbstractProtocol init
+INFO: Initializing ProtocolHandler ["http-bio-8080"]
+Apr 25, 2013 6:51:59 PM org.apache.coyote.AbstractProtocol init
+INFO: Initializing ProtocolHandler ["ajp-bio-8009"]
+Apr 25, 2013 6:51:59 PM org.apache.catalina.startup.Catalina load
+INFO: Initialization processed in 387 ms
+Apr 25, 2013 6:51:59 PM org.apache.catalina.core.StandardService startInternal
+INFO: Starting service Catalina
+Apr 25, 2013 6:51:59 PM org.apache.catalina.core.StandardEngine startInternal
+INFO: Starting Servlet Engine: Apache Tomcat/7.0.39
+Apr 25, 2013 6:51:59 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory D:\Projects\website\Tomcat\webapps\docs
+Apr 25, 2013 6:51:59 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory D:\Projects\website\Tomcat\webapps\manager
+Apr 25, 2013 6:51:59 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory D:\Projects\website\Tomcat\webapps\ROOT
+Apr 25, 2013 6:51:59 PM org.apache.coyote.AbstractProtocol start
+INFO: Starting ProtocolHandler ["http-bio-8080"]
+Apr 25, 2013 6:51:59 PM org.apache.coyote.AbstractProtocol start
+INFO: Starting ProtocolHandler ["ajp-bio-8009"]
+Apr 25, 2013 6:51:59 PM org.apache.catalina.startup.Catalina start
+INFO: Server startup in 313 ms
+Apr 25, 2013 6:52:23 PM org.apache.coyote.AbstractProtocol pause
+INFO: Pausing ProtocolHandler ["http-bio-8080"]
+Apr 25, 2013 6:52:23 PM org.apache.coyote.AbstractProtocol pause
+INFO: Pausing ProtocolHandler ["ajp-bio-8009"]
+Apr 25, 2013 6:52:23 PM org.apache.catalina.core.StandardService stopInternal
+INFO: Stopping service Catalina
+Apr 25, 2013 6:52:23 PM org.apache.coyote.AbstractProtocol stop
+INFO: Stopping ProtocolHandler ["http-bio-8080"]
+Apr 25, 2013 6:52:23 PM org.apache.coyote.AbstractProtocol stop
+INFO: Stopping ProtocolHandler ["ajp-bio-8009"]
+Apr 25, 2013 6:52:29 PM org.apache.tomcat.util.digester.Digester endElement
+WARNING:   No rules found matching 'Context'.
+Apr 25, 2013 6:52:29 PM org.apache.tomcat.util.digester.Digester fatalError
+SEVERE: Parse Fatal Error at line 31 column 2: The markup in the document following the root element must be well-formed.
+org.xml.sax.SAXParseException; systemId: file:/D:/Projects/website/Tomcat/conf/server.xml; lineNumber: 31; columnNumber: 2; The markup in the document following the root element must be well-formed.
+	at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.createSAXParseException(Unknown Source)
+	at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.fatalError(Unknown Source)
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(Unknown Source)
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(Unknown Source)
+	at com.sun.org.apache.xerces.internal.impl.XMLScanner.reportFatalError(Unknown Source)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl$TrailingMiscDriver.next(Unknown Source)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl.next(Unknown Source)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanDocument(Unknown Source)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(Unknown Source)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(Unknown Source)
+	at com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(Unknown Source)
+	at com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.parse(Unknown Source)
+	at com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl$JAXPSAXParser.parse(Unknown Source)
+	at org.apache.tomcat.util.digester.Digester.parse(Digester.java:1537)
+	at org.apache.catalina.startup.Catalina.load(Catalina.java:610)
+	at org.apache.catalina.startup.Catalina.load(Catalina.java:658)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.apache.catalina.startup.Bootstrap.load(Bootstrap.java:281)
+	at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:455)
+
+Apr 25, 2013 6:52:29 PM org.apache.catalina.startup.Catalina load
+WARNING: Catalina.start using conf/server.xml: The markup in the document following the root element must be well-formed.
+Apr 25, 2013 6:52:29 PM org.apache.tomcat.util.digester.Digester endElement
+WARNING:   No rules found matching 'Context'.
+Apr 25, 2013 6:52:29 PM org.apache.tomcat.util.digester.Digester fatalError
+SEVERE: Parse Fatal Error at line 31 column 2: The markup in the document following the root element must be well-formed.
+org.xml.sax.SAXParseException; systemId: file:/D:/Projects/website/Tomcat/conf/server.xml; lineNumber: 31; columnNumber: 2; The markup in the document following the root element must be well-formed.
+	at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.createSAXParseException(Unknown Source)
+	at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.fatalError(Unknown Source)
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(Unknown Source)
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(Unknown Source)
+	at com.sun.org.apache.xerces.internal.impl.XMLScanner.reportFatalError(Unknown Source)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl$TrailingMiscDriver.next(Unknown Source)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl.next(Unknown Source)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanDocument(Unknown Source)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(Unknown Source)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(Unknown Source)
+	at com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(Unknown Source)
+	at com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.parse(Unknown Source)
+	at com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl$JAXPSAXParser.parse(Unknown Source)
+	at org.apache.tomcat.util.digester.Digester.parse(Digester.java:1537)
+	at org.apache.catalina.startup.Catalina.load(Catalina.java:610)
+	at org.apache.catalina.startup.Catalina.start(Catalina.java:672)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.apache.catalina.startup.Bootstrap.start(Bootstrap.java:322)
+	at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:456)
+
+Apr 25, 2013 6:52:29 PM org.apache.catalina.startup.Catalina load
+WARNING: Catalina.start using conf/server.xml: The markup in the document following the root element must be well-formed.
+Apr 25, 2013 6:52:29 PM org.apache.catalina.startup.Catalina start
+SEVERE: Cannot start server. Server instance is not configured.
+Apr 25, 2013 6:53:30 PM org.apache.catalina.core.AprLifecycleListener init
+INFO: The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: D:\Projects\website\Tomcat\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\Dell\Dell Wireless WLAN Card;C:\Program Files (x86)\Autodesk\Backburner\;C:\Program Files (x86)\QuickTime\QTSystem\;C:\Program Files (x86)\ATI Technologies\ATI.ACE\Core-Static;C:\Users\Vlad\AppData\Local\GitHub\PortableGit_93e8418133eb85e81a81e5e19c272776524496c6\bin;C:\Users\Vlad\AppData\Local\GitHub\PortableGit_93e8418133eb85e81a81e5e19c272776524496c6\cmd;C:\Users\Vlad\AppData\Local\GitHub\PortableGit_93e8418133eb85e81a81e5e19c272776524496c6\libexec\git-core;;.
+Apr 25, 2013 6:53:30 PM org.apache.coyote.AbstractProtocol init
+INFO: Initializing ProtocolHandler ["http-bio-8080"]
+Apr 25, 2013 6:53:30 PM org.apache.coyote.AbstractProtocol init
+INFO: Initializing ProtocolHandler ["ajp-bio-8009"]
+Apr 25, 2013 6:53:30 PM org.apache.catalina.startup.Catalina load
+INFO: Initialization processed in 383 ms
+Apr 25, 2013 6:53:30 PM org.apache.catalina.core.StandardService startInternal
+INFO: Starting service Catalina
+Apr 25, 2013 6:53:30 PM org.apache.catalina.core.StandardEngine startInternal
+INFO: Starting Servlet Engine: Apache Tomcat/7.0.39
+Apr 25, 2013 6:53:30 PM org.apache.coyote.AbstractProtocol start
+INFO: Starting ProtocolHandler ["http-bio-8080"]
+Apr 25, 2013 6:53:30 PM org.apache.coyote.AbstractProtocol start
+INFO: Starting ProtocolHandler ["ajp-bio-8009"]
+Apr 25, 2013 6:53:30 PM org.apache.catalina.startup.Catalina start
+INFO: Server startup in 35 ms
+Apr 25, 2013 6:56:19 PM org.apache.coyote.AbstractProtocol pause
+INFO: Pausing ProtocolHandler ["http-bio-8080"]
+Apr 25, 2013 6:56:19 PM org.apache.coyote.AbstractProtocol pause
+INFO: Pausing ProtocolHandler ["ajp-bio-8009"]
+Apr 25, 2013 6:56:19 PM org.apache.catalina.core.StandardService stopInternal
+INFO: Stopping service Catalina
+Apr 25, 2013 6:56:19 PM org.apache.coyote.AbstractProtocol stop
+INFO: Stopping ProtocolHandler ["http-bio-8080"]
+Apr 25, 2013 6:56:19 PM org.apache.coyote.AbstractProtocol stop
+INFO: Stopping ProtocolHandler ["ajp-bio-8009"]
+Apr 25, 2013 6:56:23 PM org.apache.catalina.core.AprLifecycleListener init
+INFO: The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: D:\Projects\website\Tomcat\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\Dell\Dell Wireless WLAN Card;C:\Program Files (x86)\Autodesk\Backburner\;C:\Program Files (x86)\QuickTime\QTSystem\;C:\Program Files (x86)\ATI Technologies\ATI.ACE\Core-Static;C:\Users\Vlad\AppData\Local\GitHub\PortableGit_93e8418133eb85e81a81e5e19c272776524496c6\bin;C:\Users\Vlad\AppData\Local\GitHub\PortableGit_93e8418133eb85e81a81e5e19c272776524496c6\cmd;C:\Users\Vlad\AppData\Local\GitHub\PortableGit_93e8418133eb85e81a81e5e19c272776524496c6\libexec\git-core;;.
+Apr 25, 2013 6:56:24 PM org.apache.coyote.AbstractProtocol init
+INFO: Initializing ProtocolHandler ["http-bio-8080"]
+Apr 25, 2013 6:56:24 PM org.apache.coyote.AbstractProtocol init
+INFO: Initializing ProtocolHandler ["ajp-bio-8009"]
+Apr 25, 2013 6:56:24 PM org.apache.catalina.startup.Catalina load
+INFO: Initialization processed in 400 ms
+Apr 25, 2013 6:56:24 PM org.apache.catalina.core.StandardService startInternal
+INFO: Starting service Catalina
+Apr 25, 2013 6:56:24 PM org.apache.catalina.core.StandardEngine startInternal
+INFO: Starting Servlet Engine: Apache Tomcat/7.0.39
+Apr 25, 2013 6:56:24 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory D:\Projects\website\Tomcat\webapps\docs
+Apr 25, 2013 6:56:24 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory D:\Projects\website\Tomcat\webapps\manager
+Apr 25, 2013 6:56:24 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory D:\Projects\website\Tomcat\webapps\ROOT
+Apr 25, 2013 6:56:24 PM org.apache.coyote.AbstractProtocol start
+INFO: Starting ProtocolHandler ["http-bio-8080"]
+Apr 25, 2013 6:56:24 PM org.apache.coyote.AbstractProtocol start
+INFO: Starting ProtocolHandler ["ajp-bio-8009"]
+Apr 25, 2013 6:56:24 PM org.apache.catalina.startup.Catalina start
+INFO: Server startup in 318 ms
+Apr 25, 2013 6:56:54 PM org.apache.coyote.AbstractProtocol pause
+INFO: Pausing ProtocolHandler ["http-bio-8080"]
+Apr 25, 2013 6:56:54 PM org.apache.coyote.AbstractProtocol pause
+INFO: Pausing ProtocolHandler ["ajp-bio-8009"]
+Apr 25, 2013 6:56:54 PM org.apache.catalina.core.StandardService stopInternal
+INFO: Stopping service Catalina
+Apr 25, 2013 6:56:54 PM org.apache.coyote.AbstractProtocol stop
+INFO: Stopping ProtocolHandler ["http-bio-8080"]
+Apr 25, 2013 6:56:54 PM org.apache.coyote.AbstractProtocol stop
+INFO: Stopping ProtocolHandler ["ajp-bio-8009"]
+Apr 25, 2013 6:56:58 PM org.apache.catalina.core.AprLifecycleListener init
+INFO: The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: D:\Projects\website\Tomcat\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\Dell\Dell Wireless WLAN Card;C:\Program Files (x86)\Autodesk\Backburner\;C:\Program Files (x86)\QuickTime\QTSystem\;C:\Program Files (x86)\ATI Technologies\ATI.ACE\Core-Static;C:\Users\Vlad\AppData\Local\GitHub\PortableGit_93e8418133eb85e81a81e5e19c272776524496c6\bin;C:\Users\Vlad\AppData\Local\GitHub\PortableGit_93e8418133eb85e81a81e5e19c272776524496c6\cmd;C:\Users\Vlad\AppData\Local\GitHub\PortableGit_93e8418133eb85e81a81e5e19c272776524496c6\libexec\git-core;;.
+Apr 25, 2013 6:56:58 PM org.apache.tomcat.util.digester.Digester fatalError
+SEVERE: Parse Fatal Error at line 149 column 2: The markup in the document following the root element must be well-formed.
+org.xml.sax.SAXParseException; systemId: file:/D:/Projects/website/Tomcat/conf/server.xml; lineNumber: 149; columnNumber: 2; The markup in the document following the root element must be well-formed.
+	at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.createSAXParseException(Unknown Source)
+	at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.fatalError(Unknown Source)
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(Unknown Source)
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(Unknown Source)
+	at com.sun.org.apache.xerces.internal.impl.XMLScanner.reportFatalError(Unknown Source)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl$TrailingMiscDriver.next(Unknown Source)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl.next(Unknown Source)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanDocument(Unknown Source)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(Unknown Source)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(Unknown Source)
+	at com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(Unknown Source)
+	at com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.parse(Unknown Source)
+	at com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl$JAXPSAXParser.parse(Unknown Source)
+	at org.apache.tomcat.util.digester.Digester.parse(Digester.java:1537)
+	at org.apache.catalina.startup.Catalina.load(Catalina.java:610)
+	at org.apache.catalina.startup.Catalina.load(Catalina.java:658)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.apache.catalina.startup.Bootstrap.load(Bootstrap.java:281)
+	at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:455)
+
+Apr 25, 2013 6:56:58 PM org.apache.catalina.startup.Catalina load
+WARNING: Catalina.start using conf/server.xml: The markup in the document following the root element must be well-formed.
+Apr 25, 2013 6:56:58 PM org.apache.coyote.AbstractProtocol init
+INFO: Initializing ProtocolHandler ["http-bio-8080"]
+Apr 25, 2013 6:56:58 PM org.apache.coyote.AbstractProtocol init
+INFO: Initializing ProtocolHandler ["ajp-bio-8009"]
+Apr 25, 2013 6:56:58 PM org.apache.catalina.core.StandardService startInternal
+INFO: Starting service Catalina
+Apr 25, 2013 6:56:58 PM org.apache.catalina.core.StandardEngine startInternal
+INFO: Starting Servlet Engine: Apache Tomcat/7.0.39
+Apr 25, 2013 6:56:58 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory D:\Projects\website\Tomcat\webapps\docs
+Apr 25, 2013 6:56:58 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory D:\Projects\website\Tomcat\webapps\manager
+Apr 25, 2013 6:56:58 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory D:\Projects\website\Tomcat\webapps\ROOT
+Apr 25, 2013 6:56:58 PM org.apache.coyote.AbstractProtocol start
+INFO: Starting ProtocolHandler ["http-bio-8080"]
+Apr 25, 2013 6:56:58 PM org.apache.coyote.AbstractProtocol start
+INFO: Starting ProtocolHandler ["ajp-bio-8009"]
+Apr 25, 2013 6:56:58 PM org.apache.catalina.startup.Catalina start
+INFO: Server startup in 426 ms
+Apr 25, 2013 7:02:00 PM org.apache.coyote.AbstractProtocol pause
+INFO: Pausing ProtocolHandler ["http-bio-8080"]
+Apr 25, 2013 7:02:01 PM org.apache.coyote.AbstractProtocol pause
+INFO: Pausing ProtocolHandler ["ajp-bio-8009"]
+Apr 25, 2013 7:02:01 PM org.apache.catalina.core.StandardService stopInternal
+INFO: Stopping service Catalina
+Apr 25, 2013 7:02:01 PM org.apache.coyote.AbstractProtocol stop
+INFO: Stopping ProtocolHandler ["http-bio-8080"]
+Apr 25, 2013 7:02:01 PM org.apache.coyote.AbstractProtocol stop
+INFO: Stopping ProtocolHandler ["ajp-bio-8009"]
+Apr 25, 2013 7:02:06 PM org.apache.catalina.core.AprLifecycleListener init
+INFO: The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: D:\Projects\website\Tomcat\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\Dell\Dell Wireless WLAN Card;C:\Program Files (x86)\Autodesk\Backburner\;C:\Program Files (x86)\QuickTime\QTSystem\;C:\Program Files (x86)\ATI Technologies\ATI.ACE\Core-Static;C:\Users\Vlad\AppData\Local\GitHub\PortableGit_93e8418133eb85e81a81e5e19c272776524496c6\bin;C:\Users\Vlad\AppData\Local\GitHub\PortableGit_93e8418133eb85e81a81e5e19c272776524496c6\cmd;C:\Users\Vlad\AppData\Local\GitHub\PortableGit_93e8418133eb85e81a81e5e19c272776524496c6\libexec\git-core;;.
+Apr 25, 2013 7:02:07 PM org.apache.coyote.AbstractProtocol init
+INFO: Initializing ProtocolHandler ["http-bio-8080"]
+Apr 25, 2013 7:02:07 PM org.apache.coyote.AbstractProtocol init
+INFO: Initializing ProtocolHandler ["ajp-bio-8009"]
+Apr 25, 2013 7:02:07 PM org.apache.catalina.startup.Catalina load
+INFO: Initialization processed in 403 ms
+Apr 25, 2013 7:02:07 PM org.apache.catalina.core.StandardService startInternal
+INFO: Starting service Catalina
+Apr 25, 2013 7:02:07 PM org.apache.catalina.core.StandardEngine startInternal
+INFO: Starting Servlet Engine: Apache Tomcat/7.0.39
+Apr 25, 2013 7:02:07 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory D:\Projects\website\Tomcat\webapps\docs
+Apr 25, 2013 7:02:07 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory D:\Projects\website\Tomcat\webapps\manager
+Apr 25, 2013 7:02:07 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory D:\Projects\website\Tomcat\webapps\ROOT
+Apr 25, 2013 7:02:07 PM org.apache.coyote.AbstractProtocol start
+INFO: Starting ProtocolHandler ["http-bio-8080"]
+Apr 25, 2013 7:02:07 PM org.apache.coyote.AbstractProtocol start
+INFO: Starting ProtocolHandler ["ajp-bio-8009"]
+Apr 25, 2013 7:02:07 PM org.apache.catalina.startup.Catalina start
+INFO: Server startup in 320 ms
+Apr 25, 2013 7:06:32 PM org.apache.coyote.AbstractProtocol pause
+INFO: Pausing ProtocolHandler ["http-bio-8080"]
+Apr 25, 2013 7:06:32 PM org.apache.coyote.AbstractProtocol pause
+INFO: Pausing ProtocolHandler ["ajp-bio-8009"]
+Apr 25, 2013 7:06:32 PM org.apache.catalina.core.StandardService stopInternal
+INFO: Stopping service Catalina
+Apr 25, 2013 7:06:32 PM org.apache.coyote.AbstractProtocol stop
+INFO: Stopping ProtocolHandler ["http-bio-8080"]
+Apr 25, 2013 7:06:32 PM org.apache.coyote.AbstractProtocol stop
+INFO: Stopping ProtocolHandler ["ajp-bio-8009"]
+Apr 25, 2013 7:06:36 PM org.apache.catalina.core.AprLifecycleListener init
+INFO: The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: D:\Projects\website\Tomcat\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\Dell\Dell Wireless WLAN Card;C:\Program Files (x86)\Autodesk\Backburner\;C:\Program Files (x86)\QuickTime\QTSystem\;C:\Program Files (x86)\ATI Technologies\ATI.ACE\Core-Static;C:\Users\Vlad\AppData\Local\GitHub\PortableGit_93e8418133eb85e81a81e5e19c272776524496c6\bin;C:\Users\Vlad\AppData\Local\GitHub\PortableGit_93e8418133eb85e81a81e5e19c272776524496c6\cmd;C:\Users\Vlad\AppData\Local\GitHub\PortableGit_93e8418133eb85e81a81e5e19c272776524496c6\libexec\git-core;;.
+Apr 25, 2013 7:06:36 PM org.apache.tomcat.util.digester.Digester fatalError
+SEVERE: Parse Fatal Error at line 141 column 9: The element type "Engine" must be terminated by the matching end-tag "</Engine>".
+org.xml.sax.SAXParseException; systemId: file:/D:/Projects/website/Tomcat/conf/server.xml; lineNumber: 141; columnNumber: 9; The element type "Engine" must be terminated by the matching end-tag "</Engine>".
+	at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.createSAXParseException(Unknown Source)
+	at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.fatalError(Unknown Source)
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(Unknown Source)
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(Unknown Source)
+	at com.sun.org.apache.xerces.internal.impl.XMLScanner.reportFatalError(Unknown Source)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanEndElement(Unknown Source)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl$FragmentContentDriver.next(Unknown Source)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl.next(Unknown Source)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanDocument(Unknown Source)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(Unknown Source)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(Unknown Source)
+	at com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(Unknown Source)
+	at com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.parse(Unknown Source)
+	at com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl$JAXPSAXParser.parse(Unknown Source)
+	at org.apache.tomcat.util.digester.Digester.parse(Digester.java:1537)
+	at org.apache.catalina.startup.Catalina.load(Catalina.java:610)
+	at org.apache.catalina.startup.Catalina.load(Catalina.java:658)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.apache.catalina.startup.Bootstrap.load(Bootstrap.java:281)
+	at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:455)
+
+Apr 25, 2013 7:06:36 PM org.apache.catalina.startup.Catalina load
+WARNING: Catalina.start using conf/server.xml: The element type "Engine" must be terminated by the matching end-tag "</Engine>".
+Apr 25, 2013 7:06:36 PM org.apache.tomcat.util.digester.Digester fatalError
+SEVERE: Parse Fatal Error at line 141 column 9: The element type "Engine" must be terminated by the matching end-tag "</Engine>".
+org.xml.sax.SAXParseException; systemId: file:/D:/Projects/website/Tomcat/conf/server.xml; lineNumber: 141; columnNumber: 9; The element type "Engine" must be terminated by the matching end-tag "</Engine>".
+	at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.createSAXParseException(Unknown Source)
+	at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.fatalError(Unknown Source)
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(Unknown Source)
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(Unknown Source)
+	at com.sun.org.apache.xerces.internal.impl.XMLScanner.reportFatalError(Unknown Source)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanEndElement(Unknown Source)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl$FragmentContentDriver.next(Unknown Source)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl.next(Unknown Source)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanDocument(Unknown Source)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(Unknown Source)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(Unknown Source)
+	at com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(Unknown Source)
+	at com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.parse(Unknown Source)
+	at com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl$JAXPSAXParser.parse(Unknown Source)
+	at org.apache.tomcat.util.digester.Digester.parse(Digester.java:1537)
+	at org.apache.catalina.startup.Catalina.load(Catalina.java:610)
+	at org.apache.catalina.startup.Catalina.start(Catalina.java:672)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.apache.catalina.startup.Bootstrap.start(Bootstrap.java:322)
+	at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:456)
+
+Apr 25, 2013 7:06:36 PM org.apache.catalina.startup.Catalina load
+WARNING: Catalina.start using conf/server.xml: The element type "Engine" must be terminated by the matching end-tag "</Engine>".
+Apr 25, 2013 7:06:36 PM org.apache.catalina.startup.Catalina start
+SEVERE: Cannot start server. Server instance is not configured.
+Apr 25, 2013 7:07:18 PM org.apache.catalina.core.AprLifecycleListener init
+INFO: The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: D:\Projects\website\Tomcat\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\Dell\Dell Wireless WLAN Card;C:\Program Files (x86)\Autodesk\Backburner\;C:\Program Files (x86)\QuickTime\QTSystem\;C:\Program Files (x86)\ATI Technologies\ATI.ACE\Core-Static;C:\Users\Vlad\AppData\Local\GitHub\PortableGit_93e8418133eb85e81a81e5e19c272776524496c6\bin;C:\Users\Vlad\AppData\Local\GitHub\PortableGit_93e8418133eb85e81a81e5e19c272776524496c6\cmd;C:\Users\Vlad\AppData\Local\GitHub\PortableGit_93e8418133eb85e81a81e5e19c272776524496c6\libexec\git-core;;.
+Apr 25, 2013 7:07:18 PM org.apache.tomcat.util.digester.SetPropertiesRule begin
+WARNING: [SetPropertiesRule]{Server/Service/Engine/Host/Context} Setting property 'debug' to '0' did not find a matching property.
+Apr 25, 2013 7:07:18 PM org.apache.coyote.AbstractProtocol init
+INFO: Initializing ProtocolHandler ["http-bio-8080"]
+Apr 25, 2013 7:07:18 PM org.apache.coyote.AbstractProtocol init
+INFO: Initializing ProtocolHandler ["ajp-bio-8009"]
+Apr 25, 2013 7:07:18 PM org.apache.catalina.startup.Catalina load
+INFO: Initialization processed in 479 ms
+Apr 25, 2013 7:07:18 PM org.apache.catalina.core.StandardService startInternal
+INFO: Starting service Catalina
+Apr 25, 2013 7:07:18 PM org.apache.catalina.core.StandardEngine startInternal
+INFO: Starting Servlet Engine: Apache Tomcat/7.0.39
+Apr 25, 2013 7:07:19 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory D:\Projects\website\Tomcat\webapps\docs
+Apr 25, 2013 7:07:19 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory D:\Projects\website\Tomcat\webapps\manager
+Apr 25, 2013 7:07:19 PM org.apache.coyote.AbstractProtocol start
+INFO: Starting ProtocolHandler ["http-bio-8080"]
+Apr 25, 2013 7:07:19 PM org.apache.coyote.AbstractProtocol start
+INFO: Starting ProtocolHandler ["ajp-bio-8009"]
+Apr 25, 2013 7:07:19 PM org.apache.catalina.startup.Catalina start
+INFO: Server startup in 370 ms

@@ -27,5 +27,8 @@ ResultSet rs = st.executeQuery("select forenames, surnames from people");
 <% } else { %>
 <p>Duck is off the menu.</p>
 <% } %>
+<% for (int n=0; n<10; n++) { %>
+<p>The square of <%= n %> is <%= n*n %></p>
+<% } %>
 </body>
 </html>

@@ -24,3 +24,10 @@
 [2013-04-25 21:52:07] [info]  [ 5908] Running 'Tomcat7' Service...
 [2013-04-25 21:52:07] [info]  [ 5160] Starting service...
 [2013-04-25 21:52:09] [info]  [ 5160] Service started in 1087 ms.
+[2013-04-25 22:22:32] [info]  [ 4192] Console SHUTDOWN event signaled
+[2013-04-25 22:22:32] [info]  [ 4192] Stopping service...
+[2013-04-25 22:22:33] [info]  [ 5908] Run service finished.
+[2013-04-25 22:22:33] [error] [ 4192] Failed to set service status
+[2013-04-25 22:22:33] [error] [ 4192] The handle is invalid.
+[2013-04-25 22:22:33] [info]  [ 4192] Service stopped.
+[2013-04-25 22:22:33] [info]  [ 5908] Commons Daemon procrun finished

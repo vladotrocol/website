@@ -10,7 +10,11 @@
 
 <form action="db-action.jsp">
 <p>
+<p>Query</p>
 <textarea name="sql" rows="5" cols="40">
+</textarea>
+<p>Update</p>
+<textarea name="sql2" rows="5" cols="40">
 </textarea>
 </p>
 <p>

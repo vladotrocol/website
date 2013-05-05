@@ -9,8 +9,8 @@
 <body>
 <%@ page import="com.otrocol.app.*" %>
 <%
-	FormReader newForm = new FormReader(pageContext, request, response, out);
-	response.sendRedirect("index.html");
+	Mailler myemail = new Mailler();
+	myemail.send();
 %>
 </body>
 </html>

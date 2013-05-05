@@ -1,9 +1,20 @@
-May 05, 2013 6:32:51 PM org.apache.catalina.core.StandardWrapperValve invoke
-SEVERE: Servlet.service() for servlet [jsp] in context with path [] threw exception [javax.servlet.ServletException: java.lang.NoClassDefFoundError: javax/mail/Address] with root cause
-java.lang.ClassNotFoundException: javax.mail.Address
-	at org.apache.catalina.loader.WebappClassLoader.loadClass(WebappClassLoader.java:1713)
-	at org.apache.catalina.loader.WebappClassLoader.loadClass(WebappClassLoader.java:1558)
-	at org.apache.jsp.actions.sendEmail_jsp._jspService(sendEmail_jsp.java:74)
+May 05, 2013 9:53:51 PM org.apache.catalina.core.StandardWrapperValve invoke
+SEVERE: Servlet.service() for servlet [jsp] in context with path [] threw exception [An exception occurred processing JSP page /index.jsp at line 19
+
+16:     <a href="registerPage.html">Register</a>
+17:     <a href="loginPage.html">Login</a>
+18:     <%}else{
+19:     Details d = new Details(id);
+20:     %>
+21: 
+22:     <%
+
+
+Stacktrace:] with root cause
+java.lang.NullPointerException
+	at com.otrocol.app.Db.getRM(Db.java:68)
+	at com.otrocol.app.Details.<init>(Details.java:14)
+	at org.apache.jsp.index_jsp._jspService(index_jsp.java:84)
 	at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:70)
 	at javax.servlet.http.HttpServlet.service(HttpServlet.java:728)
 	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:432)
@@ -35,16 +46,152 @@ java.lang.ClassNotFoundException: javax.mail.Address
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
 	at java.lang.Thread.run(Unknown Source)
 
-May 05, 2013 6:40:32 PM org.apache.catalina.core.ApplicationContext log
+May 05, 2013 9:54:39 PM org.apache.catalina.core.ApplicationContext log
 INFO: org.tuckey.web.filters.urlrewrite.UrlRewriteFilter INFO: destroy called
-May 05, 2013 6:40:33 PM org.apache.catalina.core.ApplicationContext log
+May 05, 2013 9:54:44 PM org.apache.catalina.core.ApplicationContext log
 INFO: org.tuckey.web.filters.urlrewrite.UrlRewriteFilter INFO: loaded (conf ok)
-May 05, 2013 6:40:37 PM org.apache.catalina.core.StandardWrapperValve invoke
-SEVERE: Servlet.service() for servlet [jsp] in context with path [] threw exception [javax.servlet.ServletException: java.lang.NoClassDefFoundError: javax/mail/Address] with root cause
-java.lang.ClassNotFoundException: javax.mail.Address
-	at org.apache.catalina.loader.WebappClassLoader.loadClass(WebappClassLoader.java:1713)
-	at org.apache.catalina.loader.WebappClassLoader.loadClass(WebappClassLoader.java:1558)
-	at org.apache.jsp.actions.sendEmail_jsp._jspService(sendEmail_jsp.java:74)
+May 05, 2013 9:56:01 PM org.apache.catalina.core.StandardWrapperValve invoke
+SEVERE: Servlet.service() for servlet [jsp] in context with path [] threw exception [Unable to compile class for JSP: 
+
+An error occurred at line: 20 in the jsp file: /index.jsp
+VLAUES cannot be resolved or is not a field
+17:     <a href="loginPage.html">Login</a>
+18:     <%}else{
+19:     Details d = new Details(id);
+20:     String user = d.VLAUES.get("username");
+21:     out.print(user);
+22:     %>
+23: 
+
+
+Stacktrace:] with root cause
+org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: 20 in the jsp file: /index.jsp
+VLAUES cannot be resolved or is not a field
+17:     <a href="loginPage.html">Login</a>
+18:     <%}else{
+19:     Details d = new Details(id);
+20:     String user = d.VLAUES.get("username");
+21:     out.print(user);
+22:     %>
+23: 
+
+
+Stacktrace:
+	at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:103)
+	at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:331)
+	at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:468)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:378)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:353)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:340)
+	at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:646)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:357)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:390)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:334)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:728)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:305)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.tuckey.web.filters.urlrewrite.RuleChain.handleRewrite(RuleChain.java:176)
+	at org.tuckey.web.filters.urlrewrite.RuleChain.doRules(RuleChain.java:145)
+	at org.tuckey.web.filters.urlrewrite.UrlRewriter.processRequest(UrlRewriter.java:92)
+	at org.tuckey.web.filters.urlrewrite.UrlRewriteFilter.doFilter(UrlRewriteFilter.java:394)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at filters.ContentFilter.doFilter(ContentFilter.java:64)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:222)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:123)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:171)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:99)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:947)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:118)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:408)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1009)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:589)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:312)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+
+May 05, 2013 9:56:50 PM org.apache.catalina.core.StandardWrapperValve invoke
+SEVERE: Servlet.service() for servlet [jsp] in context with path [] threw exception [Unable to compile class for JSP: 
+
+An error occurred at line: 20 in the jsp file: /index.jsp
+The method get(Object) in the type HashMap<String,String> is not applicable for the arguments (String, String)
+17:     <a href="loginPage.html">Login</a>
+18:     <%}else{
+19:     Details d = new Details(id);
+20:     String user = d.VALUES.get(id,"username");
+21:     out.print(user);
+22:     %>
+23: 
+
+
+Stacktrace:] with root cause
+org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: 20 in the jsp file: /index.jsp
+The method get(Object) in the type HashMap<String,String> is not applicable for the arguments (String, String)
+17:     <a href="loginPage.html">Login</a>
+18:     <%}else{
+19:     Details d = new Details(id);
+20:     String user = d.VALUES.get(id,"username");
+21:     out.print(user);
+22:     %>
+23: 
+
+
+Stacktrace:
+	at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:103)
+	at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:331)
+	at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:468)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:378)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:353)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:340)
+	at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:646)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:357)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:390)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:334)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:728)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:305)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.tuckey.web.filters.urlrewrite.RuleChain.handleRewrite(RuleChain.java:176)
+	at org.tuckey.web.filters.urlrewrite.RuleChain.doRules(RuleChain.java:145)
+	at org.tuckey.web.filters.urlrewrite.UrlRewriter.processRequest(UrlRewriter.java:92)
+	at org.tuckey.web.filters.urlrewrite.UrlRewriteFilter.doFilter(UrlRewriteFilter.java:394)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at filters.ContentFilter.doFilter(ContentFilter.java:64)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:222)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:123)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:171)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:99)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:947)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:118)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:408)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1009)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:589)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:312)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+
+May 05, 2013 10:05:14 PM org.apache.catalina.core.ApplicationContext log
+INFO: org.tuckey.web.filters.urlrewrite.UrlRewriteFilter INFO: destroy called
+May 05, 2013 10:05:15 PM org.apache.catalina.core.ApplicationContext log
+INFO: org.tuckey.web.filters.urlrewrite.UrlRewriteFilter INFO: loaded (conf ok)
+May 05, 2013 10:06:49 PM org.apache.catalina.core.ApplicationContext log
+INFO: org.tuckey.web.filters.urlrewrite.UrlRewriteFilter INFO: destroy called
+May 05, 2013 10:06:53 PM org.apache.catalina.core.ApplicationContext log
+INFO: org.tuckey.web.filters.urlrewrite.UrlRewriteFilter INFO: loaded (conf ok)
+May 05, 2013 10:07:02 PM org.apache.catalina.core.StandardWrapperValve invoke
+SEVERE: Servlet.service() for servlet [jsp] in context with path [] threw exception [javax.servlet.ServletException: java.lang.NoSuchMethodError: com.otrocol.app.Details.Print(Ljavax/servlet/jsp/JspWriter;)V] with root cause
+java.lang.NoSuchMethodError: com.otrocol.app.Details.Print(Ljavax/servlet/jsp/JspWriter;)V
+	at org.apache.jsp.index_jsp._jspService(index_jsp.java:85)
 	at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:70)
 	at javax.servlet.http.HttpServlet.service(HttpServlet.java:728)
 	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:432)
@@ -76,35 +223,1456 @@ java.lang.ClassNotFoundException: javax.mail.Address
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
 	at java.lang.Thread.run(Unknown Source)
 
-May 05, 2013 6:42:23 PM org.apache.catalina.core.ApplicationContext log
+May 05, 2013 10:12:56 PM org.apache.catalina.core.StandardWrapperValve invoke
+SEVERE: Servlet.service() for servlet [jsp] in context with path [] threw exception [Unable to compile class for JSP: 
+
+An error occurred at line: 24 in the jsp file: /index.jsp
+Syntax error, insert ";" to complete Statement
+21:         <h2>Welcome <%= d.get("FIRSTNAME")%></h2>
+22:         <p>Your age is <%= d.get("AGE")%></p>
+23:         <p>Your last name is <%= d.get("LASTNAME")%></p>
+24:         <img src=<%d.get("AVATAR")%>/>
+25:         
+26:     <%
+27:     }}
+
+
+Stacktrace:] with root cause
+org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: 24 in the jsp file: /index.jsp
+Syntax error, insert ";" to complete Statement
+21:         <h2>Welcome <%= d.get("FIRSTNAME")%></h2>
+22:         <p>Your age is <%= d.get("AGE")%></p>
+23:         <p>Your last name is <%= d.get("LASTNAME")%></p>
+24:         <img src=<%d.get("AVATAR")%>/>
+25:         
+26:     <%
+27:     }}
+
+
+Stacktrace:
+	at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:103)
+	at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:331)
+	at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:468)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:378)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:353)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:340)
+	at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:646)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:357)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:390)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:334)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:728)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:305)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.tuckey.web.filters.urlrewrite.RuleChain.handleRewrite(RuleChain.java:176)
+	at org.tuckey.web.filters.urlrewrite.RuleChain.doRules(RuleChain.java:145)
+	at org.tuckey.web.filters.urlrewrite.UrlRewriter.processRequest(UrlRewriter.java:92)
+	at org.tuckey.web.filters.urlrewrite.UrlRewriteFilter.doFilter(UrlRewriteFilter.java:394)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at filters.ContentFilter.doFilter(ContentFilter.java:64)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:222)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:123)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:171)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:99)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:947)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:118)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:408)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1009)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:589)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:312)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+
+May 05, 2013 10:14:34 PM org.apache.catalina.core.ApplicationContext log
 INFO: org.tuckey.web.filters.urlrewrite.UrlRewriteFilter INFO: destroy called
-May 05, 2013 6:42:23 PM org.apache.catalina.core.ApplicationContext log
+May 05, 2013 10:14:34 PM org.apache.catalina.core.ApplicationContext log
 INFO: org.tuckey.web.filters.urlrewrite.UrlRewriteFilter INFO: loaded (conf ok)
-May 05, 2013 6:42:53 PM org.apache.catalina.core.ApplicationContext log
+May 05, 2013 10:15:27 PM org.apache.catalina.core.ApplicationContext log
 INFO: org.tuckey.web.filters.urlrewrite.UrlRewriteFilter INFO: destroy called
-May 05, 2013 6:42:54 PM org.apache.catalina.core.ApplicationContext log
+May 05, 2013 10:15:31 PM org.apache.catalina.core.ApplicationContext log
 INFO: org.tuckey.web.filters.urlrewrite.UrlRewriteFilter INFO: loaded (conf ok)
-May 05, 2013 6:44:54 PM org.apache.catalina.core.ApplicationContext log
+May 05, 2013 10:18:37 PM org.apache.catalina.core.ApplicationContext log
 INFO: org.tuckey.web.filters.urlrewrite.UrlRewriteFilter INFO: destroy called
-May 05, 2013 6:44:54 PM org.apache.catalina.core.ApplicationContext log
+May 05, 2013 10:18:41 PM org.apache.catalina.core.ApplicationContext log
 INFO: org.tuckey.web.filters.urlrewrite.UrlRewriteFilter INFO: loaded (conf ok)
-May 05, 2013 6:47:44 PM org.apache.catalina.core.ApplicationContext log
+May 05, 2013 10:23:51 PM org.apache.catalina.core.ApplicationContext log
 INFO: org.tuckey.web.filters.urlrewrite.UrlRewriteFilter INFO: destroy called
-May 05, 2013 6:47:45 PM org.apache.catalina.core.ApplicationContext log
+May 05, 2013 10:23:52 PM org.apache.catalina.core.ApplicationContext log
 INFO: org.tuckey.web.filters.urlrewrite.UrlRewriteFilter INFO: loaded (conf ok)
-May 05, 2013 6:47:45 PM org.apache.catalina.core.ApplicationContext log
+May 05, 2013 10:26:01 PM org.apache.catalina.core.StandardWrapperValve invoke
+SEVERE: Servlet.service() for servlet [jsp] in context with path [] threw exception [Unable to compile class for JSP: 
+
+An error occurred at line: 28 in the jsp file: /index.jsp
+Syntax error on tokens, Type expected instead
+25:         <%if(!d.confirmed){%>
+26:             <p>You have not confirmed your email address</p>
+27:         <%}
+28:         else{>%
+29:             <p>Your email address is confirmed</p>
+30:         <%}%>
+31:     <%
+
+
+An error occurred at line: 29 in the jsp file: /index.jsp
+Syntax error on token "email", ; expected
+26:             <p>You have not confirmed your email address</p>
+27:         <%}
+28:         else{>%
+29:             <p>Your email address is confirmed</p>
+30:         <%}%>
+31:     <%
+32:     }}
+
+
+An error occurred at line: 29 in the jsp file: /index.jsp
+Syntax error, insert ";" to complete LocalVariableDeclarationStatement
+26:             <p>You have not confirmed your email address</p>
+27:         <%}
+28:         else{>%
+29:             <p>Your email address is confirmed</p>
+30:         <%}%>
+31:     <%
+32:     }}
+
+
+An error occurred at line: 29 in the jsp file: /index.jsp
+Syntax error on tokens, delete these tokens
+26:             <p>You have not confirmed your email address</p>
+27:         <%}
+28:         else{>%
+29:             <p>Your email address is confirmed</p>
+30:         <%}%>
+31:     <%
+32:     }}
+
+
+An error occurred at line: 29 in the jsp file: /index.jsp
+Syntax error on token "/", delete this token
+26:             <p>You have not confirmed your email address</p>
+27:         <%}
+28:         else{>%
+29:             <p>Your email address is confirmed</p>
+30:         <%}%>
+31:     <%
+32:     }}
+
+
+Stacktrace:] with root cause
+org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: 28 in the jsp file: /index.jsp
+Syntax error on tokens, Type expected instead
+25:         <%if(!d.confirmed){%>
+26:             <p>You have not confirmed your email address</p>
+27:         <%}
+28:         else{>%
+29:             <p>Your email address is confirmed</p>
+30:         <%}%>
+31:     <%
+
+
+An error occurred at line: 29 in the jsp file: /index.jsp
+Syntax error on token "email", ; expected
+26:             <p>You have not confirmed your email address</p>
+27:         <%}
+28:         else{>%
+29:             <p>Your email address is confirmed</p>
+30:         <%}%>
+31:     <%
+32:     }}
+
+
+An error occurred at line: 29 in the jsp file: /index.jsp
+Syntax error, insert ";" to complete LocalVariableDeclarationStatement
+26:             <p>You have not confirmed your email address</p>
+27:         <%}
+28:         else{>%
+29:             <p>Your email address is confirmed</p>
+30:         <%}%>
+31:     <%
+32:     }}
+
+
+An error occurred at line: 29 in the jsp file: /index.jsp
+Syntax error on tokens, delete these tokens
+26:             <p>You have not confirmed your email address</p>
+27:         <%}
+28:         else{>%
+29:             <p>Your email address is confirmed</p>
+30:         <%}%>
+31:     <%
+32:     }}
+
+
+An error occurred at line: 29 in the jsp file: /index.jsp
+Syntax error on token "/", delete this token
+26:             <p>You have not confirmed your email address</p>
+27:         <%}
+28:         else{>%
+29:             <p>Your email address is confirmed</p>
+30:         <%}%>
+31:     <%
+32:     }}
+
+
+Stacktrace:
+	at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:103)
+	at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:331)
+	at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:468)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:378)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:353)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:340)
+	at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:646)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:357)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:390)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:334)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:728)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:305)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.tuckey.web.filters.urlrewrite.RuleChain.handleRewrite(RuleChain.java:176)
+	at org.tuckey.web.filters.urlrewrite.RuleChain.doRules(RuleChain.java:145)
+	at org.tuckey.web.filters.urlrewrite.UrlRewriter.processRequest(UrlRewriter.java:92)
+	at org.tuckey.web.filters.urlrewrite.UrlRewriteFilter.doFilter(UrlRewriteFilter.java:394)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at filters.ContentFilter.doFilter(ContentFilter.java:64)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:222)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:123)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:171)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:99)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:947)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:118)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:408)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1009)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:589)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:310)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+
+May 05, 2013 10:51:32 PM org.apache.catalina.core.ApplicationContext log
 INFO: org.tuckey.web.filters.urlrewrite.UrlRewriteFilter INFO: destroy called
-May 05, 2013 6:47:49 PM org.apache.catalina.core.ApplicationContext log
+May 05, 2013 10:51:33 PM org.apache.catalina.core.ApplicationContext log
 INFO: org.tuckey.web.filters.urlrewrite.UrlRewriteFilter INFO: loaded (conf ok)
-May 05, 2013 6:50:50 PM org.apache.catalina.core.ApplicationContext log
+May 05, 2013 10:51:36 PM org.apache.catalina.core.StandardWrapperValve invoke
+SEVERE: Servlet.service() for servlet [jsp] in context with path [] threw exception [Unable to compile class for JSP: 
+
+An error occurred at line: 15 in the jsp file: /folder.jsp
+The method getRSf() in the type Db is not applicable for the arguments (String)
+12:  <% String id = request.getParameter("id"); 
+13:     if(id!=null){
+14:     Db data = new Db();
+15: 	ResultSet rs = data.getRSf(id);
+16: 	ResultSetMetaData md = data.getRMf(id);
+17:     %>
+18:   	<table border="1" summary="query results">
+
+
+An error occurred at line: 16 in the jsp file: /folder.jsp
+The method getRMf() in the type Db is not applicable for the arguments (String)
+13:     if(id!=null){
+14:     Db data = new Db();
+15: 	ResultSet rs = data.getRSf(id);
+16: 	ResultSetMetaData md = data.getRMf(id);
+17:     %>
+18:   	<table border="1" summary="query results">
+19: 		<% while (rs.next()) { %>
+
+
+Stacktrace:] with root cause
+org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: 15 in the jsp file: /folder.jsp
+The method getRSf() in the type Db is not applicable for the arguments (String)
+12:  <% String id = request.getParameter("id"); 
+13:     if(id!=null){
+14:     Db data = new Db();
+15: 	ResultSet rs = data.getRSf(id);
+16: 	ResultSetMetaData md = data.getRMf(id);
+17:     %>
+18:   	<table border="1" summary="query results">
+
+
+An error occurred at line: 16 in the jsp file: /folder.jsp
+The method getRMf() in the type Db is not applicable for the arguments (String)
+13:     if(id!=null){
+14:     Db data = new Db();
+15: 	ResultSet rs = data.getRSf(id);
+16: 	ResultSetMetaData md = data.getRMf(id);
+17:     %>
+18:   	<table border="1" summary="query results">
+19: 		<% while (rs.next()) { %>
+
+
+Stacktrace:
+	at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:103)
+	at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:331)
+	at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:468)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:378)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:353)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:340)
+	at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:646)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:357)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:390)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:334)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:728)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:305)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.tuckey.web.filters.urlrewrite.RuleChain.handleRewrite(RuleChain.java:176)
+	at org.tuckey.web.filters.urlrewrite.RuleChain.doRules(RuleChain.java:145)
+	at org.tuckey.web.filters.urlrewrite.UrlRewriter.processRequest(UrlRewriter.java:92)
+	at org.tuckey.web.filters.urlrewrite.UrlRewriteFilter.doFilter(UrlRewriteFilter.java:394)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at filters.ContentFilter.doFilter(ContentFilter.java:64)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:222)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:123)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:171)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:99)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:947)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:118)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:408)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1009)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:589)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:312)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+
+May 05, 2013 10:54:23 PM org.apache.catalina.core.ApplicationContext log
 INFO: org.tuckey.web.filters.urlrewrite.UrlRewriteFilter INFO: destroy called
-May 05, 2013 6:50:50 PM org.apache.catalina.core.ApplicationContext log
+May 05, 2013 10:54:23 PM org.apache.catalina.core.ApplicationContext log
 INFO: org.tuckey.web.filters.urlrewrite.UrlRewriteFilter INFO: loaded (conf ok)
-May 05, 2013 7:09:30 PM org.apache.catalina.core.ApplicationContext log
+May 05, 2013 10:54:26 PM org.apache.catalina.core.StandardWrapperValve invoke
+SEVERE: Servlet.service() for servlet [jsp] in context with path [] threw exception [Unable to compile class for JSP: 
+
+An error occurred at line: 15 in the jsp file: /folder.jsp
+The method getRSf(String) is undefined for the type Db
+12:  <% String id = request.getParameter("id"); 
+13:     if(id!=null){
+14:     Db data = new Db();
+15: 	ResultSet rs = data.getRSf(id);
+16:     %>
+17:   	<table border="1" summary="query results">
+18: 		<% while (rs.next()) { %>
+
+
+An error occurred at line: 26 in the jsp file: /folder.jsp
+Syntax error, insert "Finally" to complete TryStatement
+23: 		<% } %>
+24: 		</table>
+25: 
+26: 	<%}%>
+27: %>
+28:   </body>
+29: </html>
+
+
+An error occurred at line: [107] in the generated java file: [D:\Projects\website\Tomcat\work\Catalina\localhost\_\org\apache\jsp\folder_jsp.java]
+Syntax error on token "catch", Identifier expected
+
+An error occurred at line: [109] in the generated java file: [D:\Projects\website\Tomcat\work\Catalina\localhost\_\org\apache\jsp\folder_jsp.java]
+out cannot be resolved to a variable
+
+An error occurred at line: [109] in the generated java file: [D:\Projects\website\Tomcat\work\Catalina\localhost\_\org\apache\jsp\folder_jsp.java]
+_jspx_out cannot be resolved to a variable
+
+An error occurred at line: [110] in the generated java file: [D:\Projects\website\Tomcat\work\Catalina\localhost\_\org\apache\jsp\folder_jsp.java]
+out cannot be resolved to a variable
+
+An error occurred at line: [110] in the generated java file: [D:\Projects\website\Tomcat\work\Catalina\localhost\_\org\apache\jsp\folder_jsp.java]
+out cannot be resolved
+
+An error occurred at line: [111] in the generated java file: [D:\Projects\website\Tomcat\work\Catalina\localhost\_\org\apache\jsp\folder_jsp.java]
+out cannot be resolved
+
+An error occurred at line: [112] in the generated java file: [D:\Projects\website\Tomcat\work\Catalina\localhost\_\org\apache\jsp\folder_jsp.java]
+_jspx_page_context cannot be resolved to a variable
+
+An error occurred at line: [112] in the generated java file: [D:\Projects\website\Tomcat\work\Catalina\localhost\_\org\apache\jsp\folder_jsp.java]
+_jspx_page_context cannot be resolved
+
+An error occurred at line: [115] in the generated java file: [D:\Projects\website\Tomcat\work\Catalina\localhost\_\org\apache\jsp\folder_jsp.java]
+Syntax error on token "finally", { expected
+
+An error occurred at line: [116] in the generated java file: [D:\Projects\website\Tomcat\work\Catalina\localhost\_\org\apache\jsp\folder_jsp.java]
+_jspx_page_context cannot be resolved to a variable
+
+Stacktrace:] with root cause
+org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: 15 in the jsp file: /folder.jsp
+The method getRSf(String) is undefined for the type Db
+12:  <% String id = request.getParameter("id"); 
+13:     if(id!=null){
+14:     Db data = new Db();
+15: 	ResultSet rs = data.getRSf(id);
+16:     %>
+17:   	<table border="1" summary="query results">
+18: 		<% while (rs.next()) { %>
+
+
+An error occurred at line: 26 in the jsp file: /folder.jsp
+Syntax error, insert "Finally" to complete TryStatement
+23: 		<% } %>
+24: 		</table>
+25: 
+26: 	<%}%>
+27: %>
+28:   </body>
+29: </html>
+
+
+An error occurred at line: [107] in the generated java file: [D:\Projects\website\Tomcat\work\Catalina\localhost\_\org\apache\jsp\folder_jsp.java]
+Syntax error on token "catch", Identifier expected
+
+An error occurred at line: [109] in the generated java file: [D:\Projects\website\Tomcat\work\Catalina\localhost\_\org\apache\jsp\folder_jsp.java]
+out cannot be resolved to a variable
+
+An error occurred at line: [109] in the generated java file: [D:\Projects\website\Tomcat\work\Catalina\localhost\_\org\apache\jsp\folder_jsp.java]
+_jspx_out cannot be resolved to a variable
+
+An error occurred at line: [110] in the generated java file: [D:\Projects\website\Tomcat\work\Catalina\localhost\_\org\apache\jsp\folder_jsp.java]
+out cannot be resolved to a variable
+
+An error occurred at line: [110] in the generated java file: [D:\Projects\website\Tomcat\work\Catalina\localhost\_\org\apache\jsp\folder_jsp.java]
+out cannot be resolved
+
+An error occurred at line: [111] in the generated java file: [D:\Projects\website\Tomcat\work\Catalina\localhost\_\org\apache\jsp\folder_jsp.java]
+out cannot be resolved
+
+An error occurred at line: [112] in the generated java file: [D:\Projects\website\Tomcat\work\Catalina\localhost\_\org\apache\jsp\folder_jsp.java]
+_jspx_page_context cannot be resolved to a variable
+
+An error occurred at line: [112] in the generated java file: [D:\Projects\website\Tomcat\work\Catalina\localhost\_\org\apache\jsp\folder_jsp.java]
+_jspx_page_context cannot be resolved
+
+An error occurred at line: [115] in the generated java file: [D:\Projects\website\Tomcat\work\Catalina\localhost\_\org\apache\jsp\folder_jsp.java]
+Syntax error on token "finally", { expected
+
+An error occurred at line: [116] in the generated java file: [D:\Projects\website\Tomcat\work\Catalina\localhost\_\org\apache\jsp\folder_jsp.java]
+_jspx_page_context cannot be resolved to a variable
+
+Stacktrace:
+	at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:103)
+	at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:331)
+	at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:468)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:378)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:353)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:340)
+	at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:646)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:357)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:390)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:334)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:728)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:305)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.tuckey.web.filters.urlrewrite.RuleChain.handleRewrite(RuleChain.java:176)
+	at org.tuckey.web.filters.urlrewrite.RuleChain.doRules(RuleChain.java:145)
+	at org.tuckey.web.filters.urlrewrite.UrlRewriter.processRequest(UrlRewriter.java:92)
+	at org.tuckey.web.filters.urlrewrite.UrlRewriteFilter.doFilter(UrlRewriteFilter.java:394)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at filters.ContentFilter.doFilter(ContentFilter.java:64)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:222)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:123)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:171)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:99)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:947)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:118)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:408)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1009)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:589)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:312)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+
+May 05, 2013 10:54:30 PM org.apache.catalina.core.StandardWrapperValve invoke
+SEVERE: Servlet.service() for servlet [jsp] in context with path [] threw exception [java.lang.ClassNotFoundException: org.apache.jsp.folder_jsp] with root cause
+java.lang.ClassNotFoundException: org.apache.jsp.folder_jsp
+	at java.net.URLClassLoader$1.run(Unknown Source)
+	at java.net.URLClassLoader$1.run(Unknown Source)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.net.URLClassLoader.findClass(Unknown Source)
+	at org.apache.jasper.servlet.JasperLoader.loadClass(JasperLoader.java:132)
+	at org.apache.jasper.servlet.JasperLoader.loadClass(JasperLoader.java:63)
+	at org.apache.catalina.core.DefaultInstanceManager.newInstance(DefaultInstanceManager.java:143)
+	at org.apache.jasper.servlet.JspServletWrapper.getServlet(JspServletWrapper.java:172)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:369)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:390)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:334)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:728)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:305)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.tuckey.web.filters.urlrewrite.RuleChain.handleRewrite(RuleChain.java:176)
+	at org.tuckey.web.filters.urlrewrite.RuleChain.doRules(RuleChain.java:145)
+	at org.tuckey.web.filters.urlrewrite.UrlRewriter.processRequest(UrlRewriter.java:92)
+	at org.tuckey.web.filters.urlrewrite.UrlRewriteFilter.doFilter(UrlRewriteFilter.java:394)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at filters.ContentFilter.doFilter(ContentFilter.java:64)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:222)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:123)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:171)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:99)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:947)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:118)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:408)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1009)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:589)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:312)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+
+May 05, 2013 10:55:23 PM org.apache.catalina.core.StandardWrapperValve invoke
+SEVERE: Servlet.service() for servlet [jsp] in context with path [] threw exception [Unable to compile class for JSP: 
+
+An error occurred at line: 15 in the jsp file: /folder.jsp
+The method getRSf(String) is undefined for the type Db
+12:  <% String id = request.getParameter("id"); 
+13:     if(id!=null){
+14:     Db data = new Db();
+15: 	ResultSet rs = data.getRSf(id);
+16:     %>
+17:   	<table border="1" summary="files">
+18: 		<% while (rs.next()) { %>
+
+
+An error occurred at line: 26 in the jsp file: /folder.jsp
+Syntax error, insert "Finally" to complete TryStatement
+23: 		<% } %>
+24: 		</table>
+25: 
+26: 	<%}%>
+27: %>
+28:   </body>
+29: </html>
+
+
+An error occurred at line: [107] in the generated java file: [D:\Projects\website\Tomcat\work\Catalina\localhost\_\org\apache\jsp\folder_jsp.java]
+Syntax error on token "catch", Identifier expected
+
+An error occurred at line: [109] in the generated java file: [D:\Projects\website\Tomcat\work\Catalina\localhost\_\org\apache\jsp\folder_jsp.java]
+out cannot be resolved to a variable
+
+An error occurred at line: [109] in the generated java file: [D:\Projects\website\Tomcat\work\Catalina\localhost\_\org\apache\jsp\folder_jsp.java]
+_jspx_out cannot be resolved to a variable
+
+An error occurred at line: [110] in the generated java file: [D:\Projects\website\Tomcat\work\Catalina\localhost\_\org\apache\jsp\folder_jsp.java]
+out cannot be resolved to a variable
+
+An error occurred at line: [110] in the generated java file: [D:\Projects\website\Tomcat\work\Catalina\localhost\_\org\apache\jsp\folder_jsp.java]
+out cannot be resolved
+
+An error occurred at line: [111] in the generated java file: [D:\Projects\website\Tomcat\work\Catalina\localhost\_\org\apache\jsp\folder_jsp.java]
+out cannot be resolved
+
+An error occurred at line: [112] in the generated java file: [D:\Projects\website\Tomcat\work\Catalina\localhost\_\org\apache\jsp\folder_jsp.java]
+_jspx_page_context cannot be resolved to a variable
+
+An error occurred at line: [112] in the generated java file: [D:\Projects\website\Tomcat\work\Catalina\localhost\_\org\apache\jsp\folder_jsp.java]
+_jspx_page_context cannot be resolved
+
+An error occurred at line: [115] in the generated java file: [D:\Projects\website\Tomcat\work\Catalina\localhost\_\org\apache\jsp\folder_jsp.java]
+Syntax error on token "finally", { expected
+
+An error occurred at line: [116] in the generated java file: [D:\Projects\website\Tomcat\work\Catalina\localhost\_\org\apache\jsp\folder_jsp.java]
+_jspx_page_context cannot be resolved to a variable
+
+Stacktrace:] with root cause
+org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: 15 in the jsp file: /folder.jsp
+The method getRSf(String) is undefined for the type Db
+12:  <% String id = request.getParameter("id"); 
+13:     if(id!=null){
+14:     Db data = new Db();
+15: 	ResultSet rs = data.getRSf(id);
+16:     %>
+17:   	<table border="1" summary="files">
+18: 		<% while (rs.next()) { %>
+
+
+An error occurred at line: 26 in the jsp file: /folder.jsp
+Syntax error, insert "Finally" to complete TryStatement
+23: 		<% } %>
+24: 		</table>
+25: 
+26: 	<%}%>
+27: %>
+28:   </body>
+29: </html>
+
+
+An error occurred at line: [107] in the generated java file: [D:\Projects\website\Tomcat\work\Catalina\localhost\_\org\apache\jsp\folder_jsp.java]
+Syntax error on token "catch", Identifier expected
+
+An error occurred at line: [109] in the generated java file: [D:\Projects\website\Tomcat\work\Catalina\localhost\_\org\apache\jsp\folder_jsp.java]
+out cannot be resolved to a variable
+
+An error occurred at line: [109] in the generated java file: [D:\Projects\website\Tomcat\work\Catalina\localhost\_\org\apache\jsp\folder_jsp.java]
+_jspx_out cannot be resolved to a variable
+
+An error occurred at line: [110] in the generated java file: [D:\Projects\website\Tomcat\work\Catalina\localhost\_\org\apache\jsp\folder_jsp.java]
+out cannot be resolved to a variable
+
+An error occurred at line: [110] in the generated java file: [D:\Projects\website\Tomcat\work\Catalina\localhost\_\org\apache\jsp\folder_jsp.java]
+out cannot be resolved
+
+An error occurred at line: [111] in the generated java file: [D:\Projects\website\Tomcat\work\Catalina\localhost\_\org\apache\jsp\folder_jsp.java]
+out cannot be resolved
+
+An error occurred at line: [112] in the generated java file: [D:\Projects\website\Tomcat\work\Catalina\localhost\_\org\apache\jsp\folder_jsp.java]
+_jspx_page_context cannot be resolved to a variable
+
+An error occurred at line: [112] in the generated java file: [D:\Projects\website\Tomcat\work\Catalina\localhost\_\org\apache\jsp\folder_jsp.java]
+_jspx_page_context cannot be resolved
+
+An error occurred at line: [115] in the generated java file: [D:\Projects\website\Tomcat\work\Catalina\localhost\_\org\apache\jsp\folder_jsp.java]
+Syntax error on token "finally", { expected
+
+An error occurred at line: [116] in the generated java file: [D:\Projects\website\Tomcat\work\Catalina\localhost\_\org\apache\jsp\folder_jsp.java]
+_jspx_page_context cannot be resolved to a variable
+
+Stacktrace:
+	at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:103)
+	at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:331)
+	at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:468)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:378)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:353)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:340)
+	at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:646)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:357)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:390)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:334)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:728)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:305)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.tuckey.web.filters.urlrewrite.RuleChain.handleRewrite(RuleChain.java:176)
+	at org.tuckey.web.filters.urlrewrite.RuleChain.doRules(RuleChain.java:145)
+	at org.tuckey.web.filters.urlrewrite.UrlRewriter.processRequest(UrlRewriter.java:92)
+	at org.tuckey.web.filters.urlrewrite.UrlRewriteFilter.doFilter(UrlRewriteFilter.java:394)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at filters.ContentFilter.doFilter(ContentFilter.java:64)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:222)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:123)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:171)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:99)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:947)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:118)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:408)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1009)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:589)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:312)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+
+May 05, 2013 10:56:31 PM org.apache.catalina.core.StandardWrapperValve invoke
+SEVERE: Servlet.service() for servlet [jsp] in context with path [] threw exception [Unable to compile class for JSP: 
+
+An error occurred at line: 15 in the jsp file: /folder.jsp
+The method getRSf(String) is undefined for the type Db
+12:  <% String id = request.getParameter("id"); 
+13:     if(id!=null){
+14:     Db data = new Db();
+15: 	ResultSet rs = data.getRSf(id);
+16:     %>
+17:   	<table border="1" summary="files">
+18: 		<% while (rs.next()) { %>
+
+
+An error occurred at line: 26 in the jsp file: /folder.jsp
+Syntax error, insert "Finally" to complete TryStatement
+23: 		<% } %>
+24: 		</table>
+25: 
+26: 	<%}%>
+27: %>
+28:   </body>
+29: </html>
+
+
+An error occurred at line: [107] in the generated java file: [D:\Projects\website\Tomcat\work\Catalina\localhost\_\org\apache\jsp\folder_jsp.java]
+Syntax error on token "catch", Identifier expected
+
+An error occurred at line: [109] in the generated java file: [D:\Projects\website\Tomcat\work\Catalina\localhost\_\org\apache\jsp\folder_jsp.java]
+out cannot be resolved to a variable
+
+An error occurred at line: [109] in the generated java file: [D:\Projects\website\Tomcat\work\Catalina\localhost\_\org\apache\jsp\folder_jsp.java]
+_jspx_out cannot be resolved to a variable
+
+An error occurred at line: [110] in the generated java file: [D:\Projects\website\Tomcat\work\Catalina\localhost\_\org\apache\jsp\folder_jsp.java]
+out cannot be resolved to a variable
+
+An error occurred at line: [110] in the generated java file: [D:\Projects\website\Tomcat\work\Catalina\localhost\_\org\apache\jsp\folder_jsp.java]
+out cannot be resolved
+
+An error occurred at line: [111] in the generated java file: [D:\Projects\website\Tomcat\work\Catalina\localhost\_\org\apache\jsp\folder_jsp.java]
+out cannot be resolved
+
+An error occurred at line: [112] in the generated java file: [D:\Projects\website\Tomcat\work\Catalina\localhost\_\org\apache\jsp\folder_jsp.java]
+_jspx_page_context cannot be resolved to a variable
+
+An error occurred at line: [112] in the generated java file: [D:\Projects\website\Tomcat\work\Catalina\localhost\_\org\apache\jsp\folder_jsp.java]
+_jspx_page_context cannot be resolved
+
+An error occurred at line: [115] in the generated java file: [D:\Projects\website\Tomcat\work\Catalina\localhost\_\org\apache\jsp\folder_jsp.java]
+Syntax error on token "finally", { expected
+
+An error occurred at line: [116] in the generated java file: [D:\Projects\website\Tomcat\work\Catalina\localhost\_\org\apache\jsp\folder_jsp.java]
+_jspx_page_context cannot be resolved to a variable
+
+Stacktrace:] with root cause
+org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: 15 in the jsp file: /folder.jsp
+The method getRSf(String) is undefined for the type Db
+12:  <% String id = request.getParameter("id"); 
+13:     if(id!=null){
+14:     Db data = new Db();
+15: 	ResultSet rs = data.getRSf(id);
+16:     %>
+17:   	<table border="1" summary="files">
+18: 		<% while (rs.next()) { %>
+
+
+An error occurred at line: 26 in the jsp file: /folder.jsp
+Syntax error, insert "Finally" to complete TryStatement
+23: 		<% } %>
+24: 		</table>
+25: 
+26: 	<%}%>
+27: %>
+28:   </body>
+29: </html>
+
+
+An error occurred at line: [107] in the generated java file: [D:\Projects\website\Tomcat\work\Catalina\localhost\_\org\apache\jsp\folder_jsp.java]
+Syntax error on token "catch", Identifier expected
+
+An error occurred at line: [109] in the generated java file: [D:\Projects\website\Tomcat\work\Catalina\localhost\_\org\apache\jsp\folder_jsp.java]
+out cannot be resolved to a variable
+
+An error occurred at line: [109] in the generated java file: [D:\Projects\website\Tomcat\work\Catalina\localhost\_\org\apache\jsp\folder_jsp.java]
+_jspx_out cannot be resolved to a variable
+
+An error occurred at line: [110] in the generated java file: [D:\Projects\website\Tomcat\work\Catalina\localhost\_\org\apache\jsp\folder_jsp.java]
+out cannot be resolved to a variable
+
+An error occurred at line: [110] in the generated java file: [D:\Projects\website\Tomcat\work\Catalina\localhost\_\org\apache\jsp\folder_jsp.java]
+out cannot be resolved
+
+An error occurred at line: [111] in the generated java file: [D:\Projects\website\Tomcat\work\Catalina\localhost\_\org\apache\jsp\folder_jsp.java]
+out cannot be resolved
+
+An error occurred at line: [112] in the generated java file: [D:\Projects\website\Tomcat\work\Catalina\localhost\_\org\apache\jsp\folder_jsp.java]
+_jspx_page_context cannot be resolved to a variable
+
+An error occurred at line: [112] in the generated java file: [D:\Projects\website\Tomcat\work\Catalina\localhost\_\org\apache\jsp\folder_jsp.java]
+_jspx_page_context cannot be resolved
+
+An error occurred at line: [115] in the generated java file: [D:\Projects\website\Tomcat\work\Catalina\localhost\_\org\apache\jsp\folder_jsp.java]
+Syntax error on token "finally", { expected
+
+An error occurred at line: [116] in the generated java file: [D:\Projects\website\Tomcat\work\Catalina\localhost\_\org\apache\jsp\folder_jsp.java]
+_jspx_page_context cannot be resolved to a variable
+
+Stacktrace:
+	at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:103)
+	at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:331)
+	at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:468)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:378)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:353)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:340)
+	at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:646)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:357)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:390)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:334)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:728)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:305)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.tuckey.web.filters.urlrewrite.RuleChain.handleRewrite(RuleChain.java:176)
+	at org.tuckey.web.filters.urlrewrite.RuleChain.doRules(RuleChain.java:145)
+	at org.tuckey.web.filters.urlrewrite.UrlRewriter.processRequest(UrlRewriter.java:92)
+	at org.tuckey.web.filters.urlrewrite.UrlRewriteFilter.doFilter(UrlRewriteFilter.java:394)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at filters.ContentFilter.doFilter(ContentFilter.java:64)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:222)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:123)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:171)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:99)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:947)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:118)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:408)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1009)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:589)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:312)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+
+May 05, 2013 10:56:33 PM org.apache.catalina.core.ApplicationContext log
 INFO: org.tuckey.web.filters.urlrewrite.UrlRewriteFilter INFO: destroy called
-May 05, 2013 7:09:31 PM org.apache.catalina.core.ApplicationContext log
+May 05, 2013 10:56:34 PM org.apache.catalina.core.ApplicationContext log
 INFO: org.tuckey.web.filters.urlrewrite.UrlRewriteFilter INFO: loaded (conf ok)
-May 05, 2013 7:11:43 PM org.apache.catalina.core.ApplicationContext log
+May 05, 2013 10:57:34 PM org.apache.catalina.core.ApplicationContext log
 INFO: org.tuckey.web.filters.urlrewrite.UrlRewriteFilter INFO: destroy called
-May 05, 2013 7:11:44 PM org.apache.catalina.core.ApplicationContext log
+May 05, 2013 10:57:34 PM org.apache.catalina.core.ApplicationContext log
+INFO: org.tuckey.web.filters.urlrewrite.UrlRewriteFilter INFO: loaded (conf ok)
+May 05, 2013 10:57:36 PM org.apache.catalina.core.ApplicationContext log
+INFO: org.tuckey.web.filters.urlrewrite.UrlRewriteFilter INFO: destroy called
+May 05, 2013 10:57:40 PM org.apache.catalina.core.ApplicationContext log
+INFO: org.tuckey.web.filters.urlrewrite.UrlRewriteFilter INFO: loaded (conf ok)
+May 05, 2013 10:57:56 PM org.apache.catalina.core.StandardWrapperValve invoke
+SEVERE: Servlet.service() for servlet [jsp] in context with path [] threw exception [Unable to compile class for JSP: 
+
+An error occurred at line: 26 in the jsp file: /folder.jsp
+Syntax error, insert "Finally" to complete TryStatement
+23: 		<% } %>
+24: 		</table>
+25: 
+26: 	<%}%>
+27: %>
+28:   </body>
+29: </html>
+
+
+An error occurred at line: [107] in the generated java file: [D:\Projects\website\Tomcat\work\Catalina\localhost\_\org\apache\jsp\folder_jsp.java]
+Syntax error on token "catch", Identifier expected
+
+An error occurred at line: [109] in the generated java file: [D:\Projects\website\Tomcat\work\Catalina\localhost\_\org\apache\jsp\folder_jsp.java]
+out cannot be resolved to a variable
+
+An error occurred at line: [109] in the generated java file: [D:\Projects\website\Tomcat\work\Catalina\localhost\_\org\apache\jsp\folder_jsp.java]
+_jspx_out cannot be resolved to a variable
+
+An error occurred at line: [110] in the generated java file: [D:\Projects\website\Tomcat\work\Catalina\localhost\_\org\apache\jsp\folder_jsp.java]
+out cannot be resolved to a variable
+
+An error occurred at line: [110] in the generated java file: [D:\Projects\website\Tomcat\work\Catalina\localhost\_\org\apache\jsp\folder_jsp.java]
+out cannot be resolved
+
+An error occurred at line: [111] in the generated java file: [D:\Projects\website\Tomcat\work\Catalina\localhost\_\org\apache\jsp\folder_jsp.java]
+out cannot be resolved
+
+An error occurred at line: [112] in the generated java file: [D:\Projects\website\Tomcat\work\Catalina\localhost\_\org\apache\jsp\folder_jsp.java]
+_jspx_page_context cannot be resolved to a variable
+
+An error occurred at line: [112] in the generated java file: [D:\Projects\website\Tomcat\work\Catalina\localhost\_\org\apache\jsp\folder_jsp.java]
+_jspx_page_context cannot be resolved
+
+An error occurred at line: [115] in the generated java file: [D:\Projects\website\Tomcat\work\Catalina\localhost\_\org\apache\jsp\folder_jsp.java]
+Syntax error on token "finally", { expected
+
+An error occurred at line: [116] in the generated java file: [D:\Projects\website\Tomcat\work\Catalina\localhost\_\org\apache\jsp\folder_jsp.java]
+_jspx_page_context cannot be resolved to a variable
+
+Stacktrace:] with root cause
+org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: 26 in the jsp file: /folder.jsp
+Syntax error, insert "Finally" to complete TryStatement
+23: 		<% } %>
+24: 		</table>
+25: 
+26: 	<%}%>
+27: %>
+28:   </body>
+29: </html>
+
+
+An error occurred at line: [107] in the generated java file: [D:\Projects\website\Tomcat\work\Catalina\localhost\_\org\apache\jsp\folder_jsp.java]
+Syntax error on token "catch", Identifier expected
+
+An error occurred at line: [109] in the generated java file: [D:\Projects\website\Tomcat\work\Catalina\localhost\_\org\apache\jsp\folder_jsp.java]
+out cannot be resolved to a variable
+
+An error occurred at line: [109] in the generated java file: [D:\Projects\website\Tomcat\work\Catalina\localhost\_\org\apache\jsp\folder_jsp.java]
+_jspx_out cannot be resolved to a variable
+
+An error occurred at line: [110] in the generated java file: [D:\Projects\website\Tomcat\work\Catalina\localhost\_\org\apache\jsp\folder_jsp.java]
+out cannot be resolved to a variable
+
+An error occurred at line: [110] in the generated java file: [D:\Projects\website\Tomcat\work\Catalina\localhost\_\org\apache\jsp\folder_jsp.java]
+out cannot be resolved
+
+An error occurred at line: [111] in the generated java file: [D:\Projects\website\Tomcat\work\Catalina\localhost\_\org\apache\jsp\folder_jsp.java]
+out cannot be resolved
+
+An error occurred at line: [112] in the generated java file: [D:\Projects\website\Tomcat\work\Catalina\localhost\_\org\apache\jsp\folder_jsp.java]
+_jspx_page_context cannot be resolved to a variable
+
+An error occurred at line: [112] in the generated java file: [D:\Projects\website\Tomcat\work\Catalina\localhost\_\org\apache\jsp\folder_jsp.java]
+_jspx_page_context cannot be resolved
+
+An error occurred at line: [115] in the generated java file: [D:\Projects\website\Tomcat\work\Catalina\localhost\_\org\apache\jsp\folder_jsp.java]
+Syntax error on token "finally", { expected
+
+An error occurred at line: [116] in the generated java file: [D:\Projects\website\Tomcat\work\Catalina\localhost\_\org\apache\jsp\folder_jsp.java]
+_jspx_page_context cannot be resolved to a variable
+
+Stacktrace:
+	at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:103)
+	at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:331)
+	at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:468)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:378)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:353)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:340)
+	at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:646)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:357)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:390)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:334)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:728)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:305)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.tuckey.web.filters.urlrewrite.RuleChain.handleRewrite(RuleChain.java:176)
+	at org.tuckey.web.filters.urlrewrite.RuleChain.doRules(RuleChain.java:145)
+	at org.tuckey.web.filters.urlrewrite.UrlRewriter.processRequest(UrlRewriter.java:92)
+	at org.tuckey.web.filters.urlrewrite.UrlRewriteFilter.doFilter(UrlRewriteFilter.java:394)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at filters.ContentFilter.doFilter(ContentFilter.java:64)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:222)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:123)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:171)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:99)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:947)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:118)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:408)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1009)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:589)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:312)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+
+May 05, 2013 10:58:16 PM org.apache.catalina.core.StandardWrapperValve invoke
+SEVERE: Servlet.service() for servlet [jsp] in context with path [] threw exception [An exception occurred processing JSP page /folder.jsp at line 15
+
+12:  <% String id = request.getParameter("id"); 
+13:     if(id!=null){
+14:     Db data = new Db();
+15: 	ResultSet rs = data.getRSf(id);
+16:     %>
+17:   	<table border="1" summary="files">
+18: 		<% while (rs.next()) { %>
+
+
+Stacktrace:] with root cause
+ERROR 42818: Comparisons between 'VARCHAR (UCS_BASIC)' and 'INTEGER' are not supported. Types must be comparable. String types must also have matching collation. If collation does not match, a possible solution is to cast operands to force them to the default collation (e.g. SELECT tablename FROM sys.systables WHERE CAST(tablename AS VARCHAR(128)) = 'T1')
+	at org.apache.derby.iapi.error.StandardException.newException(Unknown Source)
+	at org.apache.derby.impl.sql.compile.BinaryComparisonOperatorNode.bindComparisonOperator(Unknown Source)
+	at org.apache.derby.impl.sql.compile.BinaryComparisonOperatorNode.bindExpression(Unknown Source)
+	at org.apache.derby.impl.sql.compile.SelectNode.bindExpressions(Unknown Source)
+	at org.apache.derby.impl.sql.compile.DMLStatementNode.bindExpressions(Unknown Source)
+	at org.apache.derby.impl.sql.compile.DMLStatementNode.bind(Unknown Source)
+	at org.apache.derby.impl.sql.compile.CursorNode.bindStatement(Unknown Source)
+	at org.apache.derby.impl.sql.GenericStatement.prepMinion(Unknown Source)
+	at org.apache.derby.impl.sql.GenericStatement.prepare(Unknown Source)
+	at org.apache.derby.impl.sql.conn.GenericLanguageConnectionContext.prepareInternalStatement(Unknown Source)
+	at org.apache.derby.impl.jdbc.EmbedStatement.execute(Unknown Source)
+	at org.apache.derby.impl.jdbc.EmbedStatement.executeQuery(Unknown Source)
+	at org.apache.tomcat.dbcp.dbcp.DelegatingStatement.executeQuery(DelegatingStatement.java:208)
+	at org.apache.tomcat.dbcp.dbcp.DelegatingStatement.executeQuery(DelegatingStatement.java:208)
+	at com.otrocol.app.Db.getRSf(Db.java:112)
+	at org.apache.jsp.folder_jsp._jspService(folder_jsp.java:81)
+	at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:70)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:728)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:432)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:390)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:334)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:728)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:305)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.tuckey.web.filters.urlrewrite.RuleChain.handleRewrite(RuleChain.java:176)
+	at org.tuckey.web.filters.urlrewrite.RuleChain.doRules(RuleChain.java:145)
+	at org.tuckey.web.filters.urlrewrite.UrlRewriter.processRequest(UrlRewriter.java:92)
+	at org.tuckey.web.filters.urlrewrite.UrlRewriteFilter.doFilter(UrlRewriteFilter.java:394)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at filters.ContentFilter.doFilter(ContentFilter.java:64)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:222)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:123)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:171)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:99)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:947)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:118)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:408)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1009)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:589)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:312)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+
+May 05, 2013 10:59:28 PM org.apache.catalina.core.ApplicationContext log
+INFO: org.tuckey.web.filters.urlrewrite.UrlRewriteFilter INFO: destroy called
+May 05, 2013 10:59:32 PM org.apache.catalina.core.ApplicationContext log
+INFO: org.tuckey.web.filters.urlrewrite.UrlRewriteFilter INFO: loaded (conf ok)
+May 05, 2013 10:59:44 PM org.apache.catalina.core.StandardWrapperValve invoke
+SEVERE: Servlet.service() for servlet [jsp] in context with path [] threw exception [javax.servlet.ServletException: java.sql.SQLSyntaxErrorException: Comparisons between 'VARCHAR (UCS_BASIC)' and 'INTEGER' are not supported. Types must be comparable. String types must also have matching collation. If collation does not match, a possible solution is to cast operands to force them to the default collation (e.g. SELECT tablename FROM sys.systables WHERE CAST(tablename AS VARCHAR(128)) = 'T1')] with root cause
+ERROR 42818: Comparisons between 'VARCHAR (UCS_BASIC)' and 'INTEGER' are not supported. Types must be comparable. String types must also have matching collation. If collation does not match, a possible solution is to cast operands to force them to the default collation (e.g. SELECT tablename FROM sys.systables WHERE CAST(tablename AS VARCHAR(128)) = 'T1')
+	at org.apache.derby.iapi.error.StandardException.newException(Unknown Source)
+	at org.apache.derby.impl.sql.compile.BinaryComparisonOperatorNode.bindComparisonOperator(Unknown Source)
+	at org.apache.derby.impl.sql.compile.BinaryComparisonOperatorNode.bindExpression(Unknown Source)
+	at org.apache.derby.impl.sql.compile.SelectNode.bindExpressions(Unknown Source)
+	at org.apache.derby.impl.sql.compile.DMLStatementNode.bindExpressions(Unknown Source)
+	at org.apache.derby.impl.sql.compile.DMLStatementNode.bind(Unknown Source)
+	at org.apache.derby.impl.sql.compile.CursorNode.bindStatement(Unknown Source)
+	at org.apache.derby.impl.sql.GenericStatement.prepMinion(Unknown Source)
+	at org.apache.derby.impl.sql.GenericStatement.prepare(Unknown Source)
+	at org.apache.derby.impl.sql.conn.GenericLanguageConnectionContext.prepareInternalStatement(Unknown Source)
+	at org.apache.derby.impl.jdbc.EmbedStatement.execute(Unknown Source)
+	at org.apache.derby.impl.jdbc.EmbedStatement.executeQuery(Unknown Source)
+	at org.apache.tomcat.dbcp.dbcp.DelegatingStatement.executeQuery(DelegatingStatement.java:208)
+	at org.apache.tomcat.dbcp.dbcp.DelegatingStatement.executeQuery(DelegatingStatement.java:208)
+	at com.otrocol.app.Db.getRSf(Db.java:112)
+	at org.apache.jsp.folder_jsp._jspService(folder_jsp.java:81)
+	at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:70)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:728)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:432)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:390)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:334)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:728)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:305)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.tuckey.web.filters.urlrewrite.RuleChain.handleRewrite(RuleChain.java:176)
+	at org.tuckey.web.filters.urlrewrite.RuleChain.doRules(RuleChain.java:145)
+	at org.tuckey.web.filters.urlrewrite.UrlRewriter.processRequest(UrlRewriter.java:92)
+	at org.tuckey.web.filters.urlrewrite.UrlRewriteFilter.doFilter(UrlRewriteFilter.java:394)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at filters.ContentFilter.doFilter(ContentFilter.java:64)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:222)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:123)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:171)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:99)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:947)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:118)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:408)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1009)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:589)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:312)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+
+May 05, 2013 11:00:45 PM org.apache.catalina.core.ApplicationContext log
+INFO: org.tuckey.web.filters.urlrewrite.UrlRewriteFilter INFO: destroy called
+May 05, 2013 11:00:49 PM org.apache.catalina.core.ApplicationContext log
+INFO: org.tuckey.web.filters.urlrewrite.UrlRewriteFilter INFO: loaded (conf ok)
+May 05, 2013 11:00:59 PM org.apache.catalina.core.StandardWrapperValve invoke
+SEVERE: Servlet.service() for servlet [jsp] in context with path [] threw exception [javax.servlet.ServletException: java.sql.SQLSyntaxErrorException: Comparisons between 'VARCHAR (UCS_BASIC)' and 'INTEGER' are not supported. Types must be comparable. String types must also have matching collation. If collation does not match, a possible solution is to cast operands to force them to the default collation (e.g. SELECT tablename FROM sys.systables WHERE CAST(tablename AS VARCHAR(128)) = 'T1')] with root cause
+ERROR 42818: Comparisons between 'VARCHAR (UCS_BASIC)' and 'INTEGER' are not supported. Types must be comparable. String types must also have matching collation. If collation does not match, a possible solution is to cast operands to force them to the default collation (e.g. SELECT tablename FROM sys.systables WHERE CAST(tablename AS VARCHAR(128)) = 'T1')
+	at org.apache.derby.iapi.error.StandardException.newException(Unknown Source)
+	at org.apache.derby.impl.sql.compile.BinaryComparisonOperatorNode.bindComparisonOperator(Unknown Source)
+	at org.apache.derby.impl.sql.compile.BinaryComparisonOperatorNode.bindExpression(Unknown Source)
+	at org.apache.derby.impl.sql.compile.SelectNode.bindExpressions(Unknown Source)
+	at org.apache.derby.impl.sql.compile.DMLStatementNode.bindExpressions(Unknown Source)
+	at org.apache.derby.impl.sql.compile.DMLStatementNode.bind(Unknown Source)
+	at org.apache.derby.impl.sql.compile.CursorNode.bindStatement(Unknown Source)
+	at org.apache.derby.impl.sql.GenericStatement.prepMinion(Unknown Source)
+	at org.apache.derby.impl.sql.GenericStatement.prepare(Unknown Source)
+	at org.apache.derby.impl.sql.conn.GenericLanguageConnectionContext.prepareInternalStatement(Unknown Source)
+	at org.apache.derby.impl.jdbc.EmbedStatement.execute(Unknown Source)
+	at org.apache.derby.impl.jdbc.EmbedStatement.executeQuery(Unknown Source)
+	at org.apache.tomcat.dbcp.dbcp.DelegatingStatement.executeQuery(DelegatingStatement.java:208)
+	at org.apache.tomcat.dbcp.dbcp.DelegatingStatement.executeQuery(DelegatingStatement.java:208)
+	at com.otrocol.app.Db.getRSf(Db.java:112)
+	at org.apache.jsp.folder_jsp._jspService(folder_jsp.java:81)
+	at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:70)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:728)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:432)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:390)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:334)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:728)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:305)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.tuckey.web.filters.urlrewrite.RuleChain.handleRewrite(RuleChain.java:176)
+	at org.tuckey.web.filters.urlrewrite.RuleChain.doRules(RuleChain.java:145)
+	at org.tuckey.web.filters.urlrewrite.UrlRewriter.processRequest(UrlRewriter.java:92)
+	at org.tuckey.web.filters.urlrewrite.UrlRewriteFilter.doFilter(UrlRewriteFilter.java:394)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at filters.ContentFilter.doFilter(ContentFilter.java:64)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:222)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:123)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:171)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:99)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:947)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:118)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:408)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1009)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:589)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:312)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+
+May 05, 2013 11:01:49 PM org.apache.catalina.core.StandardWrapperValve invoke
+SEVERE: Servlet.service() for servlet [jsp] in context with path [] threw exception [javax.servlet.ServletException: java.sql.SQLException: ResultSet not open. Operation 'next' not permitted. Verify that autocommit is off.] with root cause
+java.sql.SQLException: ResultSet not open. Operation 'next' not permitted. Verify that autocommit is off.
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory.getSQLException(Unknown Source)
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory40.wrapArgsForTransportAcrossDRDA(Unknown Source)
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory40.getSQLException(Unknown Source)
+	at org.apache.derby.impl.jdbc.Util.newEmbedSQLException(Unknown Source)
+	at org.apache.derby.impl.jdbc.Util.newEmbedSQLException(Unknown Source)
+	at org.apache.derby.impl.jdbc.Util.generateCsSQLException(Unknown Source)
+	at org.apache.derby.impl.jdbc.EmbedConnection.newSQLException(Unknown Source)
+	at org.apache.derby.impl.jdbc.ConnectionChild.newSQLException(Unknown Source)
+	at org.apache.derby.impl.jdbc.EmbedResultSet.checkIfClosed(Unknown Source)
+	at org.apache.derby.impl.jdbc.EmbedResultSet.checkExecIfClosed(Unknown Source)
+	at org.apache.derby.impl.jdbc.EmbedResultSet.movePosition(Unknown Source)
+	at org.apache.derby.impl.jdbc.EmbedResultSet.next(Unknown Source)
+	at org.apache.tomcat.dbcp.dbcp.DelegatingResultSet.next(DelegatingResultSet.java:207)
+	at org.apache.tomcat.dbcp.dbcp.DelegatingResultSet.next(DelegatingResultSet.java:207)
+	at org.apache.jsp.folder_jsp._jspService(folder_jsp.java:86)
+	at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:70)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:728)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:432)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:390)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:334)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:728)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:305)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.tuckey.web.filters.urlrewrite.RuleChain.handleRewrite(RuleChain.java:176)
+	at org.tuckey.web.filters.urlrewrite.RuleChain.doRules(RuleChain.java:145)
+	at org.tuckey.web.filters.urlrewrite.UrlRewriter.processRequest(UrlRewriter.java:92)
+	at org.tuckey.web.filters.urlrewrite.UrlRewriteFilter.doFilter(UrlRewriteFilter.java:394)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at filters.ContentFilter.doFilter(ContentFilter.java:64)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:222)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:123)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:171)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:99)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:947)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:118)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:408)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1009)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:589)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:312)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+
+May 05, 2013 11:02:59 PM org.apache.catalina.core.ApplicationContext log
+INFO: org.tuckey.web.filters.urlrewrite.UrlRewriteFilter INFO: destroy called
+May 05, 2013 11:03:03 PM org.apache.catalina.core.ApplicationContext log
+INFO: org.tuckey.web.filters.urlrewrite.UrlRewriteFilter INFO: loaded (conf ok)
+May 05, 2013 11:26:04 PM org.apache.catalina.core.ApplicationContext log
+INFO: org.tuckey.web.filters.urlrewrite.UrlRewriteFilter INFO: destroy called
+May 05, 2013 11:26:04 PM org.apache.catalina.core.ApplicationContext log
+INFO: org.tuckey.web.filters.urlrewrite.UrlRewriteFilter INFO: loaded (conf ok)
+May 05, 2013 11:36:15 PM org.apache.catalina.core.StandardWrapperValve invoke
+SEVERE: Servlet.service() for servlet [jsp] in context with path [] threw exception [Unable to compile class for JSP: 
+
+An error occurred at line: 14 in the jsp file: /folder.jsp
+The method print(boolean) in the type JspWriter is not applicable for the arguments ()
+11:   <h1>My Folder</h1>
+12:   <%String id = request.getParameter("id"); %>
+13:   <%String user = request.getParameter("u"); %>
+14: <form enctype="multipart/form-data" name="myForm" action="actions\upload.jsp<%= %>" method="post">   
+15:   <h2>Register</h2>  
+16:     <label fro="upload">Upload a file:</label>
+17:     <input type="file" name="avatar"/>
+
+
+Stacktrace:] with root cause
+org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: 14 in the jsp file: /folder.jsp
+The method print(boolean) in the type JspWriter is not applicable for the arguments ()
+11:   <h1>My Folder</h1>
+12:   <%String id = request.getParameter("id"); %>
+13:   <%String user = request.getParameter("u"); %>
+14: <form enctype="multipart/form-data" name="myForm" action="actions\upload.jsp<%= %>" method="post">   
+15:   <h2>Register</h2>  
+16:     <label fro="upload">Upload a file:</label>
+17:     <input type="file" name="avatar"/>
+
+
+Stacktrace:
+	at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:103)
+	at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:331)
+	at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:468)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:378)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:353)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:340)
+	at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:646)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:357)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:390)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:334)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:728)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:305)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.tuckey.web.filters.urlrewrite.RuleChain.handleRewrite(RuleChain.java:176)
+	at org.tuckey.web.filters.urlrewrite.RuleChain.doRules(RuleChain.java:145)
+	at org.tuckey.web.filters.urlrewrite.UrlRewriter.processRequest(UrlRewriter.java:92)
+	at org.tuckey.web.filters.urlrewrite.UrlRewriteFilter.doFilter(UrlRewriteFilter.java:394)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at filters.ContentFilter.doFilter(ContentFilter.java:64)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:222)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:123)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:171)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:99)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:947)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:118)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:408)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1009)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:589)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:312)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+
+May 05, 2013 11:37:05 PM org.apache.catalina.core.StandardWrapperValve invoke
+SEVERE: Servlet.service() for servlet [jsp] in context with path [] threw exception [Unable to compile class for JSP: 
+
+An error occurred at line: 19 in the jsp file: /folder.jsp
+id cannot be resolved to a variable
+16:     <input type="submit"/>
+17: </form>
+18:  <% 
+19:     if(id!=null){
+20:     Db data = new Db();
+21: 	ResultSet rs = data.getRSf(id);
+22:     %>
+
+
+An error occurred at line: 21 in the jsp file: /folder.jsp
+id cannot be resolved to a variable
+18:  <% 
+19:     if(id!=null){
+20:     Db data = new Db();
+21: 	ResultSet rs = data.getRSf(id);
+22:     %>
+23:   	<table border="1" summary="files">
+24: 		<% while (rs.next()) { %>
+
+
+Stacktrace:] with root cause
+org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: 19 in the jsp file: /folder.jsp
+id cannot be resolved to a variable
+16:     <input type="submit"/>
+17: </form>
+18:  <% 
+19:     if(id!=null){
+20:     Db data = new Db();
+21: 	ResultSet rs = data.getRSf(id);
+22:     %>
+
+
+An error occurred at line: 21 in the jsp file: /folder.jsp
+id cannot be resolved to a variable
+18:  <% 
+19:     if(id!=null){
+20:     Db data = new Db();
+21: 	ResultSet rs = data.getRSf(id);
+22:     %>
+23:   	<table border="1" summary="files">
+24: 		<% while (rs.next()) { %>
+
+
+Stacktrace:
+	at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:103)
+	at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:331)
+	at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:468)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:378)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:353)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:340)
+	at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:646)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:357)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:390)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:334)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:728)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:305)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.tuckey.web.filters.urlrewrite.RuleChain.handleRewrite(RuleChain.java:176)
+	at org.tuckey.web.filters.urlrewrite.RuleChain.doRules(RuleChain.java:145)
+	at org.tuckey.web.filters.urlrewrite.UrlRewriter.processRequest(UrlRewriter.java:92)
+	at org.tuckey.web.filters.urlrewrite.UrlRewriteFilter.doFilter(UrlRewriteFilter.java:394)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at filters.ContentFilter.doFilter(ContentFilter.java:64)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:222)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:123)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:171)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:99)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:947)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:118)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:408)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1009)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:589)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:312)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+
+May 05, 2013 11:38:04 PM org.apache.catalina.core.StandardWrapperValve invoke
+SEVERE: Servlet.service() for servlet [jsp] in context with path [] threw exception [Unable to compile class for JSP: 
+
+An error occurred at line: 5 in the jsp file: /actions/upload.jsp
+The constructor Upload(HttpServletRequest, HttpServletResponse, JspWriter, String, String) is undefined
+2: <%
+3: 	String id = request.getParameter("id");
+4: 	String user = request.getParameter("u");
+5: 	Upload newupload = new Upload(request, response, out, id, user);
+6: 	response.sendRedirect("referer");
+7: %>
+
+
+Stacktrace:] with root cause
+org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: 5 in the jsp file: /actions/upload.jsp
+The constructor Upload(HttpServletRequest, HttpServletResponse, JspWriter, String, String) is undefined
+2: <%
+3: 	String id = request.getParameter("id");
+4: 	String user = request.getParameter("u");
+5: 	Upload newupload = new Upload(request, response, out, id, user);
+6: 	response.sendRedirect("referer");
+7: %>
+
+
+Stacktrace:
+	at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:103)
+	at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:331)
+	at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:468)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:378)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:353)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:340)
+	at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:646)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:357)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:390)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:334)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:728)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:305)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.tuckey.web.filters.urlrewrite.RuleChain.handleRewrite(RuleChain.java:176)
+	at org.tuckey.web.filters.urlrewrite.RuleChain.doRules(RuleChain.java:145)
+	at org.tuckey.web.filters.urlrewrite.UrlRewriter.processRequest(UrlRewriter.java:92)
+	at org.tuckey.web.filters.urlrewrite.UrlRewriteFilter.doFilter(UrlRewriteFilter.java:394)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at filters.ContentFilter.doFilter(ContentFilter.java:64)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:222)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:123)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:171)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:99)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:947)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:118)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:408)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1009)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:589)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:312)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+
+May 05, 2013 11:40:17 PM org.apache.catalina.core.StandardWrapperValve invoke
+SEVERE: Servlet.service() for servlet [jsp] in context with path [] threw exception [Unable to compile class for JSP: 
+
+An error occurred at line: 6 in the jsp file: /actions/upload.jsp
+Syntax error, insert ")" to complete Expression
+3: 	String id = request.getParameter("id");
+4: 	String user = request.getParameter("u");
+5: 	Upload newupload = new Upload(pageContext, request, response, out, id, user);
+6: 	response.sendRedirect(request.getHeader("referer");
+7: %>
+
+
+Stacktrace:] with root cause
+org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: 6 in the jsp file: /actions/upload.jsp
+Syntax error, insert ")" to complete Expression
+3: 	String id = request.getParameter("id");
+4: 	String user = request.getParameter("u");
+5: 	Upload newupload = new Upload(pageContext, request, response, out, id, user);
+6: 	response.sendRedirect(request.getHeader("referer");
+7: %>
+
+
+Stacktrace:
+	at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:103)
+	at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:331)
+	at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:468)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:378)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:353)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:340)
+	at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:646)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:357)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:390)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:334)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:728)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:305)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.tuckey.web.filters.urlrewrite.RuleChain.handleRewrite(RuleChain.java:176)
+	at org.tuckey.web.filters.urlrewrite.RuleChain.doRules(RuleChain.java:145)
+	at org.tuckey.web.filters.urlrewrite.UrlRewriter.processRequest(UrlRewriter.java:92)
+	at org.tuckey.web.filters.urlrewrite.UrlRewriteFilter.doFilter(UrlRewriteFilter.java:394)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at filters.ContentFilter.doFilter(ContentFilter.java:64)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:222)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:123)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:171)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:99)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:947)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:118)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:408)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1009)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:589)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:312)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+
+May 05, 2013 11:54:45 PM org.apache.catalina.core.ApplicationContext log
+INFO: org.tuckey.web.filters.urlrewrite.UrlRewriteFilter INFO: destroy called
+May 05, 2013 11:54:45 PM org.apache.catalina.core.ApplicationContext log
 INFO: org.tuckey.web.filters.urlrewrite.UrlRewriteFilter INFO: loaded (conf ok)

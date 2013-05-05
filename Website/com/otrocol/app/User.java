@@ -11,14 +11,13 @@ import javax.naming.*;
 import java.io.*;
 import javax.servlet.*;
 import javax.servlet.http.*;
-import java.util.*;
 import javax.servlet.jsp.JspWriter;
 import javax.servlet.jsp.JspException;
 
 public class User{
 
 	public String message;
-	public HashMap<String,String> VALUES = new HashMap<String,String>();;
+	public HashMap<String,String> VALUES = new HashMap<String,String>();
 	public DataSource d;
 	public Connection con;
 	public Context i;
@@ -75,7 +74,7 @@ public class User{
 		try{
 			st = con.createStatement(); //java.sql
 			String insertSql;
-			insertSql = "insert into users values("+id+",'"+VALUES.get("userName")+"','"+VALUES.get("passWord")+"','"+VALUES.get("email")+"','"+VALUES.get("firstName")+"','"+VALUES.get("lastName")+"','"+VALUES.get("age")+"','"+ VALUES.get("avatar")+"')";
+			insertSql = "insert into users values("+id+",'"+VALUES.get("userName")+"','"+VALUES.get("passWord")+"','"+VALUES.get("email")+"','"+VALUES.get("firstName")+"','"+VALUES.get("lastName")+"','"+VALUES.get("age")+"','"+ VALUES.get("avatar")+"','"+false+"')";
 			st.executeUpdate(insertSql);
 			st.close();
 		}catch(SQLException s){
@@ -85,7 +84,6 @@ public class User{
 	}
 	
 	public void generateUser(HttpServletRequest request,HttpServletResponse response, JspWriter out){
-
 		message = "Registration successful";
 		startDbConnection();
 		insertUser(generateId());
@@ -112,6 +110,22 @@ public class User{
 		boolean exists = check(userName, passWord);
 		closeDbConnection();
 		return exists;
+	}
+
+	public void confirm(String user, String code){
+		startDbConnection();
+		try{
+			Statement st3 = con.createStatement(); //java.sql
+			String insertSql;
+			insertSql = "update users set confirmed = true where username = '"+user+"'";
+			if(code.equals("18934_897600")){
+				st3.executeUpdate(insertSql);
+			}
+		}catch(SQLException s){
+			message = "Registration failed!Check stacktrace.";
+			s.printStackTrace();
+		};
+		closeDbConnection();
 	}
 
 };

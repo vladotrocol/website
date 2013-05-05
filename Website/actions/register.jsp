@@ -10,7 +10,7 @@
 <%@ page import="com.otrocol.app.*" %>
 <%
 	FormReader newForm = new FormReader(pageContext, request, response, out);
-	response.sendRedirect("../index.html");
+	response.sendRedirect("../index.jsp?l="+newForm.registered);
 %>
 </body>
 </html>

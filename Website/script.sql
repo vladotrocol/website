@@ -1,4 +1,6 @@
-create table users(userid int not null, username varchar(30) not null, password varchar(30) not null, email varchar(70) not null,firstname varchar(30) not null, lastname varchar(30) not null,age varchar(10), avatar varchar(200), CONSTRAINT uc_userID unique (userid), CONSTRAINT uc_username unique (username))
+create table users(userid int not null, username varchar(30) not null, password varchar(30) not null, email varchar(70) not null,firstname varchar(30) not null, lastname varchar(30) not null,age varchar(10), avatar varchar(200),confirmed boolean, CONSTRAINT uc_userID unique (userid), CONSTRAINT uc_username unique (username))
+
+create table files(userid int not null, path varchar(200) not null)
 
 insert into users values(1, 'admin', 'pass', 'noemail@nomail.no', 'vlad', 'otrocol')
 

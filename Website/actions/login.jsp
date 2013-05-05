@@ -14,10 +14,13 @@ String passWord = request.getParameter("passWord");
 User checkUser = new User();
 boolean ex = checkUser.exists(userName, passWord);
 if(ex){
-	out.print("<h1>Login sucessful</h1>");
+	Db data = new Db();
+	int id = data.getId(userName);
+	out.print(id);
+	response.sendRedirect("../index.jsp?id="+id+"");
 }
 else{
-	out.print("<h1>Login unsucessful</h1>");
+	response.sendRedirect("../index.jsp?id="+0);
 }
 
 %>

@@ -28,11 +28,11 @@ public class Image{
         if(fileName.lastIndexOf("\\") >= 0){
         		boolean success = (new File(filePath + "\\Data\\" + "\\"+user+"\\")).mkdirs();
             	file = new File(filePath + "\\Data\\" + "\\"+user+"\\" + fileName.substring( fileName.lastIndexOf("\\")));
-            	shortPath = "\\Data\\" + "\\"+user+"\\" + fileName.substring( fileName.lastIndexOf("\\"));
+            	shortPath = "\\Data\\"+user+"\\" + fileName.substring( fileName.lastIndexOf("\\"));
             }else{
             	boolean success = (new File(filePath + "\\Data\\" + "\\"+user+"\\")).mkdirs();
             	file = new File(filePath + "\\Data\\" + "\\"+user+"\\" + fileName.substring(fileName.lastIndexOf("\\")+1));
-            	shortPath ="\\Data\\" + "\\"+user+"\\" + fileName.substring(fileName.lastIndexOf("\\")+1);
+            	shortPath ="\\Data\\"+user+"\\" + fileName.substring(fileName.lastIndexOf("\\")+1);
             }
             try{
             	item.write(file);

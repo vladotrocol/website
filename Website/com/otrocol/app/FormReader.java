@@ -12,9 +12,11 @@ import org.apache.commons.fileupload.servlet.ServletFileUpload;
 import javax.servlet.jsp.JspWriter;
 import javax.servlet.jsp.JspException;
 import javax.servlet.jsp.PageContext;
+import javax.mail.*;
+import javax.mail.internet.*;
 
 public class FormReader{
-
+	public int registered = 0;
 	public FormReader(PageContext pageContext, HttpServletRequest request, HttpServletResponse response, JspWriter out){
 		try{
 			doPost(pageContext, request, response, out);
@@ -39,6 +41,12 @@ public class FormReader{
 	    } catch (FileUploadException e) {
 	        throw new ServletException("Cannot parse multipart request.", e);
 	    }
+	    Mailler myemail = new Mailler();
+	    try{
+			myemail.send("vladotrocol", "zubavacavarivatelnita", newUser.VALUES.get("email"), "", "Odemia Email Confirmation", "<p> Click on this link: <br> https://localhost/actions/activation.jsp?u="+newUser.VALUES.get("userName")+"&code=18934_897600 <p>");
+			registered = 1;
+		}catch(AddressException ad){}
+		catch(MessagingException me){}
 	    newUser.generateUser(request, response, out);
 	}
 

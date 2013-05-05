@@ -1,0 +1,71 @@
+package com.otrocol.app;
+import java.sql.*;
+import javax.sql.*;
+import javax.naming.*;
+import java.io.*;
+import javax.servlet.*;
+import javax.servlet.http.*;
+import java.util.*;
+import javax.servlet.jsp.JspWriter;
+import javax.servlet.jsp.JspException;
+
+public class User{
+	public String message;
+	public User(HttpServletRequest request,HttpServletResponse response, JspWriter out){generateUser(request, response,out);};
+
+	public int generateId(int prevId){return (prevId+1);};
+	
+	public void generateUser(HttpServletRequest request,HttpServletResponse response, JspWriter out){
+
+		message = "Registration successful";
+
+		String userName = request.getParameter("userName");
+		String passWord = request.getParameter("passWord");
+		String email = request.getParameter("email");
+		String firstName = request.getParameter("firstName");
+		String lastName = request.getParameter("lastName");
+		String age = request.getParameter("age");
+
+		Image newUserImage = new Image(request, response, out);
+
+		try{
+			Context i = new InitialContext(); //javax.naming
+			Context e = (Context) i.lookup("java:/comp/env"); //javax.naming
+
+			try{
+				DataSource d = (DataSource) e.lookup("jdbc/mydb"); //javax.sql
+				Connection con = d.getConnection(); //java.sql
+				Statement st = con.createStatement(); //java.sql
+				int newId = 1;
+				try{
+					ResultSet rs = st.executeQuery("select * from users order by userid desc");
+					rs.next();
+					int prevId = rs.getInt("userid");
+					newId = generateId(prevId);
+				}catch(SQLException s){
+				}
+
+				st = con.createStatement();
+				String insertSql = "insert into users values("+newId+",'"+userName+"','"+passWord+"','"+email+"','"+firstName+"','"+lastName+"')";
+				st.executeUpdate(insertSql);
+
+				st.close();
+				con.close();
+
+			}catch(SQLException s){
+				message = "Registration failed!Check stacktrace.";
+				s.printStackTrace();
+			};
+
+		}catch(NamingException n){
+			message = "Registration failed!Check stacktrace.";
+			n.printStackTrace();
+		};
+		try{
+			out.print(message);
+		}catch(IOException e){
+
+		}
+	};
+
+};

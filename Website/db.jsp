@@ -8,7 +8,7 @@
 <body>
 <h1>Database Maintenance</h1>
 
-<form action="db-action.jsp">
+<form action="db-action.jsp" method="post">
 <p>
 <p>Query</p>
 <textarea name="sql" rows="5" cols="40">

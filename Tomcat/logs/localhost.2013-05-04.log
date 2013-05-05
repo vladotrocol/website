@@ -1,0 +1,2 @@
+May 04, 2013 12:47:24 AM org.apache.catalina.core.ApplicationContext log
+INFO: org.tuckey.web.filters.urlrewrite.UrlRewriteFilter INFO: destroy called

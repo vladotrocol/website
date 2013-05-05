@@ -1,0 +1,10 @@
+May 04, 2013 12:47:24 AM org.apache.coyote.AbstractProtocol pause
+INFO: Pausing ProtocolHandler ["http-bio-443"]
+May 04, 2013 12:47:24 AM org.apache.coyote.AbstractProtocol pause
+INFO: Pausing ProtocolHandler ["ajp-bio-8009"]
+May 04, 2013 12:47:24 AM org.apache.catalina.core.StandardService stopInternal
+INFO: Stopping service Catalina
+May 04, 2013 12:47:24 AM org.apache.coyote.AbstractProtocol stop
+INFO: Stopping ProtocolHandler ["http-bio-443"]
+May 04, 2013 12:47:24 AM org.apache.coyote.AbstractProtocol stop
+INFO: Stopping ProtocolHandler ["ajp-bio-8009"]

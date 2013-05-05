@@ -1,0 +1,10 @@
+May 03, 2013 10:32:57 PM org.apache.catalina.core.ApplicationContext log
+INFO: org.tuckey.web.filters.urlrewrite.UrlRewriteFilter INFO: loaded (conf ok)
+May 03, 2013 10:57:08 PM org.apache.catalina.core.ApplicationContext log
+INFO: org.tuckey.web.filters.urlrewrite.UrlRewriteFilter INFO: destroy called
+May 03, 2013 10:57:08 PM org.apache.catalina.core.ApplicationContext log
+INFO: org.tuckey.web.filters.urlrewrite.UrlRewriteFilter INFO: loaded (conf ok)
+May 03, 2013 11:01:58 PM org.apache.catalina.core.ApplicationContext log
+INFO: org.tuckey.web.filters.urlrewrite.UrlRewriteFilter INFO: destroy called
+May 03, 2013 11:01:59 PM org.apache.catalina.core.ApplicationContext log
+INFO: org.tuckey.web.filters.urlrewrite.UrlRewriteFilter INFO: loaded (conf ok)

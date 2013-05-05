@@ -61,4 +61,13 @@
         <dispatcher>REQUEST</dispatcher>
         <dispatcher>FORWARD</dispatcher>
     </filter-mapping>
+
+    <context-param> 
+    <description>Location to store uploaded file</description> 
+    <param-name>file-upload</param-name> 
+    <param-value>
+         D:\Projects\website\Website\
+     </param-value> 
+</context-param>
+
 </web-app>

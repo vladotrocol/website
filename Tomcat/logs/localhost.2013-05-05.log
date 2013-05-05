@@ -1,0 +1,1860 @@
+May 05, 2013 12:42:10 PM org.apache.catalina.core.ApplicationContext log
+INFO: org.tuckey.web.filters.urlrewrite.UrlRewriteFilter INFO: loaded (conf ok)
+May 05, 2013 12:54:19 PM org.apache.catalina.core.ApplicationContext log
+INFO: org.tuckey.web.filters.urlrewrite.UrlRewriteFilter INFO: destroy called
+May 05, 2013 12:54:19 PM org.apache.catalina.core.ApplicationContext log
+INFO: org.tuckey.web.filters.urlrewrite.UrlRewriteFilter INFO: loaded (conf ok)
+May 05, 2013 1:43:30 PM org.apache.catalina.core.ApplicationContext log
+INFO: org.tuckey.web.filters.urlrewrite.UrlRewriteFilter INFO: destroy called
+May 05, 2013 1:43:30 PM org.apache.catalina.core.ApplicationContext log
+INFO: org.tuckey.web.filters.urlrewrite.UrlRewriteFilter INFO: loaded (conf ok)
+May 05, 2013 1:44:09 PM org.apache.catalina.core.StandardWrapperValve invoke
+SEVERE: Servlet.service() for servlet [jsp] in context with path [] threw exception [Unable to compile class for JSP: 
+
+An error occurred at line: 12 in the jsp file: /register.jsp
+The constructor FormReader(HttpServletRequest, HttpServletResponse, JspWriter) is undefined
+9: <body>
+10: <%@ page import="com.otrocol.app.*" %>
+11: <%
+12: 	FormReader newForm = new FormReader(request, response, out);
+13: %>
+14: </body>
+15: </html>
+
+
+Stacktrace:] with root cause
+org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: 12 in the jsp file: /register.jsp
+The constructor FormReader(HttpServletRequest, HttpServletResponse, JspWriter) is undefined
+9: <body>
+10: <%@ page import="com.otrocol.app.*" %>
+11: <%
+12: 	FormReader newForm = new FormReader(request, response, out);
+13: %>
+14: </body>
+15: </html>
+
+
+Stacktrace:
+	at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:103)
+	at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:331)
+	at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:468)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:378)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:353)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:340)
+	at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:646)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:357)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:390)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:334)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:728)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:305)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.tuckey.web.filters.urlrewrite.RuleChain.handleRewrite(RuleChain.java:176)
+	at org.tuckey.web.filters.urlrewrite.RuleChain.doRules(RuleChain.java:145)
+	at org.tuckey.web.filters.urlrewrite.UrlRewriter.processRequest(UrlRewriter.java:92)
+	at org.tuckey.web.filters.urlrewrite.UrlRewriteFilter.doFilter(UrlRewriteFilter.java:394)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at filters.ContentFilter.doFilter(ContentFilter.java:64)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:222)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:123)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:171)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:99)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:947)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:118)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:408)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1009)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:589)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:312)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+
+May 05, 2013 1:49:30 PM org.apache.catalina.core.ApplicationContext log
+INFO: org.tuckey.web.filters.urlrewrite.UrlRewriteFilter INFO: destroy called
+May 05, 2013 1:49:31 PM org.apache.catalina.core.ApplicationContext log
+INFO: org.tuckey.web.filters.urlrewrite.UrlRewriteFilter INFO: loaded (conf ok)
+May 05, 2013 1:49:34 PM org.apache.catalina.core.StandardWrapperValve invoke
+SEVERE: Servlet.service() for servlet [jsp] in context with path [] threw exception [An exception occurred processing JSP page /register.jsp at line 12
+
+9: <body>
+10: <%@ page import="com.otrocol.app.*" %>
+11: <%
+12: 	FormReader newForm = new FormReader(request, response, out);
+13: %>
+14: </body>
+15: </html>
+
+
+Stacktrace:] with root cause
+java.lang.NullPointerException
+	at com.otrocol.app.User.generateId(User.java:37)
+	at com.otrocol.app.User.generateUser(User.java:87)
+	at com.otrocol.app.User.<init>(User.java:28)
+	at com.otrocol.app.FormReader.doPost(FormReader.java:25)
+	at com.otrocol.app.FormReader.<init>(FormReader.java:19)
+	at org.apache.jsp.register_jsp._jspService(register_jsp.java:74)
+	at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:70)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:728)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:432)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:390)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:334)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:728)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:305)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.tuckey.web.filters.urlrewrite.RuleChain.handleRewrite(RuleChain.java:176)
+	at org.tuckey.web.filters.urlrewrite.RuleChain.doRules(RuleChain.java:145)
+	at org.tuckey.web.filters.urlrewrite.UrlRewriter.processRequest(UrlRewriter.java:92)
+	at org.tuckey.web.filters.urlrewrite.UrlRewriteFilter.doFilter(UrlRewriteFilter.java:394)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at filters.ContentFilter.doFilter(ContentFilter.java:64)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:222)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:123)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:171)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:99)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:947)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:118)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:408)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1009)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:589)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:312)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+
+May 05, 2013 1:51:38 PM org.apache.catalina.core.StandardWrapperValve invoke
+SEVERE: Servlet.service() for servlet [jsp] in context with path [] threw exception [An exception occurred processing JSP page /register.jsp at line 12
+
+9: <body>
+10: <%@ page import="com.otrocol.app.*" %>
+11: <%
+12: 	FormReader newForm = new FormReader(request, response, out);
+13: %>
+14: </body>
+15: </html>
+
+
+Stacktrace:] with root cause
+java.lang.NullPointerException
+	at com.otrocol.app.User.generateId(User.java:37)
+	at com.otrocol.app.User.generateUser(User.java:87)
+	at com.otrocol.app.User.<init>(User.java:28)
+	at com.otrocol.app.FormReader.doPost(FormReader.java:25)
+	at com.otrocol.app.FormReader.<init>(FormReader.java:19)
+	at org.apache.jsp.register_jsp._jspService(register_jsp.java:74)
+	at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:70)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:728)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:432)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:390)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:334)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:728)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:305)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.tuckey.web.filters.urlrewrite.RuleChain.handleRewrite(RuleChain.java:176)
+	at org.tuckey.web.filters.urlrewrite.RuleChain.doRules(RuleChain.java:145)
+	at org.tuckey.web.filters.urlrewrite.UrlRewriter.processRequest(UrlRewriter.java:92)
+	at org.tuckey.web.filters.urlrewrite.UrlRewriteFilter.doFilter(UrlRewriteFilter.java:394)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at filters.ContentFilter.doFilter(ContentFilter.java:64)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:222)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:123)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:171)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:99)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:947)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:118)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:408)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1009)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:589)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:312)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+
+May 05, 2013 1:51:41 PM org.apache.catalina.core.ApplicationContext log
+INFO: org.tuckey.web.filters.urlrewrite.UrlRewriteFilter INFO: destroy called
+May 05, 2013 1:51:41 PM org.apache.catalina.core.ApplicationContext log
+INFO: org.tuckey.web.filters.urlrewrite.UrlRewriteFilter INFO: loaded (conf ok)
+May 05, 2013 1:54:31 PM org.apache.catalina.core.StandardWrapperValve invoke
+SEVERE: Servlet.service() for servlet [jsp] in context with path [] threw exception [java.lang.NullPointerException] with root cause
+java.lang.NullPointerException
+	at com.otrocol.app.User.generateId(User.java:37)
+	at com.otrocol.app.User.generateUser(User.java:87)
+	at com.otrocol.app.User.<init>(User.java:28)
+	at com.otrocol.app.FormReader.doPost(FormReader.java:25)
+	at com.otrocol.app.FormReader.<init>(FormReader.java:19)
+	at org.apache.jsp.register_jsp._jspService(register_jsp.java:74)
+	at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:70)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:728)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:432)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:390)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:334)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:728)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:305)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.tuckey.web.filters.urlrewrite.RuleChain.handleRewrite(RuleChain.java:176)
+	at org.tuckey.web.filters.urlrewrite.RuleChain.doRules(RuleChain.java:145)
+	at org.tuckey.web.filters.urlrewrite.UrlRewriter.processRequest(UrlRewriter.java:92)
+	at org.tuckey.web.filters.urlrewrite.UrlRewriteFilter.doFilter(UrlRewriteFilter.java:394)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at filters.ContentFilter.doFilter(ContentFilter.java:64)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:222)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:123)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:171)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:99)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:947)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:118)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:408)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1009)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:589)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:312)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+
+May 05, 2013 1:56:29 PM org.apache.catalina.core.StandardWrapperValve invoke
+SEVERE: Servlet.service() for servlet [jsp] in context with path [] threw exception [java.lang.NullPointerException] with root cause
+java.lang.NullPointerException
+	at com.otrocol.app.User.generateId(User.java:37)
+	at com.otrocol.app.User.generateUser(User.java:87)
+	at com.otrocol.app.User.<init>(User.java:28)
+	at com.otrocol.app.FormReader.doPost(FormReader.java:25)
+	at com.otrocol.app.FormReader.<init>(FormReader.java:19)
+	at org.apache.jsp.register_jsp._jspService(register_jsp.java:74)
+	at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:70)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:728)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:432)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:390)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:334)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:728)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:305)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.tuckey.web.filters.urlrewrite.RuleChain.handleRewrite(RuleChain.java:176)
+	at org.tuckey.web.filters.urlrewrite.RuleChain.doRules(RuleChain.java:145)
+	at org.tuckey.web.filters.urlrewrite.UrlRewriter.processRequest(UrlRewriter.java:92)
+	at org.tuckey.web.filters.urlrewrite.UrlRewriteFilter.doFilter(UrlRewriteFilter.java:394)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at filters.ContentFilter.doFilter(ContentFilter.java:64)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:222)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:123)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:171)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:99)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:947)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:118)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:408)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1009)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:589)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:310)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+
+May 05, 2013 1:56:31 PM org.apache.catalina.core.ApplicationContext log
+INFO: org.tuckey.web.filters.urlrewrite.UrlRewriteFilter INFO: destroy called
+May 05, 2013 1:56:32 PM org.apache.catalina.core.ApplicationContext log
+INFO: org.tuckey.web.filters.urlrewrite.UrlRewriteFilter INFO: loaded (conf ok)
+May 05, 2013 1:56:32 PM org.apache.catalina.core.ApplicationContext log
+INFO: org.tuckey.web.filters.urlrewrite.UrlRewriteFilter INFO: destroy called
+May 05, 2013 1:56:39 PM org.apache.catalina.core.ApplicationContext log
+INFO: org.tuckey.web.filters.urlrewrite.UrlRewriteFilter INFO: loaded (conf ok)
+May 05, 2013 1:57:44 PM org.apache.catalina.core.ApplicationContext log
+INFO: org.tuckey.web.filters.urlrewrite.UrlRewriteFilter INFO: destroy called
+May 05, 2013 1:57:50 PM org.apache.catalina.core.ApplicationContext log
+INFO: org.tuckey.web.filters.urlrewrite.UrlRewriteFilter INFO: loaded (conf ok)
+May 05, 2013 2:03:40 PM org.apache.catalina.core.ApplicationContext log
+INFO: org.tuckey.web.filters.urlrewrite.UrlRewriteFilter INFO: destroy called
+May 05, 2013 2:03:41 PM org.apache.catalina.core.ApplicationContext log
+INFO: org.tuckey.web.filters.urlrewrite.UrlRewriteFilter INFO: loaded (conf ok)
+May 05, 2013 2:04:32 PM org.apache.catalina.core.ApplicationContext log
+INFO: org.tuckey.web.filters.urlrewrite.UrlRewriteFilter INFO: destroy called
+May 05, 2013 2:04:38 PM org.apache.catalina.core.ApplicationContext log
+INFO: org.tuckey.web.filters.urlrewrite.UrlRewriteFilter INFO: loaded (conf ok)
+May 05, 2013 2:08:38 PM org.apache.catalina.core.ApplicationContext log
+INFO: org.tuckey.web.filters.urlrewrite.UrlRewriteFilter INFO: destroy called
+May 05, 2013 2:08:38 PM org.apache.catalina.core.ApplicationContext log
+INFO: org.tuckey.web.filters.urlrewrite.UrlRewriteFilter INFO: loaded (conf ok)
+May 05, 2013 2:12:08 PM org.apache.catalina.core.ApplicationContext log
+INFO: org.tuckey.web.filters.urlrewrite.UrlRewriteFilter INFO: destroy called
+May 05, 2013 2:12:09 PM org.apache.catalina.core.ApplicationContext log
+INFO: org.tuckey.web.filters.urlrewrite.UrlRewriteFilter INFO: loaded (conf ok)
+May 05, 2013 2:22:49 PM org.apache.catalina.core.StandardWrapperValve invoke
+SEVERE: Servlet.service() for servlet [jsp] in context with path [] threw exception [An exception occurred processing JSP page /register.jsp at line 12
+
+9: <body>
+10: <%@ page import="com.otrocol.app.*" %>
+11: <%
+12: 	FormReader newForm = new FormReader(pageContext, request, response, out);
+13: %>
+14: </body>
+15: </html>
+
+
+Stacktrace:] with root cause
+java.lang.NoSuchMethodError: com.otrocol.app.FormReader.<init>(Ljavax/servlet/jsp/PageContext;Ljavax/servlet/http/HttpServletRequest;Ljavax/servlet/http/HttpServletResponse;Ljavax/servlet/jsp/JspWriter;)V
+	at org.apache.jsp.register_jsp._jspService(register_jsp.java:74)
+	at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:70)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:728)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:432)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:390)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:334)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:728)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:305)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.tuckey.web.filters.urlrewrite.RuleChain.handleRewrite(RuleChain.java:176)
+	at org.tuckey.web.filters.urlrewrite.RuleChain.doRules(RuleChain.java:145)
+	at org.tuckey.web.filters.urlrewrite.UrlRewriter.processRequest(UrlRewriter.java:92)
+	at org.tuckey.web.filters.urlrewrite.UrlRewriteFilter.doFilter(UrlRewriteFilter.java:394)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at filters.ContentFilter.doFilter(ContentFilter.java:64)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:222)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:123)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:171)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:99)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:947)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:118)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:408)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1009)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:589)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:312)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+
+May 05, 2013 2:22:49 PM org.apache.catalina.core.ApplicationContext log
+INFO: org.tuckey.web.filters.urlrewrite.UrlRewriteFilter INFO: destroy called
+May 05, 2013 2:22:49 PM org.apache.catalina.core.ApplicationContext log
+INFO: org.tuckey.web.filters.urlrewrite.UrlRewriteFilter INFO: loaded (conf ok)
+May 05, 2013 2:26:59 PM org.apache.catalina.core.ApplicationContext log
+INFO: org.tuckey.web.filters.urlrewrite.UrlRewriteFilter INFO: destroy called
+May 05, 2013 2:27:00 PM org.apache.catalina.core.ApplicationContext log
+INFO: org.tuckey.web.filters.urlrewrite.UrlRewriteFilter INFO: loaded (conf ok)
+May 05, 2013 2:28:40 PM org.apache.catalina.core.ApplicationContext log
+INFO: org.tuckey.web.filters.urlrewrite.UrlRewriteFilter INFO: destroy called
+May 05, 2013 2:28:40 PM org.apache.catalina.core.ApplicationContext log
+INFO: org.tuckey.web.filters.urlrewrite.UrlRewriteFilter INFO: loaded (conf ok)
+May 05, 2013 2:29:59 PM org.apache.catalina.core.ApplicationContext log
+INFO: org.tuckey.web.filters.urlrewrite.UrlRewriteFilter INFO: destroy called
+May 05, 2013 2:30:34 PM org.apache.catalina.core.ApplicationContext log
+INFO: org.tuckey.web.filters.urlrewrite.UrlRewriteFilter INFO: loaded (conf ok)
+May 05, 2013 2:32:00 PM org.apache.catalina.core.ApplicationContext log
+INFO: org.tuckey.web.filters.urlrewrite.UrlRewriteFilter INFO: destroy called
+May 05, 2013 2:32:04 PM org.apache.catalina.core.ApplicationContext log
+INFO: org.tuckey.web.filters.urlrewrite.UrlRewriteFilter INFO: loaded (conf ok)
+May 05, 2013 2:33:12 PM org.apache.catalina.core.ApplicationContext log
+INFO: org.tuckey.web.filters.urlrewrite.UrlRewriteFilter INFO: destroy called
+May 05, 2013 2:33:16 PM org.apache.catalina.core.ApplicationContext log
+INFO: org.tuckey.web.filters.urlrewrite.UrlRewriteFilter INFO: loaded (conf ok)
+May 05, 2013 2:34:24 PM org.apache.catalina.core.ApplicationContext log
+INFO: org.tuckey.web.filters.urlrewrite.UrlRewriteFilter INFO: destroy called
+May 05, 2013 2:34:28 PM org.apache.catalina.core.ApplicationContext log
+INFO: org.tuckey.web.filters.urlrewrite.UrlRewriteFilter INFO: loaded (conf ok)
+May 05, 2013 2:44:28 PM org.apache.catalina.core.ApplicationContext log
+INFO: org.tuckey.web.filters.urlrewrite.UrlRewriteFilter INFO: destroy called
+May 05, 2013 2:44:29 PM org.apache.catalina.core.ApplicationContext log
+INFO: org.tuckey.web.filters.urlrewrite.UrlRewriteFilter INFO: loaded (conf ok)
+May 05, 2013 2:44:43 PM org.apache.catalina.core.StandardWrapperValve invoke
+SEVERE: Servlet.service() for servlet [jsp] in context with path [] threw exception [java.lang.NullPointerException] with root cause
+java.lang.NullPointerException
+	at com.otrocol.app.User.generateId(User.java:37)
+	at com.otrocol.app.User.generateUser(User.java:87)
+	at com.otrocol.app.User.<init>(User.java:28)
+	at com.otrocol.app.FormReader.doPost(FormReader.java:26)
+	at com.otrocol.app.FormReader.<init>(FormReader.java:20)
+	at org.apache.jsp.register_jsp._jspService(register_jsp.java:74)
+	at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:70)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:728)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:432)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:390)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:334)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:728)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:305)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.tuckey.web.filters.urlrewrite.RuleChain.handleRewrite(RuleChain.java:176)
+	at org.tuckey.web.filters.urlrewrite.RuleChain.doRules(RuleChain.java:145)
+	at org.tuckey.web.filters.urlrewrite.UrlRewriter.processRequest(UrlRewriter.java:92)
+	at org.tuckey.web.filters.urlrewrite.UrlRewriteFilter.doFilter(UrlRewriteFilter.java:394)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at filters.ContentFilter.doFilter(ContentFilter.java:64)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:222)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:123)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:171)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:99)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:947)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:118)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:408)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1009)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:589)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:312)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+
+May 05, 2013 2:45:38 PM org.apache.catalina.core.ApplicationContext log
+INFO: org.tuckey.web.filters.urlrewrite.UrlRewriteFilter INFO: destroy called
+May 05, 2013 2:45:43 PM org.apache.catalina.core.ApplicationContext log
+INFO: org.tuckey.web.filters.urlrewrite.UrlRewriteFilter INFO: loaded (conf ok)
+May 05, 2013 2:45:47 PM org.apache.catalina.core.StandardWrapperValve invoke
+SEVERE: Servlet.service() for servlet [jsp] in context with path [] threw exception [java.lang.NullPointerException] with root cause
+java.lang.NullPointerException
+	at com.otrocol.app.User.closeDbConnection(User.java:47)
+	at com.otrocol.app.User.generateUser(User.java:89)
+	at com.otrocol.app.User.<init>(User.java:28)
+	at com.otrocol.app.FormReader.doPost(FormReader.java:26)
+	at com.otrocol.app.FormReader.<init>(FormReader.java:20)
+	at org.apache.jsp.register_jsp._jspService(register_jsp.java:74)
+	at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:70)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:728)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:432)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:390)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:334)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:728)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:305)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.tuckey.web.filters.urlrewrite.RuleChain.handleRewrite(RuleChain.java:176)
+	at org.tuckey.web.filters.urlrewrite.RuleChain.doRules(RuleChain.java:145)
+	at org.tuckey.web.filters.urlrewrite.UrlRewriter.processRequest(UrlRewriter.java:92)
+	at org.tuckey.web.filters.urlrewrite.UrlRewriteFilter.doFilter(UrlRewriteFilter.java:394)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at filters.ContentFilter.doFilter(ContentFilter.java:64)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:222)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:123)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:171)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:99)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:947)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:118)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:408)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1009)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:589)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:312)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+
+May 05, 2013 2:48:32 PM org.apache.catalina.core.StandardWrapperValve invoke
+SEVERE: Servlet.service() for servlet [jsp] in context with path [] threw exception [java.lang.NullPointerException] with root cause
+java.lang.NullPointerException
+	at com.otrocol.app.User.closeDbConnection(User.java:47)
+	at com.otrocol.app.User.generateUser(User.java:89)
+	at com.otrocol.app.User.<init>(User.java:28)
+	at com.otrocol.app.FormReader.doPost(FormReader.java:26)
+	at com.otrocol.app.FormReader.<init>(FormReader.java:20)
+	at org.apache.jsp.register_jsp._jspService(register_jsp.java:74)
+	at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:70)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:728)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:432)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:390)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:334)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:728)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:305)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.tuckey.web.filters.urlrewrite.RuleChain.handleRewrite(RuleChain.java:176)
+	at org.tuckey.web.filters.urlrewrite.RuleChain.doRules(RuleChain.java:145)
+	at org.tuckey.web.filters.urlrewrite.UrlRewriter.processRequest(UrlRewriter.java:92)
+	at org.tuckey.web.filters.urlrewrite.UrlRewriteFilter.doFilter(UrlRewriteFilter.java:394)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at filters.ContentFilter.doFilter(ContentFilter.java:64)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:222)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:123)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:171)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:99)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:947)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:118)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:408)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1009)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:589)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:312)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+
+May 05, 2013 2:48:33 PM org.apache.catalina.core.ApplicationContext log
+INFO: org.tuckey.web.filters.urlrewrite.UrlRewriteFilter INFO: destroy called
+May 05, 2013 2:48:33 PM org.apache.catalina.core.ApplicationContext log
+INFO: org.tuckey.web.filters.urlrewrite.UrlRewriteFilter INFO: loaded (conf ok)
+May 05, 2013 2:49:23 PM org.apache.catalina.core.ApplicationContext log
+INFO: org.tuckey.web.filters.urlrewrite.UrlRewriteFilter INFO: destroy called
+May 05, 2013 2:49:24 PM org.apache.catalina.core.ApplicationContext log
+INFO: org.tuckey.web.filters.urlrewrite.UrlRewriteFilter INFO: loaded (conf ok)
+May 05, 2013 2:49:24 PM org.apache.catalina.core.StandardWrapperValve invoke
+SEVERE: Servlet.service() for servlet [jsp] in context with path [] threw exception [java.lang.NullPointerException] with root cause
+java.lang.NullPointerException
+	at com.otrocol.app.User.closeDbConnection(User.java:53)
+	at com.otrocol.app.User.generateUser(User.java:95)
+	at com.otrocol.app.User.<init>(User.java:34)
+	at com.otrocol.app.FormReader.doPost(FormReader.java:26)
+	at com.otrocol.app.FormReader.<init>(FormReader.java:20)
+	at org.apache.jsp.register_jsp._jspService(register_jsp.java:74)
+	at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:70)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:728)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:432)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:390)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:334)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:728)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:305)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.tuckey.web.filters.urlrewrite.RuleChain.handleRewrite(RuleChain.java:176)
+	at org.tuckey.web.filters.urlrewrite.RuleChain.doRules(RuleChain.java:145)
+	at org.tuckey.web.filters.urlrewrite.UrlRewriter.processRequest(UrlRewriter.java:92)
+	at org.tuckey.web.filters.urlrewrite.UrlRewriteFilter.doFilter(UrlRewriteFilter.java:394)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at filters.ContentFilter.doFilter(ContentFilter.java:64)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:222)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:123)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:171)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:99)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:947)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:118)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:408)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1009)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:589)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:312)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+
+May 05, 2013 2:50:18 PM org.apache.catalina.core.ApplicationContext log
+INFO: org.tuckey.web.filters.urlrewrite.UrlRewriteFilter INFO: destroy called
+May 05, 2013 2:50:24 PM org.apache.catalina.core.ApplicationContext log
+INFO: org.tuckey.web.filters.urlrewrite.UrlRewriteFilter INFO: loaded (conf ok)
+May 05, 2013 2:51:33 PM org.apache.catalina.core.ApplicationContext log
+INFO: org.tuckey.web.filters.urlrewrite.UrlRewriteFilter INFO: destroy called
+May 05, 2013 2:51:38 PM org.apache.catalina.core.ApplicationContext log
+INFO: org.tuckey.web.filters.urlrewrite.UrlRewriteFilter INFO: loaded (conf ok)
+May 05, 2013 2:53:48 PM org.apache.catalina.core.ApplicationContext log
+INFO: org.tuckey.web.filters.urlrewrite.UrlRewriteFilter INFO: destroy called
+May 05, 2013 2:53:49 PM org.apache.catalina.core.ApplicationContext log
+INFO: org.tuckey.web.filters.urlrewrite.UrlRewriteFilter INFO: loaded (conf ok)
+May 05, 2013 2:57:29 PM org.apache.catalina.core.ApplicationContext log
+INFO: org.tuckey.web.filters.urlrewrite.UrlRewriteFilter INFO: destroy called
+May 05, 2013 2:57:29 PM org.apache.catalina.core.ApplicationContext log
+INFO: org.tuckey.web.filters.urlrewrite.UrlRewriteFilter INFO: loaded (conf ok)
+May 05, 2013 3:01:29 PM org.apache.catalina.core.ApplicationContext log
+INFO: org.tuckey.web.filters.urlrewrite.UrlRewriteFilter INFO: destroy called
+May 05, 2013 3:01:30 PM org.apache.catalina.core.ApplicationContext log
+INFO: org.tuckey.web.filters.urlrewrite.UrlRewriteFilter INFO: loaded (conf ok)
+May 05, 2013 3:01:54 PM org.apache.catalina.core.StandardWrapperValve invoke
+SEVERE: Servlet.service() for servlet [jsp] in context with path [] threw exception [java.lang.NullPointerException] with root cause
+java.lang.NullPointerException
+	at com.otrocol.app.User.generateId(User.java:38)
+	at com.otrocol.app.User.generateUser(User.java:89)
+	at com.otrocol.app.User.<init>(User.java:29)
+	at com.otrocol.app.FormReader.doPost(FormReader.java:26)
+	at com.otrocol.app.FormReader.<init>(FormReader.java:20)
+	at org.apache.jsp.register_jsp._jspService(register_jsp.java:74)
+	at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:70)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:728)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:432)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:390)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:334)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:728)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:305)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.tuckey.web.filters.urlrewrite.RuleChain.handleRewrite(RuleChain.java:176)
+	at org.tuckey.web.filters.urlrewrite.RuleChain.doRules(RuleChain.java:145)
+	at org.tuckey.web.filters.urlrewrite.UrlRewriter.processRequest(UrlRewriter.java:92)
+	at org.tuckey.web.filters.urlrewrite.UrlRewriteFilter.doFilter(UrlRewriteFilter.java:394)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at filters.ContentFilter.doFilter(ContentFilter.java:64)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:222)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:123)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:171)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:99)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:947)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:118)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:408)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1009)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:589)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:310)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+
+May 05, 2013 3:02:12 PM org.apache.catalina.core.StandardWrapperValve invoke
+SEVERE: Servlet.service() for servlet [jsp] in context with path [] threw exception [java.lang.NullPointerException] with root cause
+java.lang.NullPointerException
+	at com.otrocol.app.User.generateId(User.java:38)
+	at com.otrocol.app.User.generateUser(User.java:89)
+	at com.otrocol.app.User.<init>(User.java:29)
+	at com.otrocol.app.FormReader.doPost(FormReader.java:26)
+	at com.otrocol.app.FormReader.<init>(FormReader.java:20)
+	at org.apache.jsp.register_jsp._jspService(register_jsp.java:74)
+	at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:70)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:728)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:432)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:390)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:334)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:728)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:305)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.tuckey.web.filters.urlrewrite.RuleChain.handleRewrite(RuleChain.java:176)
+	at org.tuckey.web.filters.urlrewrite.RuleChain.doRules(RuleChain.java:145)
+	at org.tuckey.web.filters.urlrewrite.UrlRewriter.processRequest(UrlRewriter.java:92)
+	at org.tuckey.web.filters.urlrewrite.UrlRewriteFilter.doFilter(UrlRewriteFilter.java:394)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at filters.ContentFilter.doFilter(ContentFilter.java:64)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:222)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:123)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:171)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:99)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:947)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:118)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:408)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1009)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:589)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:312)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+
+May 05, 2013 3:02:18 PM org.apache.catalina.core.StandardWrapperValve invoke
+SEVERE: Servlet.service() for servlet [jsp] in context with path [] threw exception [java.lang.NullPointerException] with root cause
+java.lang.NullPointerException
+	at com.otrocol.app.User.generateId(User.java:38)
+	at com.otrocol.app.User.generateUser(User.java:89)
+	at com.otrocol.app.User.<init>(User.java:29)
+	at com.otrocol.app.FormReader.doPost(FormReader.java:26)
+	at com.otrocol.app.FormReader.<init>(FormReader.java:20)
+	at org.apache.jsp.register_jsp._jspService(register_jsp.java:74)
+	at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:70)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:728)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:432)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:390)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:334)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:728)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:305)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.tuckey.web.filters.urlrewrite.RuleChain.handleRewrite(RuleChain.java:176)
+	at org.tuckey.web.filters.urlrewrite.RuleChain.doRules(RuleChain.java:145)
+	at org.tuckey.web.filters.urlrewrite.UrlRewriter.processRequest(UrlRewriter.java:92)
+	at org.tuckey.web.filters.urlrewrite.UrlRewriteFilter.doFilter(UrlRewriteFilter.java:394)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at filters.ContentFilter.doFilter(ContentFilter.java:64)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:222)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:123)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:171)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:99)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:947)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:118)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:408)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1009)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:589)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:312)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+
+May 05, 2013 3:03:05 PM org.apache.catalina.core.ApplicationContext log
+INFO: org.tuckey.web.filters.urlrewrite.UrlRewriteFilter INFO: destroy called
+May 05, 2013 3:03:10 PM org.apache.catalina.core.ApplicationContext log
+INFO: org.tuckey.web.filters.urlrewrite.UrlRewriteFilter INFO: loaded (conf ok)
+May 05, 2013 3:04:18 PM org.apache.catalina.core.ApplicationContext log
+INFO: org.tuckey.web.filters.urlrewrite.UrlRewriteFilter INFO: destroy called
+May 05, 2013 3:04:22 PM org.apache.catalina.core.ApplicationContext log
+INFO: org.tuckey.web.filters.urlrewrite.UrlRewriteFilter INFO: loaded (conf ok)
+May 05, 2013 3:12:02 PM org.apache.catalina.core.ApplicationContext log
+INFO: org.tuckey.web.filters.urlrewrite.UrlRewriteFilter INFO: destroy called
+May 05, 2013 3:12:03 PM org.apache.catalina.core.ApplicationContext log
+INFO: org.tuckey.web.filters.urlrewrite.UrlRewriteFilter INFO: loaded (conf ok)
+May 05, 2013 3:12:38 PM org.apache.catalina.core.StandardWrapperValve invoke
+SEVERE: Servlet.service() for servlet [jsp] in context with path [] threw exception [java.lang.NullPointerException] with root cause
+java.lang.NullPointerException
+	at com.otrocol.app.User.generateId(User.java:38)
+	at com.otrocol.app.User.generateUser(User.java:89)
+	at com.otrocol.app.FormReader.doPost(FormReader.java:56)
+	at com.otrocol.app.FormReader.<init>(FormReader.java:20)
+	at org.apache.jsp.register_jsp._jspService(register_jsp.java:74)
+	at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:70)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:728)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:432)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:390)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:334)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:728)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:305)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.tuckey.web.filters.urlrewrite.RuleChain.handleRewrite(RuleChain.java:176)
+	at org.tuckey.web.filters.urlrewrite.RuleChain.doRules(RuleChain.java:145)
+	at org.tuckey.web.filters.urlrewrite.UrlRewriter.processRequest(UrlRewriter.java:92)
+	at org.tuckey.web.filters.urlrewrite.UrlRewriteFilter.doFilter(UrlRewriteFilter.java:394)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at filters.ContentFilter.doFilter(ContentFilter.java:64)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:222)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:123)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:171)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:99)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:947)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:118)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:408)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1009)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:589)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:312)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+
+May 05, 2013 3:14:53 PM org.apache.catalina.core.ApplicationContext log
+INFO: org.tuckey.web.filters.urlrewrite.UrlRewriteFilter INFO: destroy called
+May 05, 2013 3:14:53 PM org.apache.catalina.core.ApplicationContext log
+INFO: org.tuckey.web.filters.urlrewrite.UrlRewriteFilter INFO: loaded (conf ok)
+May 05, 2013 3:14:56 PM org.apache.catalina.core.StandardWrapperValve invoke
+SEVERE: Servlet.service() for servlet [jsp] in context with path [] threw exception [java.lang.NullPointerException] with root cause
+java.lang.NullPointerException
+	at com.otrocol.app.User.generateId(User.java:38)
+	at com.otrocol.app.User.generateUser(User.java:89)
+	at com.otrocol.app.FormReader.doPost(FormReader.java:59)
+	at com.otrocol.app.FormReader.<init>(FormReader.java:20)
+	at org.apache.jsp.register_jsp._jspService(register_jsp.java:74)
+	at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:70)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:728)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:432)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:390)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:334)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:728)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:305)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.tuckey.web.filters.urlrewrite.RuleChain.handleRewrite(RuleChain.java:176)
+	at org.tuckey.web.filters.urlrewrite.RuleChain.doRules(RuleChain.java:145)
+	at org.tuckey.web.filters.urlrewrite.UrlRewriter.processRequest(UrlRewriter.java:92)
+	at org.tuckey.web.filters.urlrewrite.UrlRewriteFilter.doFilter(UrlRewriteFilter.java:394)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at filters.ContentFilter.doFilter(ContentFilter.java:64)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:222)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:123)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:171)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:99)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:947)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:118)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:408)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1009)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:589)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:312)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+
+May 05, 2013 3:15:01 PM org.apache.catalina.core.ApplicationContext log
+INFO: org.tuckey.web.filters.urlrewrite.UrlRewriteFilter INFO: destroy called
+May 05, 2013 3:15:05 PM org.apache.catalina.core.ApplicationContext log
+INFO: org.tuckey.web.filters.urlrewrite.UrlRewriteFilter INFO: loaded (conf ok)
+May 05, 2013 3:15:12 PM org.apache.catalina.core.StandardWrapperValve invoke
+SEVERE: Servlet.service() for servlet [jsp] in context with path [] threw exception [java.lang.NullPointerException] with root cause
+java.lang.NullPointerException
+	at com.otrocol.app.User.generateId(User.java:38)
+	at com.otrocol.app.User.generateUser(User.java:89)
+	at com.otrocol.app.FormReader.doPost(FormReader.java:59)
+	at com.otrocol.app.FormReader.<init>(FormReader.java:20)
+	at org.apache.jsp.register_jsp._jspService(register_jsp.java:74)
+	at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:70)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:728)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:432)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:390)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:334)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:728)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:305)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.tuckey.web.filters.urlrewrite.RuleChain.handleRewrite(RuleChain.java:176)
+	at org.tuckey.web.filters.urlrewrite.RuleChain.doRules(RuleChain.java:145)
+	at org.tuckey.web.filters.urlrewrite.UrlRewriter.processRequest(UrlRewriter.java:92)
+	at org.tuckey.web.filters.urlrewrite.UrlRewriteFilter.doFilter(UrlRewriteFilter.java:394)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at filters.ContentFilter.doFilter(ContentFilter.java:64)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:222)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:123)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:171)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:99)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:947)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:118)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:408)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1009)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:589)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:310)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+
+May 05, 2013 3:16:46 PM org.apache.catalina.core.ApplicationContext log
+INFO: org.tuckey.web.filters.urlrewrite.UrlRewriteFilter INFO: destroy called
+May 05, 2013 3:16:50 PM org.apache.catalina.core.ApplicationContext log
+INFO: org.tuckey.web.filters.urlrewrite.UrlRewriteFilter INFO: loaded (conf ok)
+May 05, 2013 3:44:50 PM org.apache.catalina.core.ApplicationContext log
+INFO: org.tuckey.web.filters.urlrewrite.UrlRewriteFilter INFO: destroy called
+May 05, 2013 3:44:51 PM org.apache.catalina.core.ApplicationContext log
+INFO: org.tuckey.web.filters.urlrewrite.UrlRewriteFilter INFO: loaded (conf ok)
+May 05, 2013 3:47:21 PM org.apache.catalina.core.ApplicationContext log
+INFO: org.tuckey.web.filters.urlrewrite.UrlRewriteFilter INFO: destroy called
+May 05, 2013 3:47:21 PM org.apache.catalina.core.ApplicationContext log
+INFO: org.tuckey.web.filters.urlrewrite.UrlRewriteFilter INFO: loaded (conf ok)
+May 05, 2013 3:49:02 PM org.apache.catalina.core.ApplicationContext log
+INFO: org.tuckey.web.filters.urlrewrite.UrlRewriteFilter INFO: destroy called
+May 05, 2013 3:49:06 PM org.apache.catalina.core.ApplicationContext log
+INFO: org.tuckey.web.filters.urlrewrite.UrlRewriteFilter INFO: loaded (conf ok)
+May 05, 2013 3:52:02 PM org.apache.catalina.core.ApplicationContext log
+INFO: org.tuckey.web.filters.urlrewrite.UrlRewriteFilter INFO: destroy called
+May 05, 2013 3:52:09 PM org.apache.catalina.core.ApplicationContext log
+INFO: org.tuckey.web.filters.urlrewrite.UrlRewriteFilter INFO: loaded (conf ok)
+May 05, 2013 4:05:43 PM org.apache.catalina.core.ApplicationContext log
+INFO: org.tuckey.web.filters.urlrewrite.UrlRewriteFilter INFO: destroy called
+May 05, 2013 4:05:51 PM org.apache.catalina.core.ApplicationContext log
+INFO: org.tuckey.web.filters.urlrewrite.UrlRewriteFilter INFO: loaded (conf ok)
+May 05, 2013 4:08:49 PM org.apache.catalina.core.ApplicationContext log
+INFO: org.tuckey.web.filters.urlrewrite.UrlRewriteFilter INFO: destroy called
+May 05, 2013 4:08:54 PM org.apache.catalina.core.ApplicationContext log
+INFO: org.tuckey.web.filters.urlrewrite.UrlRewriteFilter INFO: loaded (conf ok)
+May 05, 2013 4:23:44 PM org.apache.catalina.core.ApplicationContext log
+INFO: org.tuckey.web.filters.urlrewrite.UrlRewriteFilter INFO: destroy called
+May 05, 2013 4:23:45 PM org.apache.catalina.core.ApplicationContext log
+INFO: org.tuckey.web.filters.urlrewrite.UrlRewriteFilter INFO: loaded (conf ok)
+May 05, 2013 4:23:58 PM org.apache.catalina.core.StandardWrapperValve invoke
+SEVERE: Servlet.service() for servlet [jsp] in context with path [] threw exception [An exception occurred processing JSP page /login.jsp at line 17
+
+14: String userName = request.getParameter("userName");
+15: String passWord = request.getParameter("passWord");
+16: User checkUser = new User();
+17: out.print(checkUser.exists(userName));
+18: %>
+19: </body>
+20: </html>
+
+
+Stacktrace:] with root cause
+ERROR 42X01: Syntax error: Encountered "null" at line 1, column 45.
+	at org.apache.derby.iapi.error.StandardException.newException(Unknown Source)
+	at org.apache.derby.impl.sql.compile.ParserImpl.parseStatement(Unknown Source)
+	at org.apache.derby.impl.sql.GenericStatement.prepMinion(Unknown Source)
+	at org.apache.derby.impl.sql.GenericStatement.prepare(Unknown Source)
+	at org.apache.derby.impl.sql.conn.GenericLanguageConnectionContext.prepareInternalStatement(Unknown Source)
+	at org.apache.derby.impl.jdbc.EmbedStatement.execute(Unknown Source)
+	at org.apache.derby.impl.jdbc.EmbedStatement.executeQuery(Unknown Source)
+	at org.apache.tomcat.dbcp.dbcp.DelegatingStatement.executeQuery(DelegatingStatement.java:208)
+	at org.apache.tomcat.dbcp.dbcp.DelegatingStatement.executeQuery(DelegatingStatement.java:208)
+	at com.otrocol.app.User.check(User.java:96)
+	at com.otrocol.app.User.exists(User.java:109)
+	at org.apache.jsp.login_jsp._jspService(login_jsp.java:79)
+	at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:70)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:728)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:432)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:390)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:334)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:728)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:305)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.tuckey.web.filters.urlrewrite.RuleChain.handleRewrite(RuleChain.java:176)
+	at org.tuckey.web.filters.urlrewrite.RuleChain.doRules(RuleChain.java:145)
+	at org.tuckey.web.filters.urlrewrite.UrlRewriter.processRequest(UrlRewriter.java:92)
+	at org.tuckey.web.filters.urlrewrite.UrlRewriteFilter.doFilter(UrlRewriteFilter.java:394)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at filters.ContentFilter.doFilter(ContentFilter.java:64)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:222)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:123)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:171)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:99)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:947)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:118)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:408)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1009)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:589)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:312)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+
+May 05, 2013 4:25:41 PM org.apache.catalina.core.StandardWrapperValve invoke
+SEVERE: Servlet.service() for servlet [jsp] in context with path [] threw exception [An exception occurred processing JSP page /login.jsp at line 17
+
+14: String userName = request.getParameter("userName");
+15: String passWord = request.getParameter("passWord");
+16: User checkUser = new User();
+17: out.print(checkUser.exists(userName));
+18: %>
+19: </body>
+20: </html>
+
+
+Stacktrace:] with root cause
+ERROR 42X01: Syntax error: Encountered "null" at line 1, column 45.
+	at org.apache.derby.iapi.error.StandardException.newException(Unknown Source)
+	at org.apache.derby.impl.sql.compile.ParserImpl.parseStatement(Unknown Source)
+	at org.apache.derby.impl.sql.GenericStatement.prepMinion(Unknown Source)
+	at org.apache.derby.impl.sql.GenericStatement.prepare(Unknown Source)
+	at org.apache.derby.impl.sql.conn.GenericLanguageConnectionContext.prepareInternalStatement(Unknown Source)
+	at org.apache.derby.impl.jdbc.EmbedStatement.execute(Unknown Source)
+	at org.apache.derby.impl.jdbc.EmbedStatement.executeQuery(Unknown Source)
+	at org.apache.tomcat.dbcp.dbcp.DelegatingStatement.executeQuery(DelegatingStatement.java:208)
+	at org.apache.tomcat.dbcp.dbcp.DelegatingStatement.executeQuery(DelegatingStatement.java:208)
+	at com.otrocol.app.User.check(User.java:96)
+	at com.otrocol.app.User.exists(User.java:109)
+	at org.apache.jsp.login_jsp._jspService(login_jsp.java:79)
+	at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:70)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:728)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:432)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:390)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:334)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:728)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:305)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.tuckey.web.filters.urlrewrite.RuleChain.handleRewrite(RuleChain.java:176)
+	at org.tuckey.web.filters.urlrewrite.RuleChain.doRules(RuleChain.java:145)
+	at org.tuckey.web.filters.urlrewrite.UrlRewriter.processRequest(UrlRewriter.java:92)
+	at org.tuckey.web.filters.urlrewrite.UrlRewriteFilter.doFilter(UrlRewriteFilter.java:394)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at filters.ContentFilter.doFilter(ContentFilter.java:64)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:222)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:123)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:171)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:99)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:947)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:118)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:408)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1009)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:589)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:312)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+
+May 05, 2013 4:25:45 PM org.apache.catalina.core.ApplicationContext log
+INFO: org.tuckey.web.filters.urlrewrite.UrlRewriteFilter INFO: destroy called
+May 05, 2013 4:25:45 PM org.apache.catalina.core.ApplicationContext log
+INFO: org.tuckey.web.filters.urlrewrite.UrlRewriteFilter INFO: loaded (conf ok)
+May 05, 2013 4:26:43 PM org.apache.catalina.core.StandardWrapperValve invoke
+SEVERE: Servlet.service() for servlet [jsp] in context with path [] threw exception [An exception occurred processing JSP page /login.jsp at line 17
+
+14: String userName = request.getParameter("userName");
+15: String passWord = request.getParameter("passWord");
+16: User checkUser = new User();
+17: int ex = checkUser.exists(userName);
+18: out.print(ex);
+19: %>
+20: </body>
+
+
+Stacktrace:] with root cause
+ERROR 42X01: Syntax error: Encountered "null" at line 1, column 45.
+	at org.apache.derby.iapi.error.StandardException.newException(Unknown Source)
+	at org.apache.derby.impl.sql.compile.ParserImpl.parseStatement(Unknown Source)
+	at org.apache.derby.impl.sql.GenericStatement.prepMinion(Unknown Source)
+	at org.apache.derby.impl.sql.GenericStatement.prepare(Unknown Source)
+	at org.apache.derby.impl.sql.conn.GenericLanguageConnectionContext.prepareInternalStatement(Unknown Source)
+	at org.apache.derby.impl.jdbc.EmbedStatement.execute(Unknown Source)
+	at org.apache.derby.impl.jdbc.EmbedStatement.executeQuery(Unknown Source)
+	at org.apache.tomcat.dbcp.dbcp.DelegatingStatement.executeQuery(DelegatingStatement.java:208)
+	at org.apache.tomcat.dbcp.dbcp.DelegatingStatement.executeQuery(DelegatingStatement.java:208)
+	at com.otrocol.app.User.check(User.java:96)
+	at com.otrocol.app.User.exists(User.java:109)
+	at org.apache.jsp.login_jsp._jspService(login_jsp.java:79)
+	at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:70)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:728)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:432)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:390)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:334)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:728)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:305)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.tuckey.web.filters.urlrewrite.RuleChain.handleRewrite(RuleChain.java:176)
+	at org.tuckey.web.filters.urlrewrite.RuleChain.doRules(RuleChain.java:145)
+	at org.tuckey.web.filters.urlrewrite.UrlRewriter.processRequest(UrlRewriter.java:92)
+	at org.tuckey.web.filters.urlrewrite.UrlRewriteFilter.doFilter(UrlRewriteFilter.java:394)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at filters.ContentFilter.doFilter(ContentFilter.java:64)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:222)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:123)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:171)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:99)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:947)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:118)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:408)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1009)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:589)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:312)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+
+May 05, 2013 4:27:50 PM org.apache.catalina.core.ApplicationContext log
+INFO: org.tuckey.web.filters.urlrewrite.UrlRewriteFilter INFO: destroy called
+May 05, 2013 4:27:55 PM org.apache.catalina.core.ApplicationContext log
+INFO: org.tuckey.web.filters.urlrewrite.UrlRewriteFilter INFO: loaded (conf ok)
+May 05, 2013 4:28:02 PM org.apache.catalina.core.StandardWrapperValve invoke
+SEVERE: Servlet.service() for servlet [jsp] in context with path [] threw exception [java.lang.NullPointerException] with root cause
+java.lang.NullPointerException
+	at com.otrocol.app.User.closeDbConnection(User.java:49)
+	at com.otrocol.app.User.exists(User.java:110)
+	at org.apache.jsp.login_jsp._jspService(login_jsp.java:79)
+	at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:70)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:728)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:432)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:390)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:334)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:728)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:305)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.tuckey.web.filters.urlrewrite.RuleChain.handleRewrite(RuleChain.java:176)
+	at org.tuckey.web.filters.urlrewrite.RuleChain.doRules(RuleChain.java:145)
+	at org.tuckey.web.filters.urlrewrite.UrlRewriter.processRequest(UrlRewriter.java:92)
+	at org.tuckey.web.filters.urlrewrite.UrlRewriteFilter.doFilter(UrlRewriteFilter.java:394)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at filters.ContentFilter.doFilter(ContentFilter.java:64)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:222)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:123)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:171)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:99)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:947)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:118)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:408)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1009)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:589)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:312)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+
+May 05, 2013 4:30:14 PM org.apache.catalina.core.StandardWrapperValve invoke
+SEVERE: Servlet.service() for servlet [jsp] in context with path [] threw exception [java.lang.NullPointerException] with root cause
+java.lang.NullPointerException
+	at com.otrocol.app.User.closeDbConnection(User.java:49)
+	at com.otrocol.app.User.exists(User.java:110)
+	at org.apache.jsp.login_jsp._jspService(login_jsp.java:79)
+	at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:70)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:728)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:432)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:390)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:334)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:728)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:305)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.tuckey.web.filters.urlrewrite.RuleChain.handleRewrite(RuleChain.java:176)
+	at org.tuckey.web.filters.urlrewrite.RuleChain.doRules(RuleChain.java:145)
+	at org.tuckey.web.filters.urlrewrite.UrlRewriter.processRequest(UrlRewriter.java:92)
+	at org.tuckey.web.filters.urlrewrite.UrlRewriteFilter.doFilter(UrlRewriteFilter.java:394)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at filters.ContentFilter.doFilter(ContentFilter.java:64)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:222)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:123)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:171)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:99)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:947)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:118)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:408)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1009)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:589)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:312)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+
+May 05, 2013 4:30:15 PM org.apache.catalina.core.ApplicationContext log
+INFO: org.tuckey.web.filters.urlrewrite.UrlRewriteFilter INFO: destroy called
+May 05, 2013 4:30:15 PM org.apache.catalina.core.ApplicationContext log
+INFO: org.tuckey.web.filters.urlrewrite.UrlRewriteFilter INFO: loaded (conf ok)
+May 05, 2013 4:30:55 PM org.apache.catalina.core.ApplicationContext log
+INFO: org.tuckey.web.filters.urlrewrite.UrlRewriteFilter INFO: destroy called
+May 05, 2013 4:30:56 PM org.apache.catalina.core.ApplicationContext log
+INFO: org.tuckey.web.filters.urlrewrite.UrlRewriteFilter INFO: loaded (conf ok)
+May 05, 2013 4:31:34 PM org.apache.catalina.core.ApplicationContext log
+INFO: org.tuckey.web.filters.urlrewrite.UrlRewriteFilter INFO: destroy called
+May 05, 2013 4:31:54 PM org.apache.catalina.core.ApplicationContext log
+INFO: org.tuckey.web.filters.urlrewrite.UrlRewriteFilter INFO: loaded (conf ok)
+May 05, 2013 4:32:31 PM org.apache.catalina.core.ApplicationContext log
+INFO: org.tuckey.web.filters.urlrewrite.UrlRewriteFilter INFO: destroy called
+May 05, 2013 4:32:51 PM org.apache.catalina.core.ApplicationContext log
+INFO: org.tuckey.web.filters.urlrewrite.UrlRewriteFilter INFO: loaded (conf ok)
+May 05, 2013 4:33:00 PM org.apache.catalina.core.StandardWrapperValve invoke
+SEVERE: Servlet.service() for servlet [jsp] in context with path [] threw exception [javax.servlet.ServletException: java.sql.SQLSyntaxErrorException: Syntax error: Encountered "null" at line 1, column 45.] with root cause
+ERROR 42X01: Syntax error: Encountered "null" at line 1, column 45.
+	at org.apache.derby.iapi.error.StandardException.newException(Unknown Source)
+	at org.apache.derby.impl.sql.compile.ParserImpl.parseStatement(Unknown Source)
+	at org.apache.derby.impl.sql.GenericStatement.prepMinion(Unknown Source)
+	at org.apache.derby.impl.sql.GenericStatement.prepare(Unknown Source)
+	at org.apache.derby.impl.sql.conn.GenericLanguageConnectionContext.prepareInternalStatement(Unknown Source)
+	at org.apache.derby.impl.jdbc.EmbedStatement.execute(Unknown Source)
+	at org.apache.derby.impl.jdbc.EmbedStatement.executeQuery(Unknown Source)
+	at org.apache.tomcat.dbcp.dbcp.DelegatingStatement.executeQuery(DelegatingStatement.java:208)
+	at org.apache.tomcat.dbcp.dbcp.DelegatingStatement.executeQuery(DelegatingStatement.java:208)
+	at com.otrocol.app.User.check(User.java:96)
+	at com.otrocol.app.User.exists(User.java:109)
+	at org.apache.jsp.login_jsp._jspService(login_jsp.java:79)
+	at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:70)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:728)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:432)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:390)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:334)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:728)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:305)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.tuckey.web.filters.urlrewrite.RuleChain.handleRewrite(RuleChain.java:176)
+	at org.tuckey.web.filters.urlrewrite.RuleChain.doRules(RuleChain.java:145)
+	at org.tuckey.web.filters.urlrewrite.UrlRewriter.processRequest(UrlRewriter.java:92)
+	at org.tuckey.web.filters.urlrewrite.UrlRewriteFilter.doFilter(UrlRewriteFilter.java:394)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at filters.ContentFilter.doFilter(ContentFilter.java:64)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:222)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:123)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:171)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:99)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:947)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:118)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:408)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1009)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:589)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:312)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+
+May 05, 2013 4:33:41 PM org.apache.catalina.core.ApplicationContext log
+INFO: org.tuckey.web.filters.urlrewrite.UrlRewriteFilter INFO: destroy called
+May 05, 2013 4:34:00 PM org.apache.catalina.core.ApplicationContext log
+INFO: org.tuckey.web.filters.urlrewrite.UrlRewriteFilter INFO: loaded (conf ok)
+May 05, 2013 4:34:08 PM org.apache.catalina.core.StandardWrapperValve invoke
+SEVERE: Servlet.service() for servlet [jsp] in context with path [] threw exception [javax.servlet.ServletException: java.sql.SQLSyntaxErrorException: Syntax error: Encountered "null" at line 1, column 38.] with root cause
+ERROR 42X01: Syntax error: Encountered "null" at line 1, column 38.
+	at org.apache.derby.iapi.error.StandardException.newException(Unknown Source)
+	at org.apache.derby.impl.sql.compile.ParserImpl.parseStatement(Unknown Source)
+	at org.apache.derby.impl.sql.GenericStatement.prepMinion(Unknown Source)
+	at org.apache.derby.impl.sql.GenericStatement.prepare(Unknown Source)
+	at org.apache.derby.impl.sql.conn.GenericLanguageConnectionContext.prepareInternalStatement(Unknown Source)
+	at org.apache.derby.impl.jdbc.EmbedStatement.execute(Unknown Source)
+	at org.apache.derby.impl.jdbc.EmbedStatement.executeQuery(Unknown Source)
+	at org.apache.tomcat.dbcp.dbcp.DelegatingStatement.executeQuery(DelegatingStatement.java:208)
+	at org.apache.tomcat.dbcp.dbcp.DelegatingStatement.executeQuery(DelegatingStatement.java:208)
+	at com.otrocol.app.User.check(User.java:96)
+	at com.otrocol.app.User.exists(User.java:109)
+	at org.apache.jsp.login_jsp._jspService(login_jsp.java:79)
+	at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:70)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:728)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:432)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:390)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:334)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:728)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:305)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.tuckey.web.filters.urlrewrite.RuleChain.handleRewrite(RuleChain.java:176)
+	at org.tuckey.web.filters.urlrewrite.RuleChain.doRules(RuleChain.java:145)
+	at org.tuckey.web.filters.urlrewrite.UrlRewriter.processRequest(UrlRewriter.java:92)
+	at org.tuckey.web.filters.urlrewrite.UrlRewriteFilter.doFilter(UrlRewriteFilter.java:394)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at filters.ContentFilter.doFilter(ContentFilter.java:64)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:222)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:123)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:171)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:99)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:947)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:118)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:408)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1009)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:589)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:312)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+
+May 05, 2013 4:35:11 PM org.apache.catalina.core.ApplicationContext log
+INFO: org.tuckey.web.filters.urlrewrite.UrlRewriteFilter INFO: destroy called
+May 05, 2013 4:35:19 PM org.apache.catalina.core.ApplicationContext log
+INFO: org.tuckey.web.filters.urlrewrite.UrlRewriteFilter INFO: loaded (conf ok)
+May 05, 2013 4:35:28 PM org.apache.catalina.core.StandardWrapperValve invoke
+SEVERE: Servlet.service() for servlet [jsp] in context with path [] threw exception [java.lang.NullPointerException] with root cause
+java.lang.NullPointerException
+	at com.otrocol.app.User.closeDbConnection(User.java:49)
+	at com.otrocol.app.User.exists(User.java:110)
+	at org.apache.jsp.login_jsp._jspService(login_jsp.java:79)
+	at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:70)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:728)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:432)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:390)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:334)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:728)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:305)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.tuckey.web.filters.urlrewrite.RuleChain.handleRewrite(RuleChain.java:176)
+	at org.tuckey.web.filters.urlrewrite.RuleChain.doRules(RuleChain.java:145)
+	at org.tuckey.web.filters.urlrewrite.UrlRewriter.processRequest(UrlRewriter.java:92)
+	at org.tuckey.web.filters.urlrewrite.UrlRewriteFilter.doFilter(UrlRewriteFilter.java:394)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at filters.ContentFilter.doFilter(ContentFilter.java:64)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:222)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:123)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:171)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:99)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:947)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:118)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:408)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1009)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:589)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:312)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+
+May 05, 2013 4:36:39 PM org.apache.catalina.core.ApplicationContext log
+INFO: org.tuckey.web.filters.urlrewrite.UrlRewriteFilter INFO: destroy called
+May 05, 2013 4:36:55 PM org.apache.catalina.core.ApplicationContext log
+INFO: org.tuckey.web.filters.urlrewrite.UrlRewriteFilter INFO: loaded (conf ok)
+May 05, 2013 4:37:10 PM org.apache.catalina.core.ApplicationContext log
+INFO: org.tuckey.web.filters.urlrewrite.UrlRewriteFilter INFO: destroy called
+May 05, 2013 4:37:30 PM org.apache.catalina.core.ApplicationContext log
+INFO: org.tuckey.web.filters.urlrewrite.UrlRewriteFilter INFO: loaded (conf ok)
+May 05, 2013 4:37:34 PM org.apache.catalina.core.StandardWrapperValve invoke
+SEVERE: Servlet.service() for servlet [jsp] in context with path [] threw exception [javax.servlet.ServletException: java.sql.SQLSyntaxErrorException: Syntax error: Encountered "null" at line 1, column 38.] with root cause
+ERROR 42X01: Syntax error: Encountered "null" at line 1, column 38.
+	at org.apache.derby.iapi.error.StandardException.newException(Unknown Source)
+	at org.apache.derby.impl.sql.compile.ParserImpl.parseStatement(Unknown Source)
+	at org.apache.derby.impl.sql.GenericStatement.prepMinion(Unknown Source)
+	at org.apache.derby.impl.sql.GenericStatement.prepare(Unknown Source)
+	at org.apache.derby.impl.sql.conn.GenericLanguageConnectionContext.prepareInternalStatement(Unknown Source)
+	at org.apache.derby.impl.jdbc.EmbedStatement.execute(Unknown Source)
+	at org.apache.derby.impl.jdbc.EmbedStatement.executeQuery(Unknown Source)
+	at org.apache.tomcat.dbcp.dbcp.DelegatingStatement.executeQuery(DelegatingStatement.java:208)
+	at org.apache.tomcat.dbcp.dbcp.DelegatingStatement.executeQuery(DelegatingStatement.java:208)
+	at com.otrocol.app.User.check(User.java:97)
+	at com.otrocol.app.User.exists(User.java:114)
+	at org.apache.jsp.login_jsp._jspService(login_jsp.java:79)
+	at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:70)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:728)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:432)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:390)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:334)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:728)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:305)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.tuckey.web.filters.urlrewrite.RuleChain.handleRewrite(RuleChain.java:176)
+	at org.tuckey.web.filters.urlrewrite.RuleChain.doRules(RuleChain.java:145)
+	at org.tuckey.web.filters.urlrewrite.UrlRewriter.processRequest(UrlRewriter.java:92)
+	at org.tuckey.web.filters.urlrewrite.UrlRewriteFilter.doFilter(UrlRewriteFilter.java:394)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at filters.ContentFilter.doFilter(ContentFilter.java:64)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:222)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:123)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:171)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:99)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:947)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:118)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:408)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1009)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:589)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:312)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+
+May 05, 2013 4:38:38 PM org.apache.catalina.core.ApplicationContext log
+INFO: org.tuckey.web.filters.urlrewrite.UrlRewriteFilter INFO: destroy called
+May 05, 2013 4:38:43 PM org.apache.catalina.core.ApplicationContext log
+INFO: org.tuckey.web.filters.urlrewrite.UrlRewriteFilter INFO: loaded (conf ok)
+May 05, 2013 4:40:33 PM org.apache.catalina.core.ApplicationContext log
+INFO: org.tuckey.web.filters.urlrewrite.UrlRewriteFilter INFO: destroy called
+May 05, 2013 4:40:34 PM org.apache.catalina.core.ApplicationContext log
+INFO: org.tuckey.web.filters.urlrewrite.UrlRewriteFilter INFO: loaded (conf ok)
+May 05, 2013 4:41:10 PM org.apache.catalina.core.StandardWrapperValve invoke
+SEVERE: Servlet.service() for servlet [jsp] in context with path [] threw exception [An exception occurred processing JSP page /login.jsp at line 17
+
+14: String userName = request.getParameter("userName");
+15: String passWord = request.getParameter("passWord");
+16: User checkUser = new User();
+17: int ex = checkUser.exists(userName);
+18: out.print(ex);
+19: %>
+20: </body>
+
+
+Stacktrace:] with root cause
+java.lang.NullPointerException
+	at com.otrocol.app.User.check(User.java:97)
+	at com.otrocol.app.User.exists(User.java:114)
+	at org.apache.jsp.login_jsp._jspService(login_jsp.java:79)
+	at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:70)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:728)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:432)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:390)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:334)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:728)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:305)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.tuckey.web.filters.urlrewrite.RuleChain.handleRewrite(RuleChain.java:176)
+	at org.tuckey.web.filters.urlrewrite.RuleChain.doRules(RuleChain.java:145)
+	at org.tuckey.web.filters.urlrewrite.UrlRewriter.processRequest(UrlRewriter.java:92)
+	at org.tuckey.web.filters.urlrewrite.UrlRewriteFilter.doFilter(UrlRewriteFilter.java:394)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at filters.ContentFilter.doFilter(ContentFilter.java:64)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:222)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:123)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:171)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:99)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:947)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:118)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:408)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1009)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:589)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:312)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+
+May 05, 2013 4:45:06 PM org.apache.catalina.core.StandardWrapperValve invoke
+SEVERE: Servlet.service() for servlet [jsp] in context with path [] threw exception [An exception occurred processing JSP page /login.jsp at line 17
+
+14: String userName = request.getParameter("userName");
+15: String passWord = request.getParameter("passWord");
+16: User checkUser = new User();
+17: int ex = checkUser.exists(userName);
+18: out.print(ex);
+19: %>
+20: </body>
+
+
+Stacktrace:] with root cause
+java.lang.NullPointerException
+	at com.otrocol.app.User.check(User.java:97)
+	at com.otrocol.app.User.exists(User.java:114)
+	at org.apache.jsp.login_jsp._jspService(login_jsp.java:79)
+	at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:70)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:728)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:432)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:390)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:334)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:728)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:305)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.tuckey.web.filters.urlrewrite.RuleChain.handleRewrite(RuleChain.java:176)
+	at org.tuckey.web.filters.urlrewrite.RuleChain.doRules(RuleChain.java:145)
+	at org.tuckey.web.filters.urlrewrite.UrlRewriter.processRequest(UrlRewriter.java:92)
+	at org.tuckey.web.filters.urlrewrite.UrlRewriteFilter.doFilter(UrlRewriteFilter.java:394)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at filters.ContentFilter.doFilter(ContentFilter.java:64)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:222)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:123)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:171)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:99)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:947)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:118)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:408)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1009)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:589)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:312)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+
+May 05, 2013 4:46:14 PM org.apache.catalina.core.ApplicationContext log
+INFO: org.tuckey.web.filters.urlrewrite.UrlRewriteFilter INFO: destroy called
+May 05, 2013 4:46:14 PM org.apache.catalina.core.ApplicationContext log
+INFO: org.tuckey.web.filters.urlrewrite.UrlRewriteFilter INFO: loaded (conf ok)
+May 05, 2013 4:46:57 PM org.apache.catalina.core.StandardWrapperValve invoke
+SEVERE: Servlet.service() for servlet [jsp] in context with path [] threw exception [Unable to compile class for JSP: 
+
+An error occurred at line: 19 in the jsp file: /login.jsp
+EX cannot be resolved to a variable
+16: User checkUser = new User();
+17: int ex = checkUser.exists(userName);
+18: out.print(userName);
+19: out.print(EX);
+20: %>
+21: </body>
+22: </html>
+
+
+Stacktrace:] with root cause
+org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: 19 in the jsp file: /login.jsp
+EX cannot be resolved to a variable
+16: User checkUser = new User();
+17: int ex = checkUser.exists(userName);
+18: out.print(userName);
+19: out.print(EX);
+20: %>
+21: </body>
+22: </html>
+
+
+Stacktrace:
+	at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:103)
+	at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:331)
+	at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:468)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:378)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:353)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:340)
+	at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:646)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:357)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:390)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:334)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:728)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:305)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.tuckey.web.filters.urlrewrite.RuleChain.handleRewrite(RuleChain.java:176)
+	at org.tuckey.web.filters.urlrewrite.RuleChain.doRules(RuleChain.java:145)
+	at org.tuckey.web.filters.urlrewrite.UrlRewriter.processRequest(UrlRewriter.java:92)
+	at org.tuckey.web.filters.urlrewrite.UrlRewriteFilter.doFilter(UrlRewriteFilter.java:394)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at filters.ContentFilter.doFilter(ContentFilter.java:64)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:222)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:123)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:171)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:99)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:947)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:118)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:408)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1009)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:589)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:312)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+
+May 05, 2013 4:47:02 PM org.apache.catalina.core.StandardWrapperValve invoke
+SEVERE: Servlet.service() for servlet [jsp] in context with path [] threw exception [Unable to compile class for JSP: 
+
+An error occurred at line: 19 in the jsp file: /login.jsp
+EX cannot be resolved to a variable
+16: User checkUser = new User();
+17: int ex = checkUser.exists(userName);
+18: out.print(userName);
+19: out.print(EX);
+20: %>
+21: </body>
+22: </html>
+
+
+Stacktrace:] with root cause
+org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: 19 in the jsp file: /login.jsp
+EX cannot be resolved to a variable
+16: User checkUser = new User();
+17: int ex = checkUser.exists(userName);
+18: out.print(userName);
+19: out.print(EX);
+20: %>
+21: </body>
+22: </html>
+
+
+Stacktrace:
+	at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:103)
+	at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:331)
+	at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:468)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:378)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:353)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:340)
+	at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:646)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:357)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:390)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:334)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:728)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:305)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.tuckey.web.filters.urlrewrite.RuleChain.handleRewrite(RuleChain.java:176)
+	at org.tuckey.web.filters.urlrewrite.RuleChain.doRules(RuleChain.java:145)
+	at org.tuckey.web.filters.urlrewrite.UrlRewriter.processRequest(UrlRewriter.java:92)
+	at org.tuckey.web.filters.urlrewrite.UrlRewriteFilter.doFilter(UrlRewriteFilter.java:394)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at filters.ContentFilter.doFilter(ContentFilter.java:64)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:222)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:123)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:171)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:99)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:947)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:118)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:408)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1009)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:589)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:312)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+
+May 05, 2013 4:47:18 PM org.apache.catalina.core.StandardWrapperValve invoke
+SEVERE: Servlet.service() for servlet [jsp] in context with path [] threw exception [An exception occurred processing JSP page /login.jsp at line 17
+
+14: String userName = request.getParameter("userName");
+15: String passWord = request.getParameter("passWord");
+16: User checkUser = new User();
+17: int ex = checkUser.exists(userName);
+18: out.print(userName);
+19: out.print(ex);
+20: %>
+
+
+Stacktrace:] with root cause
+ERROR 42X04: Column 'LIZOZOM' is either not in any table in the FROM list or appears within a join specification and is outside the scope of the join specification or appears in a HAVING clause and is not in the GROUP BY list. If this is a CREATE or ALTER TABLE  statement then 'LIZOZOM' is not a column in the target table.
+	at org.apache.derby.iapi.error.StandardException.newException(Unknown Source)
+	at org.apache.derby.impl.sql.compile.ColumnReference.bindExpression(Unknown Source)
+	at org.apache.derby.impl.sql.compile.BinaryOperatorNode.bindExpression(Unknown Source)
+	at org.apache.derby.impl.sql.compile.BinaryComparisonOperatorNode.bindExpression(Unknown Source)
+	at org.apache.derby.impl.sql.compile.SelectNode.bindExpressions(Unknown Source)
+	at org.apache.derby.impl.sql.compile.DMLStatementNode.bindExpressions(Unknown Source)
+	at org.apache.derby.impl.sql.compile.DMLStatementNode.bind(Unknown Source)
+	at org.apache.derby.impl.sql.compile.CursorNode.bindStatement(Unknown Source)
+	at org.apache.derby.impl.sql.GenericStatement.prepMinion(Unknown Source)
+	at org.apache.derby.impl.sql.GenericStatement.prepare(Unknown Source)
+	at org.apache.derby.impl.sql.conn.GenericLanguageConnectionContext.prepareInternalStatement(Unknown Source)
+	at org.apache.derby.impl.jdbc.EmbedStatement.execute(Unknown Source)
+	at org.apache.derby.impl.jdbc.EmbedStatement.executeQuery(Unknown Source)
+	at org.apache.tomcat.dbcp.dbcp.DelegatingStatement.executeQuery(DelegatingStatement.java:208)
+	at org.apache.tomcat.dbcp.dbcp.DelegatingStatement.executeQuery(DelegatingStatement.java:208)
+	at com.otrocol.app.User.check(User.java:97)
+	at com.otrocol.app.User.exists(User.java:114)
+	at org.apache.jsp.login_jsp._jspService(login_jsp.java:79)
+	at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:70)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:728)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:432)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:390)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:334)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:728)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:305)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.tuckey.web.filters.urlrewrite.RuleChain.handleRewrite(RuleChain.java:176)
+	at org.tuckey.web.filters.urlrewrite.RuleChain.doRules(RuleChain.java:145)
+	at org.tuckey.web.filters.urlrewrite.UrlRewriter.processRequest(UrlRewriter.java:92)
+	at org.tuckey.web.filters.urlrewrite.UrlRewriteFilter.doFilter(UrlRewriteFilter.java:394)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at filters.ContentFilter.doFilter(ContentFilter.java:64)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:222)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:123)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:171)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:99)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:947)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:118)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:408)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1009)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:589)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:312)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+
+May 05, 2013 4:47:35 PM org.apache.catalina.core.StandardWrapperValve invoke
+SEVERE: Servlet.service() for servlet [jsp] in context with path [] threw exception [An exception occurred processing JSP page /login.jsp at line 18
+
+15: String passWord = request.getParameter("passWord");
+16: User checkUser = new User();
+17: out.print(userName);
+18: int ex = checkUser.exists(userName);
+19: 
+20: out.print(ex);
+21: %>
+
+
+Stacktrace:] with root cause
+ERROR 42X04: Column 'LIZOZOM' is either not in any table in the FROM list or appears within a join specification and is outside the scope of the join specification or appears in a HAVING clause and is not in the GROUP BY list. If this is a CREATE or ALTER TABLE  statement then 'LIZOZOM' is not a column in the target table.
+	at org.apache.derby.iapi.error.StandardException.newException(Unknown Source)
+	at org.apache.derby.impl.sql.compile.ColumnReference.bindExpression(Unknown Source)
+	at org.apache.derby.impl.sql.compile.BinaryOperatorNode.bindExpression(Unknown Source)
+	at org.apache.derby.impl.sql.compile.BinaryComparisonOperatorNode.bindExpression(Unknown Source)
+	at org.apache.derby.impl.sql.compile.SelectNode.bindExpressions(Unknown Source)
+	at org.apache.derby.impl.sql.compile.DMLStatementNode.bindExpressions(Unknown Source)
+	at org.apache.derby.impl.sql.compile.DMLStatementNode.bind(Unknown Source)
+	at org.apache.derby.impl.sql.compile.CursorNode.bindStatement(Unknown Source)
+	at org.apache.derby.impl.sql.GenericStatement.prepMinion(Unknown Source)
+	at org.apache.derby.impl.sql.GenericStatement.prepare(Unknown Source)
+	at org.apache.derby.impl.sql.conn.GenericLanguageConnectionContext.prepareInternalStatement(Unknown Source)
+	at org.apache.derby.impl.jdbc.EmbedStatement.execute(Unknown Source)
+	at org.apache.derby.impl.jdbc.EmbedStatement.executeQuery(Unknown Source)
+	at org.apache.tomcat.dbcp.dbcp.DelegatingStatement.executeQuery(DelegatingStatement.java:208)
+	at org.apache.tomcat.dbcp.dbcp.DelegatingStatement.executeQuery(DelegatingStatement.java:208)
+	at com.otrocol.app.User.check(User.java:97)
+	at com.otrocol.app.User.exists(User.java:114)
+	at org.apache.jsp.login_jsp._jspService(login_jsp.java:80)
+	at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:70)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:728)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:432)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:390)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:334)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:728)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:305)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.tuckey.web.filters.urlrewrite.RuleChain.handleRewrite(RuleChain.java:176)
+	at org.tuckey.web.filters.urlrewrite.RuleChain.doRules(RuleChain.java:145)
+	at org.tuckey.web.filters.urlrewrite.UrlRewriter.processRequest(UrlRewriter.java:92)
+	at org.tuckey.web.filters.urlrewrite.UrlRewriteFilter.doFilter(UrlRewriteFilter.java:394)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at filters.ContentFilter.doFilter(ContentFilter.java:64)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:222)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:123)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:171)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:99)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:947)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:118)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:408)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1009)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:589)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:312)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+
+May 05, 2013 4:48:35 PM org.apache.catalina.core.ApplicationContext log
+INFO: org.tuckey.web.filters.urlrewrite.UrlRewriteFilter INFO: destroy called
+May 05, 2013 4:48:39 PM org.apache.catalina.core.ApplicationContext log
+INFO: org.tuckey.web.filters.urlrewrite.UrlRewriteFilter INFO: loaded (conf ok)
+May 05, 2013 4:49:32 PM org.apache.catalina.core.ApplicationContext log
+INFO: org.tuckey.web.filters.urlrewrite.UrlRewriteFilter INFO: destroy called
+May 05, 2013 4:49:36 PM org.apache.catalina.core.ApplicationContext log
+INFO: org.tuckey.web.filters.urlrewrite.UrlRewriteFilter INFO: loaded (conf ok)
+May 05, 2013 4:49:41 PM org.apache.catalina.core.StandardWrapperValve invoke
+SEVERE: Servlet.service() for servlet [jsp] in context with path [] threw exception [javax.servlet.ServletException: java.sql.SQLSyntaxErrorException: Column 'LIZOZOM' is either not in any table in the FROM list or appears within a join specification and is outside the scope of the join specification or appears in a HAVING clause and is not in the GROUP BY list. If this is a CREATE or ALTER TABLE  statement then 'LIZOZOM' is not a column in the target table.] with root cause
+ERROR 42X04: Column 'LIZOZOM' is either not in any table in the FROM list or appears within a join specification and is outside the scope of the join specification or appears in a HAVING clause and is not in the GROUP BY list. If this is a CREATE or ALTER TABLE  statement then 'LIZOZOM' is not a column in the target table.
+	at org.apache.derby.iapi.error.StandardException.newException(Unknown Source)
+	at org.apache.derby.impl.sql.compile.ColumnReference.bindExpression(Unknown Source)
+	at org.apache.derby.impl.sql.compile.BinaryOperatorNode.bindExpression(Unknown Source)
+	at org.apache.derby.impl.sql.compile.BinaryComparisonOperatorNode.bindExpression(Unknown Source)
+	at org.apache.derby.impl.sql.compile.SelectNode.bindExpressions(Unknown Source)
+	at org.apache.derby.impl.sql.compile.DMLStatementNode.bindExpressions(Unknown Source)
+	at org.apache.derby.impl.sql.compile.DMLStatementNode.bind(Unknown Source)
+	at org.apache.derby.impl.sql.compile.CursorNode.bindStatement(Unknown Source)
+	at org.apache.derby.impl.sql.GenericStatement.prepMinion(Unknown Source)
+	at org.apache.derby.impl.sql.GenericStatement.prepare(Unknown Source)
+	at org.apache.derby.impl.sql.conn.GenericLanguageConnectionContext.prepareInternalStatement(Unknown Source)
+	at org.apache.derby.impl.jdbc.EmbedStatement.execute(Unknown Source)
+	at org.apache.derby.impl.jdbc.EmbedStatement.executeQuery(Unknown Source)
+	at org.apache.tomcat.dbcp.dbcp.DelegatingStatement.executeQuery(DelegatingStatement.java:208)
+	at org.apache.tomcat.dbcp.dbcp.DelegatingStatement.executeQuery(DelegatingStatement.java:208)
+	at com.otrocol.app.User.check(User.java:97)
+	at com.otrocol.app.User.exists(User.java:112)
+	at org.apache.jsp.login_jsp._jspService(login_jsp.java:80)
+	at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:70)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:728)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:432)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:390)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:334)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:728)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:305)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.tuckey.web.filters.urlrewrite.RuleChain.handleRewrite(RuleChain.java:176)
+	at org.tuckey.web.filters.urlrewrite.RuleChain.doRules(RuleChain.java:145)
+	at org.tuckey.web.filters.urlrewrite.UrlRewriter.processRequest(UrlRewriter.java:92)
+	at org.tuckey.web.filters.urlrewrite.UrlRewriteFilter.doFilter(UrlRewriteFilter.java:394)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at filters.ContentFilter.doFilter(ContentFilter.java:64)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:222)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:123)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:171)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:99)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:947)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:118)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:408)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1009)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:589)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:312)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+
+May 05, 2013 4:50:04 PM org.apache.catalina.core.StandardWrapperValve invoke
+SEVERE: Servlet.service() for servlet [jsp] in context with path [] threw exception [javax.servlet.ServletException: java.sql.SQLSyntaxErrorException: Column 'MIHAIELA' is either not in any table in the FROM list or appears within a join specification and is outside the scope of the join specification or appears in a HAVING clause and is not in the GROUP BY list. If this is a CREATE or ALTER TABLE  statement then 'MIHAIELA' is not a column in the target table.] with root cause
+ERROR 42X04: Column 'MIHAIELA' is either not in any table in the FROM list or appears within a join specification and is outside the scope of the join specification or appears in a HAVING clause and is not in the GROUP BY list. If this is a CREATE or ALTER TABLE  statement then 'MIHAIELA' is not a column in the target table.
+	at org.apache.derby.iapi.error.StandardException.newException(Unknown Source)
+	at org.apache.derby.impl.sql.compile.ColumnReference.bindExpression(Unknown Source)
+	at org.apache.derby.impl.sql.compile.BinaryOperatorNode.bindExpression(Unknown Source)
+	at org.apache.derby.impl.sql.compile.BinaryComparisonOperatorNode.bindExpression(Unknown Source)
+	at org.apache.derby.impl.sql.compile.SelectNode.bindExpressions(Unknown Source)
+	at org.apache.derby.impl.sql.compile.DMLStatementNode.bindExpressions(Unknown Source)
+	at org.apache.derby.impl.sql.compile.DMLStatementNode.bind(Unknown Source)
+	at org.apache.derby.impl.sql.compile.CursorNode.bindStatement(Unknown Source)
+	at org.apache.derby.impl.sql.GenericStatement.prepMinion(Unknown Source)
+	at org.apache.derby.impl.sql.GenericStatement.prepare(Unknown Source)
+	at org.apache.derby.impl.sql.conn.GenericLanguageConnectionContext.prepareInternalStatement(Unknown Source)
+	at org.apache.derby.impl.jdbc.EmbedStatement.execute(Unknown Source)
+	at org.apache.derby.impl.jdbc.EmbedStatement.executeQuery(Unknown Source)
+	at org.apache.tomcat.dbcp.dbcp.DelegatingStatement.executeQuery(DelegatingStatement.java:208)
+	at org.apache.tomcat.dbcp.dbcp.DelegatingStatement.executeQuery(DelegatingStatement.java:208)
+	at com.otrocol.app.User.check(User.java:97)
+	at com.otrocol.app.User.exists(User.java:112)
+	at org.apache.jsp.login_jsp._jspService(login_jsp.java:80)
+	at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:70)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:728)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:432)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:390)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:334)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:728)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:305)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.tuckey.web.filters.urlrewrite.RuleChain.handleRewrite(RuleChain.java:176)
+	at org.tuckey.web.filters.urlrewrite.RuleChain.doRules(RuleChain.java:145)
+	at org.tuckey.web.filters.urlrewrite.UrlRewriter.processRequest(UrlRewriter.java:92)
+	at org.tuckey.web.filters.urlrewrite.UrlRewriteFilter.doFilter(UrlRewriteFilter.java:394)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at filters.ContentFilter.doFilter(ContentFilter.java:64)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:222)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:123)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:171)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:99)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:947)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:118)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:408)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1009)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:589)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:312)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+
+May 05, 2013 4:52:16 PM org.apache.catalina.core.StandardWrapperValve invoke
+SEVERE: Servlet.service() for servlet [jsp] in context with path [] threw exception [javax.servlet.ServletException: java.sql.SQLSyntaxErrorException: Column 'MIHAIELA' is either not in any table in the FROM list or appears within a join specification and is outside the scope of the join specification or appears in a HAVING clause and is not in the GROUP BY list. If this is a CREATE or ALTER TABLE  statement then 'MIHAIELA' is not a column in the target table.] with root cause
+ERROR 42X04: Column 'MIHAIELA' is either not in any table in the FROM list or appears within a join specification and is outside the scope of the join specification or appears in a HAVING clause and is not in the GROUP BY list. If this is a CREATE or ALTER TABLE  statement then 'MIHAIELA' is not a column in the target table.
+	at org.apache.derby.iapi.error.StandardException.newException(Unknown Source)
+	at org.apache.derby.impl.sql.compile.ColumnReference.bindExpression(Unknown Source)
+	at org.apache.derby.impl.sql.compile.BinaryOperatorNode.bindExpression(Unknown Source)
+	at org.apache.derby.impl.sql.compile.BinaryComparisonOperatorNode.bindExpression(Unknown Source)
+	at org.apache.derby.impl.sql.compile.SelectNode.bindExpressions(Unknown Source)
+	at org.apache.derby.impl.sql.compile.DMLStatementNode.bindExpressions(Unknown Source)
+	at org.apache.derby.impl.sql.compile.DMLStatementNode.bind(Unknown Source)
+	at org.apache.derby.impl.sql.compile.CursorNode.bindStatement(Unknown Source)
+	at org.apache.derby.impl.sql.GenericStatement.prepMinion(Unknown Source)
+	at org.apache.derby.impl.sql.GenericStatement.prepare(Unknown Source)
+	at org.apache.derby.impl.sql.conn.GenericLanguageConnectionContext.prepareInternalStatement(Unknown Source)
+	at org.apache.derby.impl.jdbc.EmbedStatement.execute(Unknown Source)
+	at org.apache.derby.impl.jdbc.EmbedStatement.executeQuery(Unknown Source)
+	at org.apache.tomcat.dbcp.dbcp.DelegatingStatement.executeQuery(DelegatingStatement.java:208)
+	at org.apache.tomcat.dbcp.dbcp.DelegatingStatement.executeQuery(DelegatingStatement.java:208)
+	at com.otrocol.app.User.check(User.java:97)
+	at com.otrocol.app.User.exists(User.java:112)
+	at org.apache.jsp.login_jsp._jspService(login_jsp.java:80)
+	at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:70)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:728)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:432)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:390)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:334)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:728)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:305)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.tuckey.web.filters.urlrewrite.RuleChain.handleRewrite(RuleChain.java:176)
+	at org.tuckey.web.filters.urlrewrite.RuleChain.doRules(RuleChain.java:145)
+	at org.tuckey.web.filters.urlrewrite.UrlRewriter.processRequest(UrlRewriter.java:92)
+	at org.tuckey.web.filters.urlrewrite.UrlRewriteFilter.doFilter(UrlRewriteFilter.java:394)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at filters.ContentFilter.doFilter(ContentFilter.java:64)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:222)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:123)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:171)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:99)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:947)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:118)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:408)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1009)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:589)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:312)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+
+May 05, 2013 4:52:17 PM org.apache.catalina.core.ApplicationContext log
+INFO: org.tuckey.web.filters.urlrewrite.UrlRewriteFilter INFO: destroy called
+May 05, 2013 4:52:17 PM org.apache.catalina.core.ApplicationContext log
+INFO: org.tuckey.web.filters.urlrewrite.UrlRewriteFilter INFO: loaded (conf ok)
+May 05, 2013 4:53:52 PM org.apache.catalina.core.ApplicationContext log
+INFO: org.tuckey.web.filters.urlrewrite.UrlRewriteFilter INFO: destroy called
+May 05, 2013 4:53:57 PM org.apache.catalina.core.ApplicationContext log
+INFO: org.tuckey.web.filters.urlrewrite.UrlRewriteFilter INFO: loaded (conf ok)
+May 05, 2013 4:59:58 PM org.apache.catalina.core.ApplicationContext log
+INFO: org.tuckey.web.filters.urlrewrite.UrlRewriteFilter INFO: destroy called
+May 05, 2013 4:59:58 PM org.apache.catalina.core.ApplicationContext log
+INFO: org.tuckey.web.filters.urlrewrite.UrlRewriteFilter INFO: loaded (conf ok)
+May 05, 2013 5:07:18 PM org.apache.catalina.core.ApplicationContext log
+INFO: org.tuckey.web.filters.urlrewrite.UrlRewriteFilter INFO: destroy called
+May 05, 2013 5:07:19 PM org.apache.catalina.core.ApplicationContext log
+INFO: org.tuckey.web.filters.urlrewrite.UrlRewriteFilter INFO: loaded (conf ok)
+May 05, 2013 5:09:28 PM org.apache.catalina.core.ApplicationContext log
+INFO: org.tuckey.web.filters.urlrewrite.UrlRewriteFilter INFO: destroy called
+May 05, 2013 5:09:34 PM org.apache.catalina.core.ApplicationContext log
+INFO: org.tuckey.web.filters.urlrewrite.UrlRewriteFilter INFO: loaded (conf ok)
